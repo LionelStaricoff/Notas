@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+
+header{
+    background-color: aqua;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+   place-items: center;
+   position: relative;
+
+}
+
+header{
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    text-shadow: 5px 5px 5px  black;
+}
+
+
+header button {
+ width: 2em;
+ height: 2em;
+ position: absolute;
+ right: 40px;
+ font-weight: bolder;
+ font-size: 1.2em;
+ background: transparent;
+ border: 2px solid black;
+}
+
+header button:hover {
+
+    font-size: 1.5em;
+
+}
+main{
+    background-color: orange;
+    width: 100vw;
+    height: 90vh;
+}
+
+
+
+
+/* efecto notas */
+.nota{
+    width: 20em;
+    height: 15em;
+    border: 3px dotted violet;
+    background-color: #fcfd9c;
+    text-align: center;
+
+}
+
+.nota:hover {
+    box-shadow: 0px 0px 10px 3px rgba(237, 36, 213, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgb(252, 253, 156,80%);
+  }
+
+  /* animacion */
+  p:active{
+    animation: shadow-animation 1s infinite;
+  }
+  
+  @keyframes shadow-animation {
+    0% {
+      box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
+    }
+    50% {
+      box-shadow: 0 0 10px red, 0 0 15px blue, 0 0 20px green;
+    }
+    100% {
+      box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
+    }
+  }
+
+  .nota textarea{
+    background: transparent;
+    border: 1px solid black;
+  }
+
+  .nota button, img{
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    border: none;
+  }
+
+  .nota button img{
+
+    border: 1px solid black;
+  }
