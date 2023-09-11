@@ -1,0 +1,57 @@
+@import url("nota.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+
+header {
+    background-color: aqua;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    text-shadow: 5px 5px 5px black;
+}
+
+
+header button {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 40px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    background: transparent;
+    border: 2px solid black;
+}
+
+header button img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+header button:hover {
+    font-size: 1.5em;
+}
+
+main {
+    background-color: rgb(214, 121, 235);
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+}
+
+
