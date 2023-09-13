@@ -1,7 +1,7 @@
 .cambioDeColumna {
     width: 18em;
-    height: 4em;
-    padding: 2px;
+    height: 5em;
+    padding: 0.2em;
     background-color: aqua;
     border: 4px ridge rgb(53, 54, 54);
     display: flex;
@@ -11,15 +11,13 @@
 
 .cambioDeColumna button {
     border-radius: 6px;
-    font-size: 11px;
-    font-weight: bold;
     width: 30%;
-    height: 80%;
+    height: 90%;
     border: 4px outset rgb(53, 54, 54);
 }
 
 .cambioDeColumna button:hover {
-    background-color: rgb(32, 32, 109);
+    background-color: rgb(235, 233, 111);
     color: white;
 }
 .cambioDeColumna button:active {
