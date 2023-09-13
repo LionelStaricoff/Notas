@@ -1,6 +1,7 @@
 @import url("nota.css");
 @import url("notaReducida.css");
 @import url("cambioDeColumnas.css");
+@import url("cuadro.css");
 
 * {
     margin: 0;
@@ -52,13 +53,10 @@ header button:hover {
 main {
     background-color: rgb(214, 121, 235);
     width: 100vw;
-    height: 90vh;
     position: relative;
     padding: 1em;
 }
 
-.cuadro {
 
-}
 
 

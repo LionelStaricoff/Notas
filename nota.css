@@ -2,7 +2,7 @@
 .nota {
     width: 20em;
     height: 15em;
-    border: 2px groove rgba(205, 212, 26, 0.7);
+    border: 2px groove rgba(108, 108, 106, 0.7);
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,13 @@ input {
     text-align: center;
     background: transparent;
     border: 1px solid rgba(205, 212, 26, 0.7);
+    font-family: 'Kalam', cursive;
 }
+input {
+    font-weight: 800;
+    font-size: .8em
+}
+
 
 .buttons-container {
     display: flex;
@@ -82,13 +88,11 @@ img {
     width: 2em;
 }
 
-
-/* efecto de esquina doblada
 .triangle {
     width: 24px;
     height: 24px;
-    border-bottom: 24px solid transparent;
-    border-left: 24px solid rgba(205, 212, 26, 0.7);
+    border-bottom: 26px solid transparent;
+    border-left: 24px solid rgba(212, 169, 26, 0.7);
     box-shadow: -3px -3px 5px rgba(124, 119, 60, 0.9);
     align-self: flex-end;
     z-index: 10;
@@ -96,4 +100,3 @@ img {
     bottom: 0;
     right: 0;
 } 
-*/
