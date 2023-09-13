@@ -1,7 +1,7 @@
 /* efecto notas */
 .nota {
     width: 20em;
-    height: 15em;
+    height: 22em;
     border: 2px groove rgba(108, 108, 106, 0.7);
     background-color: #fcfd9c;
     display: flex;
@@ -99,4 +99,8 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
+    display: none;
 } 
+.nota:hover .triangle{
+    display:block;
+}
