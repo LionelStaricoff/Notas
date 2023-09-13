@@ -1,4 +1,6 @@
 @import url("nota.css");
+@import url("notaReducida.css");
+@import url("cambioDeColumnas.css");
 
 * {
     margin: 0;
@@ -52,6 +54,11 @@ main {
     width: 100vw;
     height: 90vh;
     position: relative;
+    padding: 1em;
+}
+
+.cuadro {
+
 }
 
 

@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>App Notas</title>
 </head>
 <body>
-   <header>
-    <h1>App Notas</h1>
-    <button> <img src="img/plus-black-symbol.png" alt=""></button>
-      </header>
+    <header>
+        <h1>App Notas</h1>
+        <button> <img src="img/plus-black-symbol.png" alt=""></button>
+    </header>
     <main>
-
         <div class="nota">
-        <input type="text" placeholder="titulo">
-        <textarea  cols="30" rows="10"></textarea>
-        <button><img src="img/correct-symbol.png"></button>  
+            <h2><input type="text" placeholder="TITULO"></h2>
+            <textarea  cols="30" rows="10" placeholder="Descripción"></textarea>
+            <section class="buttons-container">  
+                <button><img src="img/remove-symbol.png"></button> 
+                <button><input class="color" type="color" value="#ffd200"></button> 
+                <button><img src="img/correct-symbol.png"></button> 
+            </section>
+        </div>
+
+        <div class="notaReducida">
+            <h2><input type="text" placeholder="TITULO"></h2>
+            <section class="buttons-container">
+                <button><img src="img/remove-symbol.png"></button>
+                <button><img src="img/edit.png"></button>
+                <button><img src="img/flecha.png"></button>
+            </section>
+        </div>
+        <br>
+        <div class="cambioDeColumna">
+            <button>Ideas</button>
+            <button>En proceso</button>
+            <button>Completadas</button>
         </div>
     </main>
 </body>

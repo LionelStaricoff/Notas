@@ -1,0 +1,28 @@
+.cambioDeColumna {
+    width: 18em;
+    height: 4em;
+    padding: 2px;
+    background-color: aqua;
+    border: 4px ridge rgb(53, 54, 54);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cambioDeColumna button {
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    width: 30%;
+    height: 80%;
+    border: 4px outset rgb(53, 54, 54);
+}
+
+.cambioDeColumna button:hover {
+    background-color: rgb(32, 32, 109);
+    color: white;
+}
+.cambioDeColumna button:active {
+    color: aqua;
+    transform: scale(90%)
+}
