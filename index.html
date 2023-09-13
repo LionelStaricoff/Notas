@@ -13,11 +13,20 @@
 <body>
     <header>
         <h1>App Notas</h1>
-        <button> <img src="img/plus-black-symbol.png" alt=""></button>
+        <button>+</button>
     </header>
     <main>
-        
-<!--
+        <div class="nota">
+            <h2><input type="text" placeholder="TITULO"></h2>
+            <textarea  cols="30" rows="10" placeholder="Descripción"></textarea>
+            <section class="buttons-container">  
+                <button><img src="img/remove-symbol.png"></button> 
+                <button><input class="color" type="color" value="#ffd200"></button> 
+                <button><img src="img/correct-symbol.png"></button> 
+            </section>
+            <section class="triangle"></section>
+        </div>
+        <!--nota pequeña "sólo el título y botones"-->
         <div class="notaReducida">
             <h2><input type="text" placeholder="TITULO"></h2>
             <section class="buttons-container">
@@ -27,16 +36,20 @@
             </section>
         </div>
         <br>
+
+        <!--popUp-->
         <div class="cambioDeColumna">
-            <button>Ideas</button>
-            <button>En proceso</button>
-            <button>Completadas</button>
-        </div>-->
+            <button><img src="img/idea.png"></button>
+            <button><img src="img/enProceso.png"></button>
+            <button><img src="img/hecho.png"></button>
+        </div>
+
+        <!--CUADRO-->
         <div class="cuadro">
             <div class="cabezaCuadro">
-                <div class="columnaTitulo">IDEAS</div>
-                <div class="columnaTitulo">EN PROCESO</div>
-                <div class="columnaTitulo">COMPLETADAS</div>
+                <div class="columnaTitulo">IDEAS<img src="img/idea.png" class="iconos"></div>
+                <div class="columnaTitulo">EN PROCESO<img src="img/enProceso.png" class="iconos"></div>
+                <div class="columnaTitulo">COMPLETADAS<img src="img/hecho.png" class="iconos"></div>
             </div>
             <div class="cuerpoCuadro">
                 <div class="columnaCuadro">
@@ -58,6 +71,7 @@
                 <div class="columnaCuadro"></div>
             </div>
         </div>
+
     </main>
 </body>
 </html>

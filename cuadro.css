@@ -9,23 +9,26 @@
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 2px solid black;
     font-family: 'Kalam', cursive;
-    font-size: 1.8em
+    font-size: 1.8em;
+}
+.iconos{
+    margin-left: 10px;
+    width: 1.8em;
+    height: 1.8em;
 }
 
 .columnaTitulo {
-    padding: 5px;
     text-align: center;
     border-right: 1px solid black;
+
 }
 
 .cuerpoCuadro {
-    display: flex;
     height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .columnaCuadro {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
     border-right: 1px solid black;
 }
