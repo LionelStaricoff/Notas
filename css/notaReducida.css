@@ -1,8 +1,8 @@
 .notaReducida {
-    width: 18em; 
-    height: 6em;
+    width: 20em; 
     padding: 2px; 
-    border: 2px groove rgba(205, 212, 26, 0.7);
+    border: 3px groove rgba(205, 212, 26, 0.7);
+    box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
@@ -11,16 +11,18 @@
     z-index: 1;
     position: relative;
 }
-  
+
 .notaReducida textarea,
-input {
+h2 input {
     width: 100%;
     text-align: center;
     background: transparent;
-    border: 1px solid rgba(205, 212, 26, 0.7);
+    border: 1px solid rgba(204, 204, 200, 0.7);
+    font-family: 'Kalam', cursive;
 }
 
 .buttons-container {
+    margin-top: 0.1em;
     display: flex;
     justify-content: space-around;
 }

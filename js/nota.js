@@ -8,3 +8,4 @@ colorPicker.addEventListener("change", () => {
     nota.style.backgroundColor = colorElegido;
     triangle.style.borderLeftColor = colorElegido;
 })
+

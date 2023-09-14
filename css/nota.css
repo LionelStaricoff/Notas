@@ -1,7 +1,6 @@
 /* efecto notas */
 .nota {
     width: 20em;
-    height: 15em;
     border: 3px groove rgba(108, 108, 106, 0.7);
     box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
     background-color: #fcfd9c;
@@ -18,33 +17,6 @@
     padding: 2px;
 }
 
-/*
-.nota:hover {
-    box-shadow: 0px 0px 10px 3px rgba(237, 36, 213, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
-    background-color: rgb(252, 253, 156, 80%);
-} 
-
-p:active {
-    animation: shadow-animation 1s infinite;
-}
-
-
-@keyframes shadow-animation {
-    0% {
-        box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
-    }
-
-    50% {
-        box-shadow: 0 0 10px red, 0 0 15px blue, 0 0 20px green;
-    }
-
-    100% {
-        box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
-    }
-}
-*/
-
 .nota textarea,
 h2 input {
     width: 100%;
@@ -53,11 +25,13 @@ h2 input {
     border: 1px solid rgba(204, 204, 200, 0.7);
     font-family: 'Kalam', cursive;
 }
+textarea {
+    height: 15em;
+}
 input {
     font-weight: 800;
     font-size: .8em;
 }
-
 
 .buttons-container {
     display: flex;
@@ -91,7 +65,6 @@ img {
     width: 2em;
     height: 2.5em;
     border-radius: 4px;
-
 }
 
 .triangle {
