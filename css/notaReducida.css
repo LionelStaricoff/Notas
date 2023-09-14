@@ -29,6 +29,8 @@ img {
     height: 2em;
     background: transparent;
     border: none;
+    border-radius: 4px;
+
 }
 
 .notaReducida button img {
@@ -40,7 +42,10 @@ img {
 }
 
 .notaReducida button:hover {
-    transform: scale(130%);
+    transform: scale(140%);
+}
+.notaReducida button:active {
+    background-color: rgb(205, 200, 200);
 }
 
 .color {

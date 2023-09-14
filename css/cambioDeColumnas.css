@@ -10,14 +10,15 @@
 }
 
 .cambioDeColumna button {
-    border-radius: 6px;
+    background-color: white;
+    border-radius: 10px;
     width: 30%;
     height: 90%;
     border: 4px outset rgb(53, 54, 54);
 }
 
 .cambioDeColumna button:hover {
-    background-color: rgb(235, 233, 111);
+    background-color: rgb(150, 242, 242);
     color: white;
 }
 .cambioDeColumna button:active {
