@@ -1,8 +1,8 @@
 /* efecto notas */
 .nota {
     width: 20em;
-    height: 15em;
-    border: 3px dotted violet;
+    height: 22em;
+    border: 2px groove rgba(108, 108, 106, 0.7);
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
@@ -14,21 +14,20 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    padding: 2px
 }
 
-
-
-
+/*
 .nota:hover {
     box-shadow: 0px 0px 10px 3px rgba(237, 36, 213, 0.5);
     transition: box-shadow 0.3s ease-in-out;
     background-color: rgb(252, 253, 156, 80%);
-}
+} 
 
-/* animacion */
 p:active {
     animation: shadow-animation 1s infinite;
 }
+
 
 @keyframes shadow-animation {
     0% {
@@ -43,12 +42,25 @@ p:active {
         box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
     }
 }
+*/
 
 .nota textarea,
 input {
+    width: 100%;
     text-align: center;
     background: transparent;
-    border: 1px solid black;
+    border: 1px solid rgba(205, 212, 26, 0.7);
+    font-family: 'Kalam', cursive;
+}
+input {
+    font-weight: 800;
+    font-size: .8em
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .nota button,
@@ -60,14 +72,35 @@ img {
 }
 
 .nota button img {
-
     border: 1px solid black;
 }
 
 .nota button {
-    align-self: flex-end;
+    align-self: center;
 }
 
 .nota button:hover {
-    transform: rotateZ(90deg);
+    transform: scale(130%);
+}
+
+.color {
+    border: 1px solid black;
+    width: 2em;
+}
+
+.triangle {
+    width: 24px;
+    height: 24px;
+    border-bottom: 26px solid transparent;
+    border-left: 24px solid rgba(212, 169, 26, 0.7);
+    box-shadow: -3px -3px 5px rgba(124, 119, 60, 0.9);
+    align-self: flex-end;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+} 
+.nota:hover .triangle{
+    display:block;
 }

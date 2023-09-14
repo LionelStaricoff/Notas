@@ -1,14 +1,13 @@
 class Nota{
-
     constructor(){
         this.titulo;
         this.descripcion;
         this.color;
         crearNota();
-
     }
  
     crearNota(){
+
 
         const nota = document.createElement('div');
         nota.className = 'nota';
@@ -49,6 +48,15 @@ class Nota{
             <button><img src="img/remove-symbol.png"></button>
             <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
             <button><img src="img/correct-symbol.png"></button>
+=======
+        const nota = ` <div class="nota">
+        <h2><input type="text" placeholder="TITULO"></h2>
+        <textarea  cols="30" rows="10" placeholder="Descripción"></textarea>
+        <section class="buttons-container">  
+            <button><img src="img/remove-symbol.png"></button> 
+            <button><input class="color" type="color" value="#ffd200"></button> 
+            <button><img src="img/correct-symbol.png"></button> 
+>>>>>>> dd60454a79d949e3192f8aa95c8f0a76bfe24e3f
         </section>
         <section class="triangle"></section>
     </div>`
