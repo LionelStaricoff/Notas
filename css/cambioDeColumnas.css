@@ -1,12 +1,13 @@
 .cambioDeColumna {
+    position: relative;
     width: 18em;
     height: 5em;
     padding: 0.2em;
     background-color: aqua;
     border: 4px ridge rgb(53, 54, 54);
+    z-index: 3; 
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
 }
 
 .cambioDeColumna button {
@@ -15,6 +16,8 @@
     width: 30%;
     height: 90%;
     border: 4px outset rgb(53, 54, 54);
+    margin: 0.18em
+
 }
 
 .cambioDeColumna button:hover {

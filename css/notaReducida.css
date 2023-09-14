@@ -8,6 +8,8 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    z-index: 1;
+    position: relative;
 }
   
 .notaReducida textarea,

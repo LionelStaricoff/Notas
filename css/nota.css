@@ -3,7 +3,7 @@
     width: 20em;
     height: 15em;
     border: 3px groove rgba(108, 108, 106, 0.7);
-    box-shadow: 7px 7px 7px rgba(69, 68, 66, 0.7);
+    box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,6 @@
     bottom: 0;
     margin: auto;
     padding: 2px;
-    position: absolute
 }
 
 /*
@@ -47,7 +46,7 @@ p:active {
 */
 
 .nota textarea,
-input {
+h2 input {
     width: 100%;
     text-align: center;
     background: transparent;
@@ -56,7 +55,7 @@ input {
 }
 input {
     font-weight: 800;
-    font-size: .8em
+    font-size: .8em;
 }
 
 
