@@ -1,0 +1,55 @@
+.notaReducida {
+    width: 18em; 
+    height: 6em;
+    padding: 2px; 
+    border: 2px groove rgba(205, 212, 26, 0.7);
+    background-color: #fcfd9c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+  
+.notaReducida textarea,
+input {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(205, 212, 26, 0.7);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.notaReducida button,
+img {
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.notaReducida button img {
+    border: 1px solid black;
+}
+
+.notaReducida button {
+    align-self: center;
+}
+
+.notaReducida button:hover {
+    transform: scale(140%);
+}
+.notaReducida button:active {
+    background-color: rgb(205, 200, 200);
+}
+
+.color {
+    border: 1px solid black;
+    width: 2em;
+}
+  

@@ -1,0 +1,36 @@
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 75vw;
+    position: absolute;
+}
+
+.cabezaCuadro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 2px solid black;
+    font-family: 'Kalam', cursive;
+    font-size: 1.8em;
+}
+.iconos{
+    margin-left: 10px;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.columnaTitulo {
+    text-align: center;
+    border-right: 1px solid black;
+
+}
+
+.cuerpoCuadro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 75vh;
+}
+
+.columnaCuadro {
+    border-right: 1px solid black;
+}
