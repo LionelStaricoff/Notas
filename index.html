@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Orbitron:wght@500&family=Permanent+Marker&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam&family=Orbitron:wght@500&family=Permanent+Marker&family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js" defer></script>
     <script src="js/nota.js" defer></script>
     <title>App Notas</title>
 </head>
+
 <body>
     <header>
         <h1>App Notas</h1>
         <button>+</button>
     </header>
     <main>
+        <!--CUADRO-->
+        <div class="cuadro">
+            <div class="cabezaCuadro">
+                <div class="columnaTitulo">IDEAS<img src="img/idea.png" class="iconos"></div>
+                <div class="columnaTitulo">EN PROCESO<img src="img/enProceso.png" class="iconos"></div>
+                <div class="columnaTitulo">COMPLETADAS<img src="img/hecho.png" class="iconos"></div>
+            </div>
+            <div class="cuerpoCuadro">
+                <div class="columnaCuadro"></div>
+                <div class="columnaCuadro"></div>
+                <div class="columnaCuadro"></div>
+            </div>
+        </div>
+
+        <!--Nota-->
         <div class="nota">
             <h2><input type="text" placeholder="TITULO"></h2>
-            <textarea  cols="30" rows="10" placeholder="Descripción"></textarea>
-            <section class="buttons-container">  
-                <button><img src="img/remove-symbol.png"></button> 
-                <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button> 
-                <button><img src="img/correct-symbol.png"></button> 
+            <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
+            <section class="buttons-container">
+                <button><img src="img/remove-symbol.png"></button>
+                <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
+                <button><img src="img/correct-symbol.png"></button>
             </section>
             <section class="triangle"></section>
         </div>
@@ -43,20 +62,9 @@
             <button><img src="img/hecho.png"></button>
         </div>
 
-        <!--CUADRO-->
-        <div class="cuadro">
-            <div class="cabezaCuadro">
-                <div class="columnaTitulo">IDEAS<img src="img/idea.png" class="iconos"></div>
-                <div class="columnaTitulo">EN PROCESO<img src="img/enProceso.png" class="iconos"></div>
-                <div class="columnaTitulo">COMPLETADAS<img src="img/hecho.png" class="iconos"></div>
-            </div>
-            <div class="cuerpoCuadro">
-                <div class="columnaCuadro"></div>
-                <div class="columnaCuadro"></div>
-                <div class="columnaCuadro"></div>
-            </div>
-        </div>
-    
+
+
     </main>
 </body>
+
 </html>
