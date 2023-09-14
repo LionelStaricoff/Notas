@@ -15,11 +15,11 @@ botonEditar.addEventListener("click", ()=>{
 });
 
 botonMover.addEventListener("click", () => {
-    /*
-    if (cambioDeColumna.style.display === "none") {
+    
+    if (cambioDeColumna.style.display === "none" || cambioDeColumna.style.display === "") {
         cambioDeColumna.style.display = "block";
     } else {
         cambioDeColumna.style.display = "none";
     }
-    */
+    
 }); 
