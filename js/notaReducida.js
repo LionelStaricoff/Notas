@@ -2,55 +2,43 @@ const botonEliminar = document.querySelector(".notaReducida .boton-eliminar");
 const botonEditar = document.querySelector(".notaReducida .boton-editar");
 const botonMover = document.querySelector(".notaReducida .boton-mover");
 const notaReducida = document.querySelector(".notaReducida");
-const cambioDeColumna = document.querySelector(".cambioDeColumna");
-//cuando presionen el botón editar en la notaReducida: Debe verse con el mismo diseño de la clase Nota
-const notaCompleta = document.querySelector(".nota");
+const cambioDeColumna = document.querySelector(".cambioDeColumna")
+
 
 
 
 botonEliminar.addEventListener("click", () => {
-    alert("boton-eliminar")
-    
+    alert("boton-eliminar");
+
 });
 
-botonEditar.addEventListener("click", ()=>{
+botonEditar.addEventListener("click", () => {
     alert("boton-editar");
-    //Copio el contenido de la nota reducida a la nota completa
+
+/*cuando presionen el botón editar en la notaReducida: Debe verse con el mismo diseño de la clase Nota
     notaCompleta.querySelector("h2 input").value = notaReducida.querySelector("h2 input").value;
     notaCompleta.querySelector("textarea").value = notaReducida.querySelector("textarea").value;
 
-    //Remuevo los botones de la notaReducida
-    const buttonsContainer = notaReducida.querySelector(".buttons-container");
-    while (buttonsContainer.firstChild) {
-        buttonsContainer.removeChild(buttonsContainer.firstChild);
-    }
+    const colorElegido = botonCambiarColor.querySelector("input").value;
 
-    //Creo y agrego los botones de la notaCompleta
-    const botonEliminar = document.createElement("button");
-    botonEliminar.innerHTML = '<img src="img/remove-symbol.png">';
-    botonEliminar.addEventListener("click", () => {
-        alert('Boton Eliminar');
-    });
+    const notaCompleta = document.querySelector("div");
+    notaCompleta.classList.add(".nota");
+    notaCompleta.innerHTML = `
+    <div class="nota">
+        <h2><input type="text" placeholder="TITULO"></h2>
+        <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
+        <section class="buttons-container">
+            <button><img src="img/remove-symbol.png"></button>
+            <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
+            <button><img src="img/correct-symbol.png"></button>
+        </section>
+        <section class="triangle"></section>
+    </div>
+    `
+*/
+})
 
-    const botonCambiarColor = document.createElement("button");
-    botonCambiarColor.innerHTML = '<input id="colorPicker" class="color" type="color">';
-    botonCambiarColor.addEventListener("change", () => {
-        const colorElegido = botonCambiarColor.querySelector("input").value;
-        notaCompleta.style.backgroundColor = colorElegido;
-        notaCompleta.querySelector(".triangle").style.borderLeftColor = colorElegido;
-    });
 
-    const botonCheck = document.createElement("button");
-    botonCheck.innerHTML = '<img src="img/correct-symbol.png">';
-    botonCheck.addEventListener("click", () => {
-        alert('Boton Check');
-    });
-
-    buttonsContainer.appendChild(botonEliminar);
-    buttonsContainer.appendChild(botonCambiarColor);
-    buttonsContainer.appendChild(botonCheck);
-
-});
 
 botonMover.addEventListener("click", () => {
     if (cambioDeColumna.style.display === "none" || cambioDeColumna.style.display === "") {
@@ -58,5 +46,4 @@ botonMover.addEventListener("click", () => {
     } else {
         cambioDeColumna.style.display = "none";
     }
-    
-}); 
+})

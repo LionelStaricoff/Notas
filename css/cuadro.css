@@ -28,7 +28,7 @@
 .cuerpoCuadro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 75vh;
+    height: 90vh;
 }
 
 .columnaCuadro {
