@@ -26,9 +26,19 @@
 }
 
 .cuerpoCuadro {
+<<<<<<< HEAD
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 75vh;
+=======
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+<<<<<<<< HEAD:cuadro.css
+========
+    height: 90vh;
+>>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a:css/cuadro.css
+>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a
 }
 
 .columnaCuadro {

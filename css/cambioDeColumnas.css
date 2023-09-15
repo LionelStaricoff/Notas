@@ -4,9 +4,15 @@
     padding: 0.2em;
     background-color: aqua;
     border: 4px ridge rgb(53, 54, 54);
+<<<<<<< HEAD
     display: flex;
     justify-content: space-around;
     align-items: center;
+=======
+    z-index: 10; 
+    display: flex;
+    text-align: center;
+>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a
 }
 
 .cambioDeColumna button {
@@ -15,6 +21,11 @@
     width: 30%;
     height: 90%;
     border: 4px outset rgb(53, 54, 54);
+<<<<<<< HEAD
+=======
+    margin: 0.18em
+
+>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a
 }
 
 .cambioDeColumna button:hover {

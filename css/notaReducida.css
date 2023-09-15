@@ -1,13 +1,21 @@
 .notaReducida {
+<<<<<<< HEAD
     width: 18em; 
     height: 6em;
     padding: 2px; 
     border: 2px groove rgba(205, 212, 26, 0.7);
+=======
+    width: 20em; 
+    padding: 2px; 
+    border: 3px groove rgba(205, 212, 26, 0.7);
+    box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
+>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+<<<<<<< HEAD
 }
   
 .notaReducida textarea,
@@ -19,6 +27,23 @@ input {
 }
 
 .buttons-container {
+=======
+    z-index: 1;
+    position: relative;
+}
+
+.notaReducida textarea,
+h2 input {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(204, 204, 200, 0.7);
+    font-family: 'Kalam', cursive;
+}
+
+.buttons-container {
+    margin-top: 0.1em;
+>>>>>>> 3ff95f4555410e5526b2a9e7f9f2c4548ba0c50a
     display: flex;
     justify-content: space-around;
 }
