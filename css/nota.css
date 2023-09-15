@@ -1,6 +1,6 @@
 /* efecto notas */
 .nota {
-    width: 20em;
+    width: min(100%, 18em);
     height: 15em;
     border: 3px groove rgba(108, 108, 106, 0.7);
     box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
@@ -17,6 +17,7 @@
     margin: auto;
     margin-top: 1em;
     padding: 2px;
+    position: static;
 }
 
 .nota textarea,
