@@ -1,13 +1,14 @@
 /* efecto notas */
 .nota {
     width: 20em;
+    height: 15em;
     border: 3px groove rgba(108, 108, 106, 0.7);
     box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
+    position: absolute;
     z-index: 5;
     top: 0;
     left: 0;

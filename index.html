@@ -7,9 +7,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kalam&family=Orbitron:wght@500&family=Permanent+Marker&family=Roboto:wght@100;300;400&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js" defer></script>
-    <script src="js/nota.js" defer></script>
+    <script src="js/cambiaDeColor.js" defer></script>
     <script src="js/notaReducida.js" defer></script>
     <title>App Notas</title>
 </head>
@@ -28,42 +29,58 @@
                 <div class="columnaTitulo">COMPLETADAS<img src="img/hecho.png" class="iconos"></div>
             </div>
             <div class="cuerpoCuadro">
-                <div class="columnaCuadro"></div>
+                <div class="columnaCuadro">
+                    <div class="nota">
+                        <h2><input type="text" placeholder="TITULO"></h2>
+                        <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
+                        <section class="buttons-container">
+                            <button><img src="img/remove-symbol.png"></button>
+                            <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
+                            <button><img src="img/correct-symbol.png"></button>
+                        </section>
+                        <section class="triangle"></section>
+                    </div>
+                </div>
                 <div class="columnaCuadro"></div>
                 <div class="columnaCuadro"></div>
             </div>
         </div>
 
-        <!--Nota-->
+        <!--Nota
         <div class="nota">
             <h2><input type="text" placeholder="TITULO"></h2>
             <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
             <section class="buttons-container">
-                <button class="boton-eliminar"><img src="img/remove-symbol.png"></button>
+                <button><img src="img/remove-symbol.png"></button>
                 <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
-                <button class="boton-guardar"><img src="img/correct-symbol.png"></button>
+                <button><img src="img/correct-symbol.png"></button>
             </section>
             <section class="triangle"></section>
-        </div>
-        <!--nota pequeña "sólo el título y botones"-->
+        </div>-->
+
+
+
+        <!--nota pequeña "sólo el título y botones"
         <div class="notaReducida">
             <h2><input type="text" placeholder="TITULO"></h2>
             <section class="buttons-container">
-                <button class="boton-eliminar"><img src="img/remove-symbol.png"></button>
-                <button class="boton-editar"><img src="img/edit.png"></button>
-                <button class="boton-mover"><img src="img/flecha.png"></button>
+                <button><img src="img/remove-symbol.png"></button>
+                <button><img src="img/edit.png"></button>
+                <button><img src="img/flecha.png"></button>
             </section>
         </div>
-        <br>
+        <br>-->
 
-        <!--popUp-->
+
+
+        <!--popUp
         <div class="cambioDeColumna">
             <button><img src="img/idea.png"></button>
             <button><img src="img/enProceso.png"></button>
             <button><img src="img/hecho.png"></button>
         </div>
 
-
+-->
 
     </main>
 </body>
