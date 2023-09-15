@@ -15,7 +15,7 @@
     bottom: 0;
     margin: auto;
     padding: 2px;
-    position: absolute;
+    position: static;
 }
 
 
