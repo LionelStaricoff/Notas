@@ -1,9 +1,9 @@
 class Nota{
     constructor(){
-        this.titulo;
-        this.descripcion;
-        this.color;
-        crearNota();
+        this.titulo = '';
+        this.descripcion= '';
+        this.color='';
+      
     }
  
     crearNota(){
@@ -25,41 +25,41 @@ class Nota{
 
        const section = document.createElement('section');
        section.className = 'buttons-container';
-       const button1 = document.createElement('button');
+       const btnX = document.createElement('button');
        const img = document.createElement('img');
        img.src = 'img/remove-symbol.png';
-       button1.appendChild(img);
-       const button2 = document.createElement('button');
-       const button3 = document.createElement('button');
-       section.appendChild(button1);
-       section.appendChild(button2);
-       section.appendChild(button3);
+       btnX.appendChild(img);
+       const btnColor = document.createElement('button');
+       const input = document.createElement('input');
+       input.id = 'colorPicker';
+       input.className = 'color';
+       input.type = 'color';
+       input.value = '#ffd200';
+       this.color = '#ffd200';
+       btnColor.appendChild(input);
+       btnColor.addEventListener("change", () => {
+        const colorPicker = document.getElementById("colorPicker");
+        const triangle = document.querySelector(".triangle");
+        const colorElegido = colorPicker.value;
+    
+        nota.style.backgroundColor = colorElegido;
+        triangle.style.borderLeftColor = colorElegido;
+    })
+       const btnTilde = document.createElement('button');
+       const img2 = document.createElement('img');
+       img2.src = 'img/correct-symbol.png';
+       btnTilde.appendChild(img2);
+       section.appendChild(btnX);
+       section.appendChild(btnColor);
+       section.appendChild(btnTilde);
+       const i = document.createElement('i');
+       i.className = 'triangle';
 
         nota.appendChild(h2);
         nota.appendChild(textarea);
         nota.appendChild(section);
+        nota.appendChild(i);
 
-
-        
-        `<div class="notaSinAbsolute">
-        <h2><input type="text" placeholder="TITULO"></h2>
-        <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
-        <section class="buttons-container">
-            <button><img src="img/remove-symbol.png"></button>
-            <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
-            <button><img src="img/correct-symbol.png"></button>
-=======
-        const nota = ` <div class="nota">
-        <h2><input type="text" placeholder="TITULO"></h2>
-        <textarea  cols="30" rows="10" placeholder="Descripción"></textarea>
-        <section class="buttons-container">  
-            <button><img src="img/remove-symbol.png"></button> 
-            <button><input class="color" type="color" value="#ffd200"></button> 
-            <button><img src="img/correct-symbol.png"></button> 
->>>>>>> dd60454a79d949e3192f8aa95c8f0a76bfe24e3f
-        </section>
-        <section class="triangle"></section>
-    </div>`
     }
 
     agregarAlFront(){
