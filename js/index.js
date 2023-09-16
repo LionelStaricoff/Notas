@@ -19,6 +19,5 @@ colorPicker.addEventListener("change", () => {
 
 const nota = new Nota();
   nota.agregarAlFront();
-  const nota1 = new Nota();
-  nota1.agregarAlFront();
+
   
