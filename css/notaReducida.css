@@ -1,0 +1,58 @@
+.notaReducida {
+    width: 20em; 
+    padding: 2px; 
+    border: 3px groove rgba(205, 212, 26, 0.7);
+    box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
+    background-color: #fcfd9c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.notaReducida textarea,
+h2 input {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(204, 204, 200, 0.7);
+    font-family: 'Kalam', cursive;
+}
+
+.buttons-container {
+    margin-top: 0.1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.notaReducida button,
+img {
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+}
+
+.notaReducida button img {
+    border: 1px solid black;
+}
+
+.notaReducida button {
+    align-self: center;
+}
+
+.notaReducida button:hover {
+    transform: scale(140%);
+}
+.notaReducida button:active {
+    background-color: rgb(205, 200, 200);
+}
+
+.color {
+    border: 1px solid black;
+    width: 2em;
+}
+  

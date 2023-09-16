@@ -1,0 +1,79 @@
+@import url("nota.css");
+@import url("notaReducida.css");
+@import url("cambioDeColumnas.css");
+@import url("cuadro.css");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+header {
+    background-color: rgb(29, 212, 23); 
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-bottom: 2px solid black;
+    font-family: 'Kalam', cursive;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.titulo {
+    display: flex;
+    align-items: center;
+}
+.titulo img {
+    width: 6em;
+    height: 2.7em;
+    margin-right: 4em;
+    margin-left: 4em;
+    align-items: center;
+}
+.titulo h1 {
+    font-size: 2.5em;
+    text-shadow: -6px 6px 6px rgba(6, 91, 19, 0.8);
+}
+
+header button {
+    font-weight: bolder;
+    font-size: 2.6em;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    color: rgb(75, 230, 14);
+    background-color: rgb(3, 88, 24);
+    border: 3px ridge rgb(119, 187, 132);
+    box-shadow:5px 5px 5px rgb(55, 53, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 50px
+}
+header button:hover {
+    color: white
+}
+header button:active {
+    font-size: 2.2em;
+}
+
+main {
+    background-color: rgb(192, 248, 177);
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    padding: 1em;
+}
+
+.cambioDeColumna {
+    display: none;
+}
+
+
+
+

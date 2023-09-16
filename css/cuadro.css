@@ -1,0 +1,41 @@
+.cuadro {
+    width: 100vw;
+    height: 75vw;
+    position: absolute;
+}
+
+.cabezaCuadro {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    border-bottom: 2px solid black;
+    font-family: 'Kalam', cursive;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.iconos{
+    margin-left: 10px;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.columnaTitulo {
+    text-align: center;
+}
+
+.columnaTituloCentro {
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+.cuerpoCuadro {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: 90vh;
+}
+
+.columnaCuadroCentro {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
