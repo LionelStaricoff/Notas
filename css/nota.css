@@ -8,17 +8,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
     z-index: 5;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    margin-top: 1em;
+    margin-top: 7em; /*DEBO VOLVERLO A 1em */
     padding: 2px;
-    position: static;
+    position: relative;
+
 }
+.chinche {
+    width: 35px; /* Ajusta el ancho de la imagen de la chinche según tus necesidades */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    position: absolute;
+    top: -13px; /* Ajusta esta propiedad para controlar la posición vertical */
+    left: 45%; /* Ajusta esta propiedad para controlar la posición horizontal */
+    z-index: 10; /* Asegura que la imagen esté sobre otros elementos */
+}
+
 
 .nota textarea,
 h2 input {

@@ -18,7 +18,12 @@
 
 <body>
     <header>
-        <h1>App Notas</h1>
+        <div class="titulo">
+            <img src="img/notitas.png" alt="notitas">
+            <h1>App Notas</h1>
+            <img src="img/notitas.png" alt="notitas">
+
+        </div>
         <button>+</button>
     </header>
     <main>
@@ -26,7 +31,7 @@
         <div class="cuadro">
             <div class="cabezaCuadro">
                 <div class="columnaTitulo">IDEAS<img src="img/idea.png" class="iconos"></div>
-                <div class="columnaTitulo">EN PROCESO<img src="img/enProceso.png" class="iconos"></div>
+                <div class="columnaTituloCentro">EN PROCESO<img src="img/enProceso.png" class="iconos"></div>
                 <div class="columnaTitulo">COMPLETADAS<img src="img/hecho.png" class="iconos"></div>
             </div>
             <div class="cuerpoCuadro">
@@ -40,17 +45,18 @@
                             <button><input id="colorPicker" class="color" type="color" value="#ffd200"></button>
                             <button><img src="img/correct-symbol.png"></button>
                         </section>
-                        <section class="triangle"></section>
+                        <i class="triangle"></i>
                     </div>
 
                 </div>
-                <div class="columnaCuadro"></div>
+                <div class="columnaCuadroCentro"></div>
                 <div class="columnaCuadro"></div>
             </div>
         </div>
 
-        <!--Nota
+        <!--Nota-->
         <div class="nota">
+            <img class="chinche" src="img/chinche.png" alt="chinche">
             <h2><input type="text" placeholder="TITULO"></h2>
             <textarea cols="30" rows="10" placeholder="Descripción"></textarea>
             <section class="buttons-container">
@@ -60,7 +66,7 @@
             </section>
             <i class="triangle"></i>
 
-        </div>-->
+        </div>
 
 
 
