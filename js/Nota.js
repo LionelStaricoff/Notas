@@ -3,7 +3,7 @@ class Nota {
         this.titulo = '';
         this.descripcion = '';
         this.color = '';
-      //  this.agregarAlFront();
+        this.editar = true;
 
     }
 
@@ -12,6 +12,11 @@ class Nota {
 
         const nota = document.createElement('div');
         nota.className = 'nota';
+
+        const img1 = document.createElement('img');
+        img1.src = 'img/chinche.png';
+        img1.alt = 'imagen de chinche';
+        img1.className = 'chinche';
 
         const h2 = document.createElement('h2');
         const titulo = document.createElement('input');
@@ -29,6 +34,7 @@ class Nota {
         const btnX = document.createElement('button');
         const img = document.createElement('img');
         img.src = 'img/remove-symbol.png';
+        img.alt = 'imagen de una x'
         btnX.appendChild(img);
         const btnColor = document.createElement('button');
         const input = document.createElement('input');
@@ -37,10 +43,11 @@ class Nota {
         input.value = '#ffd200';
         this.color = '#ffd200';
         btnColor.appendChild(input);
-        
+
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
         img2.src = 'img/correct-symbol.png';
+        img2.alt = 'imagen de un tilde';
         btnTilde.appendChild(img2);
         section.appendChild(btnX);
         section.appendChild(btnColor);
@@ -48,12 +55,14 @@ class Nota {
         const i = document.createElement('i');
         i.className = 'triangle';
 
+        nota.appendChild(img1);
         nota.appendChild(h2);
         nota.appendChild(textarea);
         nota.appendChild(section);
         nota.appendChild(i);
-       
-        this.modificarColor(btnColor,nota,i,input);
+
+        this.modificarColor(btnColor, nota, i, input);
+        this.editarNota(btnTilde, titulo, textarea, nota);
 
         return nota;
     }
@@ -67,19 +76,40 @@ class Nota {
     cambiarDeEstado() {
 
     }
-    editar() {
+    editarNota(btnTilde, titulo, textarea, nota) {
 
-    }
-    eliminar() {
 
-    }
-    modificarColor(btnColor,nota,i,input) {
-        btnColor.addEventListener("change", () => {
-            this.color = input.value;
-            nota.style.backgroundColor = this.color;
-            i.style.borderLeftColor = this.color;
+        btnTilde.addEventListener('click', () => {
+
+            if (nota.style.position == 'relative') {
+                titulo.readOnly = false;
+                textarea.readOnly = false;
+                nota.style.position = 'absolute';
+            } else {
+                this.titulo = titulo.value;
+                this.descripcion = textarea.value;
+                titulo.readOnly = true;
+                textarea.readOnly = true;
+                nota.style.position = 'relative';
+
+            }
 
         });
-    }
+
+
+    
+
+}
+eliminar() {
+
+}
+modificarColor(btnColor, nota, i, input) {
+    btnColor.addEventListener("change", () => {
+        this.color = input.value;
+        nota.style.backgroundColor = this.color;
+        i.style.borderLeftColor = this.color;
+
+    });
+}
 }
 

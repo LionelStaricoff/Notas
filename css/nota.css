@@ -16,16 +16,21 @@
     margin: auto;
     margin-top: 7em; /*DEBO VOLVERLO A 1em */
     padding: 2px;
-    position: relative;
+    position: absolute;
 
 }
+
+.nota > *{
+    min-height: 0;
+}
+
 .chinche {
-    width: 35px;
-    height: auto;
+    width: 35px; /* Ajusta el ancho de la imagen de la chinche según tus necesidades */
+    height: auto; /* Mantiene la proporción original de la imagen */
     position: absolute;
-    top: -13px;
-    left: 45%;
-    z-index: 10;
+    top: -13px; /* Ajusta esta propiedad para controlar la posición vertical */
+    left: 45%; /* Ajusta esta propiedad para controlar la posición horizontal */
+    z-index: 10; /* Asegura que la imagen esté sobre otros elementos */
 }
 
 

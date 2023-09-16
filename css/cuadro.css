@@ -6,7 +6,7 @@
 
 .cabezaCuadro {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 2px solid black;
     font-family: 'Kalam', cursive;
     font-size: 1.8em;
@@ -31,7 +31,7 @@
 
 .cuerpoCuadro {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 90vh;
 }
 
