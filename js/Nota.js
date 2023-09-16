@@ -86,6 +86,8 @@ class Nota {
                 textarea.readOnly = false;
                 nota.style.position = 'absolute';
             } else {
+                this.titulo = titulo.value;
+                this.descripcion = textarea.value;
                 titulo.readOnly = true;
                 textarea.readOnly = true;
                 nota.style.position = 'relative';
