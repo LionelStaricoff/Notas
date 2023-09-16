@@ -16,6 +16,7 @@ class Nota {
          const img1 = document.createElement('img');
          img1.src = 'img/chinche.png';
          img1.alt = 'imagen de chinche';
+         img1.className = 'chinche';
 
         const h2 = document.createElement('h2');
         const titulo = document.createElement('input');
@@ -54,7 +55,7 @@ class Nota {
         const i = document.createElement('i');
         i.className = 'triangle';
 
-        nota.appendChild(img2);
+        nota.appendChild(img1);
         nota.appendChild(h2);
         nota.appendChild(textarea);
         nota.appendChild(section);
