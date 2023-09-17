@@ -63,6 +63,7 @@ class Nota {
 
         this.modificarColor(btnColor, nota, i, input);
         this.editarNota(btnTilde, titulo, textarea, nota);
+        this.eliminar(nota,btnX);
 
         return nota;
     }
@@ -100,7 +101,14 @@ class Nota {
     
 
 }
-eliminar() {
+eliminar(nota,btnX) {
+    btnX.addEventListener('click',()=>{
+      // modificar el prompt
+       const respuesta = confirm("Seguro que decesa eliminarlo?");
+         if(respuesta == 1){ nota.style.display = 'none'};
+        
+    });
+
 
 }
 modificarColor(btnColor, nota, i, input) {
