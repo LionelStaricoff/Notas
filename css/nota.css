@@ -43,6 +43,7 @@ h2 input {
 }
 textarea {
     height: 15em;
+    margin-bottom: 0.5em
 }
 input {
     font-weight: 800;
@@ -50,7 +51,7 @@ input {
 }
 
 .buttons-container {
-    margin-top: 0.1em;
+    margin-bottom: .5em;
     display: flex;
     justify-content: space-evenly;
 }
@@ -66,7 +67,6 @@ img {
 
 .nota button img {
     border: 1px solid black;
-    border-radius: 4px;
 }
 .nota button {
     align-self: center;

@@ -9,7 +9,6 @@ class Nota {
 
     crearNota() {
 
-
         const nota = document.createElement('div');
         nota.className = 'nota';
 
@@ -75,7 +74,28 @@ class Nota {
 
     }
     cambiarDeEstado() {
-
+        const cambioDeColumna = document.createElement('div');
+        cambioDeColumna.className = 'cambioDeColumna'
+    
+        const btnIdea = document.createElement('button');
+        const img =  'img/idea.png';
+        img.src = 'img/idea.png';
+        img.alt = 'imagen IDEA';
+        btnIdea.appendChild(img);
+    
+        const btnEnProceso = document.createElement('button');
+        const img1 =  'img/enProceso.png';
+        img1.src = 'img/enProceso.png';
+        img1.alt = 'imagen En Proceso';
+        btnEnProceso.appendChild(img1);
+    
+    
+        const btnCompletada = document.createElement('button');
+        const img2 =  'img/hecho.png';
+        img2.src = 'img/hecho.png';
+        img2.alt = 'imagen Completada';
+        btnCompletada.appendChild(img2);
+    
     }
     editarNota(btnTilde, titulo, textarea, nota) {
 

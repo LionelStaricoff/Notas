@@ -1,6 +1,6 @@
 .notaReducida {
     width: min(100%, 20em); 
-    border: 3px groove rgba(205, 212, 26, 0.7);
+    border: 3px groove rgba(108, 108, 106, 0.7);
     box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
     background-color: #fcfd9c;
     display: flex;
@@ -8,9 +8,22 @@
     justify-content: space-around;
     z-index: 5;
     margin: auto;
-    margin-top: 1em;
+    margin-top: 0em;
     padding: 2px; 
-    position: relative;
+    position: absolute;
+}
+
+.nota > *{
+    min-height: 0;
+}
+
+.chinche {
+    width: 35px; 
+    height: auto;
+    position: absolute;
+    top: -13px; 
+    left: 45%; 
+    z-index: 10;
 }
 
 .notaReducida textarea,
@@ -23,11 +36,13 @@ h2 input {
 }
 textarea {
     height: 15em;
+    margin-bottom: 0.5em
 }
 input {
     font-weight: 800;
     font-size: .8em;
 }
+
 .buttons-container {
     margin-top: 0.1em;
     display: flex;
@@ -52,14 +67,11 @@ img {
 }
 
 .notaReducida button:hover {
-    transform: scale(140%);
+    transform: scale(130%);
 }
 .notaReducida button:active {
     background-color: rgb(205, 200, 200);
 }
 
-.color {
-    border: 1px solid black;
-    width: 2em;
-}
+
   
