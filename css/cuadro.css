@@ -1,41 +1,118 @@
 .cuadro {
     width: 100vw;
-    height: 75vw;
+    height: 89vh;
     position: absolute;
 }
 
 .cabezaCuadro {
+    height: 9vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 2px solid black;
     font-family: 'Kalam', cursive;
     font-size: 1.8em;
     font-weight: bold;
+    text-align: center;
 }
 .iconos{
-    margin-left: 10px;
-    width: 1.8em;
-    height: 1.8em;
+    margin-left: .6em;
+    width: 1.4em;
+    height: 1.4em;
 }
 
 .columnaTitulo {
-    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .columnaTituloCentro {
-    text-align: center;
     border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 1px solid black;    
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: .2em
 
 }
 
 .cuerpoCuadro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 90vh;
+    height: 81vh;
 }
 
 .columnaCuadroCentro {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+
+
+@media (max-width: 320px) {
+    .cabezaCuadro {
+        height: 6vh;
+        font-size: .6em;
+    }
+
+    .iconos{
+        margin-left: .1em;
+    }
+    .cuerpoCuadro {
+        height: 84vh;  
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .cabezaCuadro {
+        height: 6vh;
+        font-size: 0.8em;
+    }
+    .cuerpoCuadro {
+        height: 84vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 650px) {
+    .cabezaCuadro {
+        height: 8vh;
+        font-size: 0.8em;
+    }
+    .cuerpoCuadro {
+        height: 82vh;
+    }
+}
+
+@media screen and (min-width: 651px) and (max-width: 767px) {
+    .cabezaCuadro {
+        height: 9vh;
+        font-size: .8em;
+    }
+    .cuerpoCuadro {
+        height: 81vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 819px) {
+    .cabezaCuadro {
+        font-size: 1.6em;
+    }
+}
+@media screen and (min-width: 820px) and (max-width: 914px) {
+    .cabezaCuadro {
+        height: 7vh;
+        font-size: 1em;
+    }
+    .cuerpoCuadro {
+        height: 83vh;
+    }
+}
+@media screen and (min-width: 915px) and (max-width: 1300px) {
+    .cabezaCuadro {
+        height: 7vh;
+        font-size: 1em;
+    }
+    .cuerpoCuadro {
+        height: 83vh;
+    }
+}
+
+

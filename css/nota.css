@@ -1,6 +1,6 @@
 /* efecto notas */
 .nota {
-    width: min(100%, 18em);
+    width: min(100%, 20em);
     height: 15em;
     border: 3px groove rgba(108, 108, 106, 0.7);
     box-shadow: 10px 10px 10px rgba(69, 68, 66, 0.7);
@@ -14,7 +14,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    margin-top: 7em; /*DEBO VOLVERLO A 1em */
+    margin-top: 1em;
     padding: 2px;
     position: absolute;
 
@@ -25,14 +25,13 @@
 }
 
 .chinche {
-    width: 35px; /* Ajusta el ancho de la imagen de la chinche según tus necesidades */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    width: 35px; 
+    height: auto;
     position: absolute;
-    top: -13px; /* Ajusta esta propiedad para controlar la posición vertical */
-    left: 45%; /* Ajusta esta propiedad para controlar la posición horizontal */
-    z-index: 10; /* Asegura que la imagen esté sobre otros elementos */
+    top: -13px; 
+    left: 45%; 
+    z-index: 10;
 }
-
 
 .nota textarea,
 h2 input {
@@ -51,8 +50,9 @@ input {
 }
 
 .buttons-container {
+    margin-top: 0.1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .nota button,
@@ -61,12 +61,12 @@ img {
     height: 2em;
     background: transparent;
     border: none;
+    border-radius: 4px;
 }
 
 .nota button img {
     border: 1px solid black;
     border-radius: 4px;
-
 }
 .nota button {
     align-self: center;
@@ -84,7 +84,7 @@ img {
     border-radius: 4px;
 }
 
-.triangle {
+.nota:hover .triangle {
     width: 24px;
     height: 24px;
     border-bottom: 24px solid transparent;
