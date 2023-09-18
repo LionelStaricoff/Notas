@@ -1,9 +1,11 @@
 class Nota {
-    constructor() {
-        this.titulo = '';
-        this.descripcion = '';
-        this.color = '';
-        this.editar = true;
+    constructor(titulo,descripcion,color,position,estado) {
+
+        this.titulo = titulo??'';
+        this.descripcion = descripcion??'';
+        this.color =color?? '#ffd200';
+        this.estado =estado?? util.estados[0];
+        this.position = position??'absolute';
 
     }
 
@@ -11,6 +13,8 @@ class Nota {
 
         const nota = document.createElement('div');
         nota.className = 'nota';
+        nota.style.backgroundColor = this.color;
+        nota.style.position = this.position;
 
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
@@ -21,12 +25,16 @@ class Nota {
         const titulo = document.createElement('input');
         titulo.type = "text";
         titulo.placeholder = "TITULO";
+        titulo.className = "titulo";
+        titulo.value = this.titulo;
         h2.appendChild(titulo);
 
         const textarea = document.createElement('textarea');
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
+        const titleTextarea = document.createTextNode(this.descripcion);
+        textarea.appendChild(titleTextarea);
 
         const section = document.createElement('section');
         section.className = 'buttons-container';
@@ -39,8 +47,7 @@ class Nota {
         const input = document.createElement('input');
         input.className = 'color';
         input.type = 'color';
-        input.value = '#ffd200';
-        this.color = '#ffd200';
+        input.value = this.color;
         btnColor.appendChild(input);
 
         const btnTilde = document.createElement('button');
@@ -53,6 +60,7 @@ class Nota {
         section.appendChild(btnTilde);
         const i = document.createElement('i');
         i.className = 'triangle';
+        i.style.borderLeftColor = this.color;
 
         nota.appendChild(img1);
         nota.appendChild(h2);
@@ -62,7 +70,7 @@ class Nota {
 
         this.modificarColor(btnColor, nota, i, input);
         this.editarNota(btnTilde, titulo, textarea, nota);
-        this.eliminar(nota,btnX);
+        this.eliminar(nota, btnX);
 
         return nota;
     }
@@ -118,26 +126,28 @@ class Nota {
         });
 
 
+
+
+    }
+    eliminar(nota, btnX) {
+        btnX.addEventListener('click', () => {
+            // modificar el prompt
+            const respuesta = confirm("Seguro que decesa eliminarlo?");
+            if (respuesta == 1) { nota.style.display = 'none' };
+
+        });
+
+
+    }
+    modificarColor(btnColor, nota, i, input) {
+        btnColor.addEventListener("change", () => {
+            this.color = input.value;
+            nota.style.backgroundColor = this.color;
+            i.style.borderLeftColor = this.color;
+
+        });
+    }
+
     
-
-}
-eliminar(nota,btnX) {
-    btnX.addEventListener('click',()=>{
-      // modificar el prompt
-       const respuesta = confirm("Seguro que decesa eliminarlo?");
-         if(respuesta == 1){ nota.style.display = 'none'};
-        
-    });
-
-
-}
-modificarColor(btnColor, nota, i, input) {
-    btnColor.addEventListener("change", () => {
-        this.color = input.value;
-        nota.style.backgroundColor = this.color;
-        i.style.borderLeftColor = this.color;
-
-    });
-}
 }
 

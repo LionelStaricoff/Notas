@@ -41,6 +41,9 @@ h2 input {
     border: 1px solid rgba(204, 204, 200, 0.7);
     font-family: 'Kalam', cursive;
 }
+.nota textarea:focus,h2 input:focus{
+    outline:none;
+}
 textarea {
     height: 15em;
     margin-bottom: 0.5em
@@ -72,7 +75,7 @@ img {
     align-self: center;
 }
 .nota button:hover {
-    transform: scale(130%);
+    transform: scale(90%);
 }
 .nota button:active {
     background-color: rgb(205, 200, 200);
@@ -95,5 +98,10 @@ img {
     position: absolute;
     bottom: 0;
     right: 0;
-    filter: brightness(0.8)
+    filter: brightness(0.8);
+    display: none;
 } 
+
+.nota:hover .triangle {
+    display: block;
+}
