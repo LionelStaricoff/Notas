@@ -44,6 +44,9 @@ h2 input {
 .nota textarea:focus,h2 input:focus{
     outline:none;
 }
+h2 {
+    margin-top:0.2em
+}
 textarea {
     height: 15em;
     margin-bottom: 0.5em;
@@ -76,10 +79,10 @@ img {
     align-self: center;
 }
 .nota button:hover {
-    transform: scale(90%);
+    transform: scale(120%);
 }
 .nota button:active {
-    background-color: rgb(205, 200, 200);
+    background-color: rgb(228, 228, 228);
 }
 .color {
     border: 1px solid black;

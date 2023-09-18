@@ -109,8 +109,7 @@ class Nota {
         cambioDeColumna.appendChild(btnCompletada);
     
     }
-    editarNota(btnTilde, titulo, textarea, nota) {
-
+/*    editarNota(btnTilde, titulo, textarea, nota) {
 
         btnTilde.addEventListener('click', () => {
 
@@ -129,29 +128,83 @@ class Nota {
 
         });
 
+    }*/
 
 
-
-    }
-    eliminar(nota, btnX) {
-        btnX.addEventListener('click', () => {
-            // modificar el prompt
-            const respuesta = confirm("Seguro que decesa eliminarlo?");
-            if (respuesta == 1) { nota.style.display = 'none' };
-
+eliminar(nota,btnX) {
+        btnX.addEventListener('click',()=>{
+      // modificar el prompt
+        const respuesta = confirm("Seguro que decesa eliminarlo?");
+            if(respuesta == 1){ nota.style.display = 'none'};
+        
         });
 
 
     }
-    modificarColor(btnColor, nota, i, input) {
-        btnColor.addEventListener("change", () => {
-            this.color = input.value;
-            nota.style.backgroundColor = this.color;
-            i.style.borderLeftColor = this.color;
+        modificarColor(btnColor, nota, i, input) {
+            btnColor.addEventListener("change", () => {
+                this.color = input.value;
+                nota.style.backgroundColor = this.color;
+                i.style.borderLeftColor = this.color;
 
-        });
+            });
     }
 
-    
+
+
+guardarNota(btnTilde, titulo, textarea, nota, btnColor) {
+
+        btnTilde.addEventListener('click', () => {
+
+            textarea.style.display = 'none';
+            nota.className = 'notaReducida';
+
+            if (nota.style.position == 'relative') {
+                titulo.readOnly = false;
+                textarea.readOnly = false;
+                nota.style.position = 'absolute';
+                
+            } else {
+                this.titulo = titulo.value;
+                this.descripcion = textarea.value;
+                titulo.readOnly = true;
+                textarea.readOnly = true;
+                nota.style.position = 'relative';
+
+            }
+
+        });
+
+    }
+
 }
+/*
+const btnEditar = document.createElement('button');
+const img4 = document.createElement('img');
+img4.src = 'img/edit.png';
+img4.alt = 'imagen de un lapiz';
+btnEditar.appendChild(img4);
 
+const btnMover = document.createElement('button');
+const img5 = document.createElement('img');
+img5.src = 'img/flecha.png';
+img5.alt = 'imagen de flechas';
+btnMover.appendChild(img5);
+
+textarea.style.display = 'none';
+nota.className = 'notaReducida';
+
+section.removeChild(btnColor);
+section.appendChild(btnEditar);
+
+section.removeChild(btnTilde);
+section.appendChild(btnMover);
+
+          nota.className = 'notaReducida';
+            textarea.style.display = 'none';
+
+            section.removeChild(btnColor);
+            section.removeChild(btnTilde);
+
+
+*/
