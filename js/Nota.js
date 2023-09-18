@@ -118,12 +118,14 @@ class Nota {
                 titulo.readOnly = false;
                 textarea.readOnly = false;
                 nota.style.position = 'absolute';
+               
             } else {
                 this.titulo = titulo.value;
                 this.descripcion = textarea.value;
                 titulo.readOnly = true;
                 textarea.readOnly = true;
                 nota.style.position = 'relative';
+                this.RealizarCambios(btnTilde);
 
             }
 
@@ -150,6 +152,11 @@ class Nota {
             i.style.borderLeftColor = this.color;
 
         });
+    }
+
+    RealizarCambios(nota){
+       // nota.btnColor.style.display = 'none';
+        
     }
 
     
