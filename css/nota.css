@@ -46,7 +46,8 @@ h2 input {
 }
 textarea {
     height: 15em;
-    margin-bottom: 0.5em
+    margin-bottom: 0.5em;
+    font-size: 1em;
 }
 input {
     font-weight: 800;
