@@ -9,7 +9,7 @@ buttons[0].addEventListener('click', util.btnGuardar);
 //cargrar todas las notas
 buttons[1].addEventListener('click', util.btnCargar);
 
-util.promptCambiar();
+//util.promptCambiarNota();
 
 
 

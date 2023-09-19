@@ -153,25 +153,44 @@ const util = {
     };
   },
 
-  promptCambiar: () => {
-
+  promptCambiarNota: (nota, estado) => {
+  
     const main = document.querySelector('.cuerpoCuadro');
     const divs = main.querySelectorAll('div');
-
+  
     const section = document.createElement('section');
     section.className = 'prompt';
 
     const button1 = document.createElement('button');
     button1.innerHTML = util.estados[0];
+    button1.addEventListener('click',()=>{
+      divs[estado].removeChild(nota);
+      divs[0].appendChild(nota);
+      section.style.display = 'none';
+    });
 
     const button2 = document.createElement('button');
     button2.innerHTML = util.estados[1];
+    button2.addEventListener('click',()=>{
+      divs[estado].removeChild(nota);
+      divs[1].appendChild(nota);
+      section.style.display = 'none';
+    });
 
     const button3 = document.createElement('button');
     button3.innerHTML = util.estados[2];
+    button3.addEventListener('click',()=>{
+      divs[estado].removeChild(nota);
+      divs[2].appendChild(nota);
+      section.style.display = 'none';
+    });
 
     const buttonX = document.createElement('button');
     buttonX.innerHTML = 'X';
+    buttonX.addEventListener('click',()=>{
+      section.style.display = 'none';
+
+    });
 
     section.appendChild(button1);
     section.appendChild(button2);
@@ -179,7 +198,6 @@ const util = {
     section.appendChild(buttonX);
  
 
-    //divs[0].appendChild(section);
     main.appendChild(section);
   }
 
