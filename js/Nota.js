@@ -189,7 +189,7 @@ class Nota {
         imgMover.src = 'img/flecha.png'
         btnMover.appendChild(imgMover);
         btnMover.addEventListener('click',()=>{
-            util.promptCambiarNota(nota,this.getEstado());
+            util.promptCambiarNota(this,this.getEstado());
         })
 
         btns[1].replaceWith(btnEditar);

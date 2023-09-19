@@ -156,7 +156,10 @@ const util = {
   promptCambiarNota: (nota, estado) => {
   
     const main = document.querySelector('.cuerpoCuadro');
-    const divs = main.querySelectorAll('div');
+    const div1 = main.querySelector('.idea');
+    const div2 = main.querySelector('.enProceso');
+    const div3 = main.querySelector('.completada');
+    const divs = [div1,div2,div3];
   
     const section = document.createElement('section');
     section.className = 'prompt';
@@ -164,24 +167,27 @@ const util = {
     const button1 = document.createElement('button');
     button1.innerHTML = util.estados[0];
     button1.addEventListener('click',()=>{
-      divs[estado].removeChild(nota);
-      divs[0].appendChild(nota);
+      divs[estado].removeChild(nota.nota);
+      divs[0].appendChild(nota.nota);
+      nota.estado = util.estados[0];
       section.style.display = 'none';
     });
 
     const button2 = document.createElement('button');
     button2.innerHTML = util.estados[1];
     button2.addEventListener('click',()=>{
-      divs[estado].removeChild(nota);
-      divs[1].appendChild(nota);
+      divs[estado].removeChild(nota.nota);
+      divs[1].appendChild(nota.nota);
+      nota.estado = util.estados[1];
       section.style.display = 'none';
     });
 
     const button3 = document.createElement('button');
     button3.innerHTML = util.estados[2];
     button3.addEventListener('click',()=>{
-      divs[estado].removeChild(nota);
-      divs[2].appendChild(nota);
+      divs[estado].removeChild(nota.nota);
+      divs[2].appendChild(nota.nota);
+      nota.estado = util.estados[2];
       section.style.display = 'none';
     });
 
