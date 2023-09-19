@@ -109,8 +109,9 @@ class Nota {
         cambioDeColumna.appendChild(btnCompletada);
     
     }
-    editarNota(btnTilde, titulo, textarea, nota) {
 
+
+    editarNota(btnTilde, titulo, textarea, nota) {
 
         btnTilde.addEventListener('click', () => {
 
@@ -118,6 +119,7 @@ class Nota {
                 titulo.readOnly = false;
                 textarea.readOnly = false;
                 nota.style.position = 'absolute';
+                this.agrandarNota(nota);
                
             } else {
                 this.titulo = titulo.value;
@@ -125,7 +127,7 @@ class Nota {
                 titulo.readOnly = true;
                 textarea.readOnly = true;
                 nota.style.position = 'relative';
-                this.RealizarCambios(btnTilde);
+                this.achicarNota(nota);
 
             }
 
@@ -146,6 +148,7 @@ class Nota {
 
     }
     modificarColor(btnColor, nota, i, input) {
+
         btnColor.addEventListener("change", () => {
             this.color = input.value;
             nota.style.backgroundColor = this.color;
@@ -154,9 +157,66 @@ class Nota {
         });
     }
 
-    RealizarCambios(nota){
-       // nota.btnColor.style.display = 'none';
+    achicarNota(nota){
+       const btns =  nota.querySelectorAll('button');
+       const textarea =  nota.querySelector('textarea');
+       const titulo = nota.querySelector('input')
+
+       textarea.style.display = 'none';
+       nota.style.height = '5em';
+
+       const btnEditar = document.createElement('button');
+       btnEditar.className = 'boton-editar';
+       const imgEditar = document.createElement('img');
+       imgEditar.src = 'img/edit.png'
+       btnEditar.appendChild(imgEditar);
+       btnEditar.addEventListener('click', 
+       this.editarNota(btnEditar, titulo, textarea, nota));
+
+       const btnMover = document.createElement('button');
+       btnMover.className = 'boton-mover';
+       const imgMover = document.createElement('img');
+       imgMover.src = 'img/flecha.png'
+       btnMover.appendChild(imgMover);
+      
+       btns[1].replaceWith(btnEditar);
+       btns[2].replaceWith(btnMover);
+
+    }
+
+    agrandarNota(nota){
+        const btns =  nota.querySelectorAll('button');
+        const textarea =  nota.querySelector('textarea');
+        const section =  nota.querySelector('section');
+        const i =  nota.querySelector('i');
+        const titulo =  nota.querySelector('input');
+ 
+        textarea.style.display = 'block';
+        nota.style.height = '15em';
+
+        const btnTilde = document.createElement('button');
+        const img2 = document.createElement('img');
+        img2.src = 'img/correct-symbol.png';
+        img2.alt = 'imagen de un tilde';
+        btnTilde.appendChild(img2);
+
+        const btnColor = document.createElement('button');
+        const input = document.createElement('input');
+        input.className = 'color';
+        input.type = 'color';
+        input.value = this.color;
+        btnColor.appendChild(input);
+
+
+        this.modificarColor(btnColor, nota, i, input);
+        this.editarNota(btnTilde, titulo, textarea, nota);
+
+        btns[1].replaceWith(btnColor);
+        btns[2].replaceWith(btnTilde);
+
         
+    
+
     }
 
     
