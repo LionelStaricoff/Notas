@@ -2,6 +2,7 @@
 @import url("notaReducida.css");
 @import url("cambioDeColumnas.css");
 @import url("cuadro.css");
+@import url("prompt.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
 * {
@@ -17,7 +18,7 @@ header {
     height: 11vh;
     display: grid;
     place-items: center;
-   /* position: relative;*/
+    /* position: relative;*/
     border-bottom: 2px solid black;
 }
 
@@ -41,11 +42,11 @@ header {
     text-shadow: -6px 6px 6px rgba(6, 91, 19, 0.8);
 }
 
-header button{
-align-self: flex-start;
+header button {
+    align-self: flex-start;
 }
 
-header button:last-child{
+header button:last-child {
     font-weight: bolder;
     font-size: 2.8em;
     border-radius: 50%;
@@ -125,7 +126,8 @@ main {
 
     header button:active {
         font-size: 1em;
-    }}
+    }
+}
 
 @media screen and (min-width: 481px) and (max-width: 653px) {
     .titulo img {
@@ -175,6 +177,7 @@ main {
     .header {
         height: 12vh;
     }
+
     .titulo img {
         margin-right: 1.5em;
         margin-left: 1.5em;
@@ -197,6 +200,7 @@ main {
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
         font-size: 1.8em;
     }
@@ -205,6 +209,7 @@ main {
         font-size: 1.8em;
         right: 1em
     }
+
     header button:hover {
         font-size: 1.5em;
     }
@@ -218,6 +223,7 @@ main {
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
         font-size: 1.6em;
     }
@@ -234,4 +240,6 @@ main {
     main {
         height: 89vh;
     }
+
+  
 }

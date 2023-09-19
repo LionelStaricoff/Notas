@@ -153,29 +153,34 @@ const util = {
     };
   },
 
-  promptCambiar: (nota) => {
+  promptCambiar: () => {
 
-    const main = document.querySelector('main');
-
-    const div = document.createElement('div');
-    div.className = 'botonesCambioDeEstado';
+    const main = document.querySelector('.cuerpoCuadro');
+    const divs = main.querySelectorAll('div');
 
     const section = document.createElement('section');
-    section.className = 'cambioDeColumna';
+    section.className = 'prompt';
 
     const button1 = document.createElement('button');
-    button1.src = 'img/idea.png';
+    button1.innerHTML = util.estados[0];
+
     const button2 = document.createElement('button');
-    button1.src = 'img/enProceso.png';
+    button2.innerHTML = util.estados[1];
+
     const button3 = document.createElement('button');
-    button1.src = 'img/hecho.png';
-    
+    button3.innerHTML = util.estados[2];
+
+    const buttonX = document.createElement('button');
+    buttonX.innerHTML = 'X';
+
     section.appendChild(button1);
     section.appendChild(button2);
     section.appendChild(button3);
-    div.appendChild(section);
+    section.appendChild(buttonX);
+ 
 
-    main.appendChild(div);
+    //divs[0].appendChild(section);
+    main.appendChild(section);
   }
 
 }
