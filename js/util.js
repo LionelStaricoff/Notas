@@ -1,7 +1,7 @@
 const util = {
 
-
   estados: ['ideas', 'en proceso', 'completadas'],
+
 
   btnCrearNota: function () {
     const columnas = document.querySelectorAll('.columnaCuadro');
@@ -24,6 +24,7 @@ const util = {
     // Recorrer los elementos y obtener los valores
     for (var i = 0; i < notas.length; i++) {
 
+
       const a = notas[i].style.position;
 
       const nota = document.querySelector('.nota');
@@ -36,12 +37,12 @@ const util = {
         color: backgroundColor,
         // color: notas[i].querySelector('.color').value,
         position: notas[i].style.position
+
       }
 
       datosNotas.push(nuevaNota);
 
     }
-
 
     // Guarda el array de notas en el local storage
     localStorage.setItem('notas', JSON.stringify(datosNotas));
@@ -60,6 +61,7 @@ const util = {
 
       const columnas = document.querySelectorAll('.columnaCuadro');
 
+
       for (a of notasArray) {
         let nota = new Nota(a.input, a.textarea,
           a.color, a.position);
@@ -75,7 +77,6 @@ const util = {
         }
       }
 
-
       // Notifica al usuario que las notas fueron recuperadas
       alert('Notas recuperadas exitosamente');
     } else {
@@ -83,8 +84,6 @@ const util = {
       alert('No hay notas guardadas');
     }
   },
-
-
 
 
   importarArchivo: () => {
@@ -211,4 +210,5 @@ const util = {
 
 
 //https://developer.chrome.com/es/articles/browser-fs-access/##%20La%20API%20de%20File%20System%20Access
+
 

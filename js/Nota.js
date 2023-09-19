@@ -18,7 +18,6 @@ class Nota {
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
 
-
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
         img1.alt = 'imagen de chinche';
@@ -255,6 +254,19 @@ class Nota {
         return e;
     }
 
+        });
 
+
+    }
+    modificarColor(btnColor, nota, i, input) {
+        btnColor.addEventListener("change", () => {
+            this.color = input.value;
+            nota.style.backgroundColor = this.color;
+            i.style.borderLeftColor = this.color;
+
+        });
+    }
+
+    
 }
 
