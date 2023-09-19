@@ -1,5 +1,5 @@
 
-.prompt{
+/*.prompt{
     width: 20em;
     height: 20em;
     position: absolute;
@@ -12,7 +12,8 @@
     display: grid;
    padding: 1em;
    gap: 1em;
-   border: 3px solid blue;
+   border: 3px solid blue; 
 
-}
+
+}*/
 
