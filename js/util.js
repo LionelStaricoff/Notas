@@ -65,7 +65,7 @@ const util = {
           a.color, a.position);
 
         nota.crearNota();
-        
+
         nota.agregarAlFront();
         nota1 = nota.getNota();
 
@@ -151,6 +151,31 @@ const util = {
       });
       a.click();
     };
+  },
+
+  promptCambiar: (nota) => {
+
+    const main = document.querySelector('main');
+
+    const div = document.createElement('div');
+    div.className = 'botonesCambioDeEstado';
+
+    const section = document.createElement('section');
+    section.className = 'cambioDeColumna';
+
+    const button1 = document.createElement('button');
+    button1.src = 'img/idea.png';
+    const button2 = document.createElement('button');
+    button1.src = 'img/enProceso.png';
+    const button3 = document.createElement('button');
+    button1.src = 'img/hecho.png';
+    
+    section.appendChild(button1);
+    section.appendChild(button2);
+    section.appendChild(button3);
+    div.appendChild(section);
+
+    main.appendChild(div);
   }
 
 }
