@@ -258,10 +258,10 @@ class Nota {
         return e;
     }
 
-        });
+        
 
 
-    }
+    
     modificarColor(btnColor, nota, i, input) {
         btnColor.addEventListener("change", () => {
             this.color = input.value;
@@ -271,6 +271,6 @@ class Nota {
         });
     }
 
-    
 }
+
 

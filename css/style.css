@@ -42,7 +42,7 @@ header {
     text-shadow: -6px 6px 6px rgba(6, 91, 19, 0.8);
 }
 
-header button {
+header button:last-child {
     align-self: flex-start;
     font-weight: bolder;
     font-size: 2.8em;
