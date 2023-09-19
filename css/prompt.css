@@ -1,0 +1,18 @@
+
+.prompt{
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: aqua;
+    display: grid;
+   padding: 1em;
+   gap: 1em;
+   border: 3px solid blue;
+
+}
+
