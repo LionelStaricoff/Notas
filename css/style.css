@@ -71,7 +71,7 @@ header button:active {
 main {
     background-color: rgb(192, 248, 177);
     width: 100vw;
-    height: 89vh;
+    min-height: 89vh;
     position: relative;
 }
 

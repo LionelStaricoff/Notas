@@ -1,6 +1,6 @@
 .cuadro {
     width: 100vw;
-    height: 89vh;
+    min-height: 89vh;
     position: absolute;
 }
 
@@ -39,7 +39,7 @@
 .cuerpoCuadro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 81vh;
+    min-height: 81vh;
 }
 
 .columnaCuadroCentro {
