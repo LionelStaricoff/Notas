@@ -24,19 +24,24 @@ const util = {
     // Recorrer los elementos y obtener los valores
     for (var i = 0; i < notas.length; i++) {
 
-     const a =notas[i].style.position;
-    
+      const a = notas[i].style.position;
+
+      const nota = document.querySelector('.nota');
+      const style = getComputedStyle(nota);
+      const backgroundColor = style.getPropertyValue('background-color');
+
       const nuevaNota = {
         input: notas[i].querySelector('.titulo').value,
         textarea: notas[i].querySelector('textarea').value,
-        color: notas[i].querySelector('.color').value,
-        position : notas[i].style.position
+        color: backgroundColor,
+        // color: notas[i].querySelector('.color').value,
+        position: notas[i].style.position
       }
 
       datosNotas.push(nuevaNota);
 
     }
-  
+
 
     // Guarda el array de notas en el local storage
     localStorage.setItem('notas', JSON.stringify(datosNotas));
@@ -55,12 +60,21 @@ const util = {
 
       const columnas = document.querySelectorAll('.columnaCuadro');
 
-      for ( a  of notasArray ){
-        const nota = new Nota(a.input,a.textarea,
-          a.color,a.position);
+      for (a of notasArray) {
+        let nota = new Nota(a.input, a.textarea,
+          a.color, a.position);
+
+        nota.crearNota();
+        
         nota.agregarAlFront();
+        nota1 = nota.getNota();
+
+        if (nota.position != 'absolute') {
+          nota.agrandarNota(nota1);
+          nota.achicarNota(nota1);
+        }
       }
-   
+
 
       // Notifica al usuario que las notas fueron recuperadas
       alert('Notas recuperadas exitosamente');
@@ -73,48 +87,48 @@ const util = {
 
 
 
- importarArchivo :  ()=>{
-  alert('GuardarArchivoBBDD');
- 
-// Define el contenido del archivo de texto
-const contenido = 'Este es el contenido del archivo de texto';
+  importarArchivo: () => {
+    alert('GuardarArchivoBBDD');
 
-// Crea un enlace simulado para descargar el archivo
-const link = document.createElement('a');
-link.href = URL.createObjectURL(new Blob([contenido], { type: 'text/plain' }));
-link.download = 'archivo.txt';
-link.click();
+    // Define el contenido del archivo de texto
+    const contenido = 'Este es el contenido del archivo de texto';
+
+    // Crea un enlace simulado para descargar el archivo
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([contenido], { type: 'text/plain' }));
+    link.download = 'archivo.txt';
+    link.click();
 
 
   },
 
-  exportarArchivo :()=>{
+  exportarArchivo: () => {
     alert('cargarArchivoBBDD');
- 
-// Carga el archivo utilizando la API fetch
-fetch('archivo.txt')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Error al cargar el archivo');
-    }
-    return response.text();
-  })
-  .then(data => {
-    // Muestra el contenido del archivo en la consola
-    console.log(data);
-  })
-  .catch(error => {
-    // Maneja el error
-    console.error(error);
-  
 
-});
+    // Carga el archivo utilizando la API fetch
+    fetch('archivo.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al cargar el archivo');
+        }
+        return response.text();
+      })
+      .then(data => {
+        // Muestra el contenido del archivo en la consola
+        console.log(data);
+      })
+      .catch(error => {
+        // Maneja el error
+        console.error(error);
+
+
+      });
 
 
 
   },
 
-   btnCargarArchivo: ()=>{
+  btnCargarArchivo: () => {
     const openFile = async () => {
       return new Promise((resolve) => {
         const input = document.createElement('input');
@@ -127,7 +141,7 @@ fetch('archivo.txt')
     };
   },
 
-  btnGuardarArchivo : ()=>{
+  btnGuardarArchivo: () => {
     const saveFile = async (blob) => {
       const a = document.createElement('a');
       a.download = 'my-file.txt';

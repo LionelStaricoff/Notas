@@ -1,4 +1,5 @@
 class Nota {
+   
     constructor(titulo,descripcion,color,position,estado) {
 
         this.titulo = titulo??'';
@@ -6,6 +7,7 @@ class Nota {
         this.color =color?? '#ffd200';
         this.estado =estado?? util.estados[0];
         this.position = position??'absolute';
+        this.nota;
 
     }
 
@@ -15,6 +17,7 @@ class Nota {
         nota.className = 'nota';
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
+        
 
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
@@ -72,6 +75,7 @@ class Nota {
         this.editarNota(btnTilde, titulo, textarea, nota);
         this.eliminar(nota, btnX);
 
+        this.nota = nota;
         return nota;
     }
 
@@ -156,12 +160,18 @@ class Nota {
 
         });
     }
-
+     
     achicarNota(nota){
+      
        const btns =  nota.querySelectorAll('button');
+        
+     
        const textarea =  nota.querySelector('textarea');
+       
+       
        const titulo = nota.querySelector('input')
 
+       
        textarea.style.display = 'none';
        nota.style.height = '5em';
 
@@ -217,6 +227,11 @@ class Nota {
         
     
 
+    }
+
+    getNota(){
+        const n = this.nota;
+        return n;
     }
 
     
