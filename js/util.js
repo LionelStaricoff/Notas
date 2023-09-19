@@ -1,7 +1,7 @@
 const util = {
 
 
-  estados: ['ideas', 'en proceso', 'completadas'],
+  estados: ['idea', 'enProceso', 'completada'],
 
   btnCrearNota: function () {
     const columnas = document.querySelectorAll('.columnaCuadro');
@@ -25,6 +25,7 @@ const util = {
     for (var i = 0; i < notas.length; i++) {
 
       const a = notas[i].style.position;
+      const padre = notas[i].parentNode.classList;
 
       const nota = document.querySelector('.nota');
       const style = getComputedStyle(nota);
@@ -35,7 +36,8 @@ const util = {
         textarea: notas[i].querySelector('textarea').value,
         color: backgroundColor,
         // color: notas[i].querySelector('.color').value,
-        position: notas[i].style.position
+        position: notas[i].style.position,
+        estado: padre[1]
       }
 
       datosNotas.push(nuevaNota);
@@ -62,7 +64,7 @@ const util = {
 
       for (a of notasArray) {
         let nota = new Nota(a.input, a.textarea,
-          a.color, a.position);
+          a.color, a.position, a.estado);
 
         nota.crearNota();
 

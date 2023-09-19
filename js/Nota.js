@@ -80,9 +80,13 @@ class Nota {
     }
 
     agregarAlFront() {
-        const columnas = document.querySelectorAll('.columnaCuadro');
+        const div1 = document.querySelector('.idea');
+        const div2 = document.querySelector('.enProceso');
+        const div3 = document.querySelector('.completada');
+        const columnas = [div1, div2, div3];
+       
         const nota = this.crearNota();
-        columnas[0].appendChild(nota);
+        columnas[this.getEstado()].appendChild(nota);
 
     }
     cambiarDeEstado() {
@@ -188,8 +192,8 @@ class Nota {
         const imgMover = document.createElement('img');
         imgMover.src = 'img/flecha.png'
         btnMover.appendChild(imgMover);
-        btnMover.addEventListener('click',()=>{
-            util.promptCambiarNota(this,this.getEstado());
+        btnMover.addEventListener('click', () => {
+            util.promptCambiarNota(this, this.getEstado());
         })
 
         btns[1].replaceWith(btnEditar);
