@@ -11,6 +11,3 @@ buttons[1].addEventListener('click', util.btnCargar);
 
 //util.promptCambiarNota();
 
-
-
-
