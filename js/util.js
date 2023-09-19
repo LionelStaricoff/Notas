@@ -2,7 +2,9 @@ const util = {
 
 
 
+
   estados: ['idea', 'enProceso', 'completada'],
+
 
 
 
@@ -40,9 +42,9 @@ const util = {
         textarea: notas[i].querySelector('textarea').value,
         color: backgroundColor,
         // color: notas[i].querySelector('.color').value,
-
         position: notas[i].style.position,
         estado: padre[1]
+
 
       }
 
