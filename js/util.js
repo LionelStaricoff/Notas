@@ -55,6 +55,8 @@ const util = {
 
   btnCargar: function () {
 
+    util.borrarTodasLasNotas();
+
     // Verificar si hay notas guardadas en el local storage
     if (localStorage.getItem('notas')) {
       // Obtén las notas del local storage y conviértelas en un objeto JS
@@ -84,10 +86,19 @@ const util = {
       // Si no hay notas guardadas, notifica al usuario
       alert('No hay notas guardadas');
     }
+
+  
   },
 
 
-
+   borrarTodasLasNotas : ()=> {
+    const div1 = document.querySelector('.idea');
+    const div2 = document.querySelector('.enProceso');
+    const div3 = document.querySelector('.completada');
+    div1.replaceChildren();
+    div2.replaceChildren();
+    div3.replaceChildren();
+  },
 
   importarArchivo: () => {
     alert('GuardarArchivoBBDD');
