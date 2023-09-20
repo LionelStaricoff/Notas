@@ -21,23 +21,39 @@
 
 .prompt button{
     cursor: pointer;
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 40%);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+}
+
+.prompt button:first-child{
+    background-image: url("/img/idea.png"); 
+}
+
+.prompt button:nth-child(2){
+    background-image: url("/img/enProceso.png");
 
 }
 
-.btnX {
+.prompt button:nth-child(3){
+    background-image: url("/img/hecho.png"); 
+
+}
+.prompt button:last-child {
     position: absolute;
     z-index: 2;
     right: 0;
     width: 2em;
     height: 2em;
-  
-  
-  }
+    background-image: url("/img/remove-symbol.png"); 
+    border-radius: 1px;
+ }
 
-  /*
-     <section class="botonesCambioDeEstado">
-                <button><img src="img/idea.png"></button>
-                <button><img src="img/enProceso.png"></button>
-                <button><img src="img/hecho.png"></button>
-                <button><img src="img/remove-symbol.png"></button>
-            </section>*/
+ .prompt button:hover{
+    background-color: rgba(255, 255, 255, 90%);
+ }
