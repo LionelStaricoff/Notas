@@ -1,7 +1,7 @@
 
 .prompt{
-    width: 20em;
-    height: 20em;
+    width: 25em;
+    height: 8em;
     position: absolute;
     top: 0;
     right: 0;
@@ -10,11 +10,34 @@
     margin: auto;
     background-color: aqua;
     display: grid;
-    padding: 1em;
-    gap: 1em;
+    grid-template-columns: auto auto auto;
+    padding: 1.8em;
+    gap: .2em;
     border: 3px solid blue; 
     z-index: 25
 
 
 }
 
+.prompt button{
+    cursor: pointer;
+
+}
+
+.btnX {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 2em;
+    height: 2em;
+  
+  
+  }
+
+  /*
+     <section class="botonesCambioDeEstado">
+                <button><img src="img/idea.png"></button>
+                <button><img src="img/enProceso.png"></button>
+                <button><img src="img/hecho.png"></button>
+                <button><img src="img/remove-symbol.png"></button>
+            </section>*/
