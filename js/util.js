@@ -27,15 +27,10 @@ const util = {
       const a = notas[i].style.position;
       const padre = notas[i].parentNode.classList;
 
-      const nota = document.querySelector('.nota');
-      const style = getComputedStyle(nota);
-      const backgroundColor = style.getPropertyValue('background-color');
-
       const nuevaNota = {
         input: notas[i].querySelector('.titulo').value,
         textarea: notas[i].querySelector('textarea').value,
-        color: backgroundColor,
-        // color: notas[i].querySelector('.color').value,
+        color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
         estado: padre[1]
       }
@@ -65,6 +60,7 @@ const util = {
       const columnas = document.querySelectorAll('.columnaCuadro');
 
       for (a of notasArray) {
+    
         let nota = new Nota(a.input, a.textarea,
           a.color, a.position, a.estado);
 
