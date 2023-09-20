@@ -202,6 +202,7 @@ const util = {
 
     const buttonX = document.createElement('button');
     buttonX.innerHTML = 'X';
+    buttonX.className = 'btnX';
     buttonX.addEventListener('click',()=>{
       section.style.display = 'none';
 
