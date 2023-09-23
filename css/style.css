@@ -137,7 +137,7 @@ ul {
 #menu li ul li:nth-child(3):hover {
     border: 2px solid #000;
 }
-#menu li ul li:nth-child(4) {
+#menu li ul li:nth-child(4):hover {
     border: 2px solid #000;
 }
 #menu li ul li:nth-child(5):hover {

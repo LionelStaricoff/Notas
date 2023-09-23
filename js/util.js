@@ -167,7 +167,6 @@ const util = {
     section.className = 'prompt';
 
     const button1 = document.createElement('button');
-    button1.innerHTML = util.estados[0];
     button1.addEventListener('click',()=>{
       divs[estado].removeChild(nota.nota);
       divs[0].appendChild(nota.nota);
@@ -176,7 +175,6 @@ const util = {
     });
 
     const button2 = document.createElement('button');
-    button2.innerHTML = util.estados[1];
     button2.addEventListener('click',()=>{
       divs[estado].removeChild(nota.nota);
       divs[1].appendChild(nota.nota);
@@ -185,7 +183,6 @@ const util = {
     });
 
     const button3 = document.createElement('button');
-    button3.innerHTML = util.estados[2];
     button3.addEventListener('click',()=>{
       divs[estado].removeChild(nota.nota);
       divs[2].appendChild(nota.nota);
@@ -194,7 +191,6 @@ const util = {
     });
 
     const buttonX = document.createElement('button');
-    buttonX.innerHTML = 'X';
     buttonX.addEventListener('click',()=>{
       section.style.display = 'none';
 

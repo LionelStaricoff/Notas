@@ -11,12 +11,12 @@ buttons[0].addEventListener('click', util.btnGuardar);
 buttons[1].addEventListener('click', util.btnCargar);
 */
 
-const agregarNota = document.querySelector('agregarNota');
-const recuperarNota = document.querySelector('recuperarNota');
-const guardarTablero = document.querySelector('guardarTablero');
+const crearNotaMenuItem = document.getElementById('crearNota');
+const recuperarNotaMenuItem = document.getElementById('recuperarNota');
+const guardarTableroMenuItem = document.getElementById('guardarTablero');
 //faltan hacer la funciones de los de abajo:
-const exportarTablero = document.querySelector('exportarTablero');
-const vaciarTablero = document.querySelector('vaciarTablero');
+const exportarTableroMenuItem = document.getElementById('exportarTablero');
+const vaciarTableroMenuItem = document.getElementById('vaciarTablero');
 
 crearNotaMenuItem.addEventListener('click', util.btnCrearNota);
 recuperarNotaMenuItem.addEventListener('click', util.btnCargar);
