@@ -1,7 +1,7 @@
 
 .prompt{
-    width: 25em;
-    height: 8em;
+    width: 20em;
+    height: 20em;
     position: absolute;
     top: 0;
     right: 0;
@@ -10,50 +10,11 @@
     margin: auto;
     background-color: aqua;
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1.8em;
-    gap: .2em;
+    padding: 1em;
+    gap: 1em;
     border: 3px solid blue; 
     z-index: 25
 
 
 }
 
-.prompt button{
-    cursor: pointer;
-    background-color: #cccccc; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: contain;
-    background-color: rgba(255, 255, 255, 40%);
-    border: 1px solid black;
-    border-radius: 10px;
-    transition: all 0.5s ease-in;
-}
-
-.prompt button:first-child{
-    background-image: url("/img/idea.png"); 
-}
-
-.prompt button:nth-child(2){
-    background-image: url("/img/enProceso.png");
-
-}
-
-.prompt button:nth-child(3){
-    background-image: url("/img/hecho.png"); 
-
-}
-.prompt button:last-child {
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    width: 2em;
-    height: 2em;
-    background-image: url("/img/remove-symbol.png"); 
-    border-radius: 1px;
- }
-
- .prompt button:hover{
-    background-color: rgba(255, 255, 255, 90%);
- }
