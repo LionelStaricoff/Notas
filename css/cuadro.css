@@ -39,14 +39,13 @@
 .cuerpoCuadro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 81vh;
+    min-height: 79vh;
 }
 
 .columnaCuadroCentro {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
-
 
 @media (max-width: 320px) {
     .cabezaCuadro {
@@ -104,10 +103,10 @@
 @media screen and (min-width: 651px) and (max-width: 750px) {
     .cabezaCuadro {
         height: 10vh;
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .cuerpoCuadro {
-        min-height: 90vh;
+        min-height: 78vh;
     }
 }
 @media screen and (min-width: 751px) and (max-width: 950px) {
@@ -140,7 +139,7 @@
         min-height: 95vh;
     }  
 }
-@media screen and (min-width: 1251px) and (max-width: 1370px) {
+@media screen and (min-width: 1251px) and (max-width: 1300px) {
     .cabezaCuadro {
         height: 50px;
         font-size: 1.5em;

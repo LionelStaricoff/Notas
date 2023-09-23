@@ -46,7 +46,7 @@ header .titulo img {
 /*MENU DESPLEGABLE  - Comienza aquí */
 .menuDesplegable {
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 20;
+    z-index: 3;
     cursor: pointer;
     margin-top: 0.2em;
     position: absolute;
@@ -122,7 +122,7 @@ ul {
 }
 #menu li ul li:nth-child(4) {
     color: #000;
-    background-color: #ac95f8;
+    background-color: #bb83fb;
 }
 #menu li ul li:nth-child(5) {
     color: #000;
@@ -137,7 +137,7 @@ ul {
 #menu li ul li:nth-child(3):hover {
     border: 2px solid #000;
 }
-#menu li ul li:nth-child(4):hover {
+#menu li ul li:nth-child(4) {
     border: 2px solid #000;
 }
 #menu li ul li:nth-child(5):hover {
@@ -160,7 +160,7 @@ ul {
     border: 2px solid #000;
 }
 #menu li ul li:nth-child(4):active {
-    color: #ac95f8;
+    color: #c49bf2;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
@@ -400,7 +400,7 @@ main {
         min-height: 90vh;
     }
 }
-@media screen and (min-width: 1251px) and (max-width: 1370px) {
+@media screen and (min-width: 1251px) and (max-width: 1300px) {
     header {
         height: 80px;
     }
