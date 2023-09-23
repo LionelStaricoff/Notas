@@ -17,6 +17,7 @@ class Nota {
         nota.className = 'nota';
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
+        nota.style.zIndex = '10';
 
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
@@ -129,6 +130,7 @@ class Nota {
                 this.agrandarNota(nota);
 
             } else {
+                nota.style.zIndex = '10';
                 this.titulo = titulo.value;
                 this.descripcion = textarea.value;
                 titulo.readOnly = true;
@@ -172,11 +174,12 @@ class Nota {
         const textarea = nota.querySelector('textarea');
 
 
-        const titulo = nota.querySelector('input')
+        const titulo = nota.querySelector('input');
 
 
         textarea.style.display = 'none';
         nota.style.height = '5em';
+        nota.style.zIndex = '5';
 
         const btnEditar = document.createElement('button');
         btnEditar.className = 'boton-editar';

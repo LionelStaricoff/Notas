@@ -39,7 +39,7 @@
 .cuerpoCuadro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 79vh;
+    min-height: 100vh;
 }
 
 .columnaCuadroCentro {

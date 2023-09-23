@@ -46,7 +46,7 @@ header .titulo img {
 /*MENU DESPLEGABLE  - Comienza aquí */
 .menuDesplegable {
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 3;
+    z-index: 20;
     cursor: pointer;
     margin-top: 0.2em;
     position: absolute;
