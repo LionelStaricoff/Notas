@@ -212,6 +212,7 @@ class Nota {
 
         textarea.style.display = 'block';
         nota.style.height = '15em';
+        nota.style.zIndex = '10';
 
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
