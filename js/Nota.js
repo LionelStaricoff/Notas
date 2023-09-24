@@ -149,7 +149,7 @@ class Nota {
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
             // modificar el prompt
-            const respuesta = confirm("Seguro que decesa eliminarlo?");
+            const respuesta = confirm("¿Seguro que deseas eliminarlo?");
             if (respuesta == 1) { nota.style.display = 'none' };
 
         });
@@ -212,6 +212,8 @@ class Nota {
 
         textarea.style.display = 'block';
         nota.style.height = '15em';
+        nota.style.zIndex = '10';
+
 
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
