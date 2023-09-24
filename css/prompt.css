@@ -50,6 +50,7 @@
     height: 2em;
     background-image: url("/img/remove-symbol.png"); 
     border-radius: 1px;
+  
  }
 
  .prompt button:hover{

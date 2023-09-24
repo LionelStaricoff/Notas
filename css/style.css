@@ -177,6 +177,7 @@ main {
     width: 100vw;
     min-height: 88vh;
     position: relative;
+    overflow: auto;
 }
 
 
