@@ -155,6 +155,7 @@ class Nota {
             padre.removeChild(nota);
             }
 
+
         });
 
 
