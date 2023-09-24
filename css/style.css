@@ -58,6 +58,10 @@ header .titulo img {
     transition: all .5s;
 }
 
+header .menuDesplegable #checkbox{
+     display: none; 
+  
+}
 header .menuDesplegable img {
     width: 3em;
     height: 3em;
@@ -90,10 +94,10 @@ ul {
     float: left;
     text-align: right;
 }
-#menu>li>ul{
+.menu-list {
     display: none;
 }
-#menu>li:hover>ul {
+#checkbox:checked ~ li > .menu-list {
     display:block;
 }
 
@@ -107,6 +111,19 @@ ul {
     margin-bottom:0.3em;
     text-align: center;
 }
+
+
+/*ocultar ultimos 2 botones*/
+
+#menu li ul li:nth-child(4) {
+  display: none;
+}
+#menu li ul li:nth-child(5) {
+    display: none;
+}
+
+
+
 
 #menu li ul li:first-child {
     color: #000;
