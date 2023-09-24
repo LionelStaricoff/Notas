@@ -5,8 +5,7 @@
     background-color: #fcfd9c;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    z-index: 1;
+    justify-content: space-evenly;
     top: 0;
     left: 0;
     right: 0;

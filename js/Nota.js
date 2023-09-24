@@ -17,7 +17,7 @@ class Nota {
         nota.className = 'nota';
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
-       // nota.style.zIndex = '30';
+        nota.style.zIndex = '10';
 
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
@@ -130,6 +130,7 @@ class Nota {
                 this.agrandarNota(nota);
 
             } else {
+                nota.style.zIndex = '10';
                 this.titulo = titulo.value;
                 this.descripcion = textarea.value;
                 titulo.readOnly = true;
@@ -149,10 +150,7 @@ class Nota {
         btnX.addEventListener('click', () => {
             // modificar el prompt
             const respuesta = confirm("Seguro que decesa eliminarlo?");
-            if (respuesta == 1) {
-                const padre = nota.parentNode;
-                padre.removeChild(nota);
-                 }
+            if (respuesta == 1) { nota.style.display = 'none' };
 
         });
 
@@ -176,11 +174,12 @@ class Nota {
         const textarea = nota.querySelector('textarea');
 
 
-        const titulo = nota.querySelector('input')
+        const titulo = nota.querySelector('input');
 
 
         textarea.style.display = 'none';
         nota.style.height = '5em';
+        nota.style.zIndex = '5';
 
         const btnEditar = document.createElement('button');
         btnEditar.className = 'boton-editar';
@@ -213,6 +212,7 @@ class Nota {
 
         textarea.style.display = 'block';
         nota.style.height = '15em';
+        nota.style.zIndex = '10';
 
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
