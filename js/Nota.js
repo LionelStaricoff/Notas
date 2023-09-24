@@ -214,7 +214,6 @@ class Nota {
         nota.style.height = '15em';
         nota.style.zIndex = '10';
 
-
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
         img2.src = 'img/correct-symbol.png';
