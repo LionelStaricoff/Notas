@@ -112,6 +112,19 @@ ul {
     text-align: center;
 }
 
+
+/*ocultar ultimos 2 botones*/
+
+#menu li ul li:nth-child(4) {
+  display: none;
+}
+#menu li ul li:nth-child(5) {
+    display: none;
+}
+
+
+
+
 #menu li ul li:first-child {
     color: #000;
     background-color: #f5abed;
