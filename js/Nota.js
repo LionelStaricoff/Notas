@@ -150,8 +150,10 @@ class Nota {
         btnX.addEventListener('click', () => {
             // modificar el prompt
             const respuesta = confirm("Seguro que decesa eliminarlo?");
+            if(respuesta==1){
             const padre = nota.parentNode;
             padre.removeChild(nota);
+            }
 
         });
 
