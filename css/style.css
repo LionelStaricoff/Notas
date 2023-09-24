@@ -73,6 +73,7 @@ main {
     width: 100vw;
     min-height: 89vh;
     position: relative;
+    overflow: auto;
 }
 
 .cambioDeColumna {

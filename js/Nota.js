@@ -17,6 +17,7 @@ class Nota {
         nota.className = 'nota';
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
+       // nota.style.zIndex = '30';
 
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
