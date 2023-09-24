@@ -95,10 +95,10 @@ img {
 }
 
 .nota:hover .triangle {
-    width: 24px;
-    height: 24px;
-    border-bottom: 24px solid transparent;
-    border-left: 24px solid #fcfd9c;
+    width: 15px;
+    height: 15px;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fcfd9c;
     box-shadow: -3px -3px 5px rgba(69, 68, 66, 0.9); 
     align-self: flex-end;
     z-index: 10;
@@ -106,9 +106,6 @@ img {
     bottom: 0;
     right: 0;
     filter: brightness(0.8);
-    display: none;
+    display: block;
 } 
 
-.nota:hover .triangle {
-    display: block;
-}
