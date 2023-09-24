@@ -54,6 +54,8 @@ const util = {
 
   btnCargar: function () {
 
+    util.borrarTodasLasNotas();
+
     // Verificar si hay notas guardadas en el local storage
     if (localStorage.getItem('notas')) {
       // Obtén las notas del local storage y conviértelas en un objeto JS
