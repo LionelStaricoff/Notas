@@ -26,15 +26,10 @@ const util = {
       const a = notas[i].style.position;
       const padre = notas[i].parentNode.classList;
 
-      const nota = document.querySelector('.nota');
-      const style = getComputedStyle(nota);
-      const backgroundColor = style.getPropertyValue('background-color');
-
       const nuevaNota = {
         input: notas[i].querySelector('.titulo').value,
         textarea: notas[i].querySelector('textarea').value,
-        color: backgroundColor,
-        // color: notas[i].querySelector('.color').value,
+        color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
         estado: padre[1]
       }
@@ -64,6 +59,7 @@ const util = {
       const columnas = document.querySelectorAll('.columnaCuadro');
 
       for (a of notasArray) {
+    
         let nota = new Nota(a.input, a.textarea,
           a.color, a.position, a.estado);
 
@@ -85,10 +81,19 @@ const util = {
       // Si no hay notas guardadas, notifica al usuario
       alert('No hay notas guardadas');
     }
+
+  
   },
 
 
-
+   borrarTodasLasNotas : ()=> {
+    const div1 = document.querySelector('.idea');
+    const div2 = document.querySelector('.enProceso');
+    const div3 = document.querySelector('.completada');
+    div1.replaceChildren();
+    div2.replaceChildren();
+    div3.replaceChildren();
+  },
 
   importarArchivo: () => {
     alert('GuardarArchivoBBDD');
@@ -192,6 +197,7 @@ const util = {
     });
 
     const buttonX = document.createElement('button');
+    buttonX.innerHTML = 'X';
     buttonX.addEventListener('click',()=>{
       section.style.display = 'none';
 
