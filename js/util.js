@@ -199,7 +199,8 @@ const util = {
     const buttonX = document.createElement('button');
     buttonX.innerHTML = 'X';
     buttonX.addEventListener('click',()=>{
-      section.style.display = 'none';
+      const padre = section.parentNode;
+      padre.removeChild(section);
 
     });
 
