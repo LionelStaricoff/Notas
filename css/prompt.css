@@ -1,7 +1,7 @@
 
 .prompt{
     width: min(100%,25em);
-    height: 8em;
+     height: 10em; 
     position: absolute;
     top: 0;
     right: 0;
@@ -10,13 +10,21 @@
     margin: auto;
     background-color: aqua;
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1.8em;
-    gap: .2em;
+    grid-template-areas: 'h4 h4 h4'
+                         'btn1 btn2 btn3';
+    
+ 
     border: 3px solid blue; 
-    z-index: 25
+    z-index: 25;
 }
 
+.prompt h4{
+    margin-top: .2em;
+    grid-area: h4;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
 
 .prompt button{
     cursor: pointer;
@@ -28,18 +36,25 @@
     border: 1px solid black;
     border-radius: 10px;
     transition: all 0.5s ease-in;
-}
-
-.prompt button:first-child{
-    background-image: url("/img/idea.png"); 
+    height: 5em;
+    margin: 0 .5em 0 .5em;
+   
 }
 
 .prompt button:nth-child(2){
-    background-image: url("/img/enProceso.png");
+    background-image: url("/img/idea.png"); 
+    grid-area: btn1;
+   
 }
 
 .prompt button:nth-child(3){
+    background-image: url("/img/enProceso.png");
+    grid-area: btn2;
+}
+
+.prompt button:nth-child(4){
     background-image: url("/img/hecho.png"); 
+    grid-area: btn3;
 
 }
 .prompt button:last-child {
