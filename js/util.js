@@ -172,6 +172,10 @@ const util = {
     const section = document.createElement('section');
     section.className = 'prompt';
 
+    const titulo = document.createElement('h4');
+    const palabras = document.createTextNode('Mover a:');
+    titulo.appendChild(palabras);
+
     const button1 = document.createElement('button');
     button1.addEventListener('click',()=>{
       divs[estado].removeChild(nota.nota);
@@ -204,17 +208,10 @@ const util = {
 
     });
 
-    section.appendChild(button1);
-    section.appendChild(button2);
-    section.appendChild(button3);
-    section.appendChild(buttonX);
- 
-
+    section.append(titulo,button1,button2,button3,buttonX);
     main.appendChild(section);
   }
 
 }
 
-
-//https://developer.chrome.com/es/articles/browser-fs-access/##%20La%20API%20de%20File%20System%20Access
 
