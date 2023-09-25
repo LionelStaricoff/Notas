@@ -1,6 +1,6 @@
 
 .prompt{
-    width: 25em;
+    width: min(100%,25em);
     height: 8em;
     position: absolute;
     top: 0;

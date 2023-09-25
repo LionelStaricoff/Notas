@@ -76,7 +76,7 @@ const util = {
 
 
       // Notifica al usuario que las notas fueron recuperadas
-      alert('Notas recuperadas exitosamente');
+      //alert('Notas recuperadas exitosamente');
     } else {
       // Si no hay notas guardadas, notifica al usuario
       alert('No hay notas guardadas');
