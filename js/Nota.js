@@ -89,35 +89,7 @@ class Nota {
         columnas[this.getEstado()].appendChild(nota);
 
     }
-    cambiarDeEstado() {
-        const cambioDeEstado = document.querySelector('cambioDeEstado')
-        const cambioDeColumna = document.createElement('div');
-        cambioDeColumna.className = 'cambioDeColumna'
-
-        const btnIdea = document.createElement('button');
-        const img = document.createElement('img');
-        img.src = 'img/idea.png';
-        img.alt = 'imagen IDEA';
-        btnIdea.appendChild(img);
-
-        const btnEnProceso = document.createElement('button');
-        const img1 = document.createElement('img');
-        img1.src = 'img/enProceso.png';
-        img1.alt = 'imagen En Proceso';
-        btnEnProceso.appendChild(img1);
-
-        const btnCompletada = document.createElement('button');
-        const img2 = document.createElement('img');
-        img2.src = 'img/hecho.png';
-        img2.alt = 'imagen Completada';
-        btnCompletada.appendChild(img2);
-
-        cambioDeColumna.appendChild(btnIdea);
-        cambioDeColumna.appendChild(btnEnProceso);
-        cambioDeColumna.appendChild(btnCompletada);
-
-    }
-
+    
 
     editarNota(btnTilde, titulo, textarea, nota) {
 
@@ -149,14 +121,6 @@ class Nota {
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
             util.promptConfirmacion(nota);
-            /* modificar el prompt
-            const respuesta = confirm("¿Seguro que deseas eliminarlo?");
-            if(respuesta==1){
-            const padre = nota.parentNode;
-            padre.removeChild(nota);
-            }*/
-
-
         });
 
 
@@ -268,17 +232,6 @@ class Nota {
     }
 
         
-
-
-    
-    modificarColor(btnColor, nota, i, input) {
-        btnColor.addEventListener("change", () => {
-            this.color = input.value;
-            nota.style.backgroundColor = this.color;
-            i.style.borderLeftColor = this.color;
-
-        });
-    }
 
 }
 
