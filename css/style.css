@@ -3,6 +3,7 @@
 @import url("cambioDeColumnas.css");
 @import url("cuadro.css");
 @import url("prompt.css");
+@import url("promptConfirm.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
 * {
@@ -438,37 +439,4 @@ main {
     main {
         min-height: 92vh;
     }
-}
-
-.promptConfirmacion {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: 25em;
-    height: 8em;
-    background-color: rgb(64, 237, 211);
-    border: 5px ridge rgb(6, 109, 127);
-    border-radius: 10px;
-    text-align: center;
-}
-.promptConfirmacion h2 { 
-    font-size: 1.2em;
-    margin-top: 1.1em
-
-}
-.promptConfirmacion button {
-    width: 40%;
-    height: 2em;
-    font-size: 1em;
-    font-weight: bold;
-    background-color: rgb(25, 164, 186);
-    border-radius: 10px;
-    margin: 0 .25em 0 0.25em;
-    transition: all .2s;
-}
-.promptConfirmacion button {
-    transform: scale(.9);
 }

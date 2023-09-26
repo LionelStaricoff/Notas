@@ -173,7 +173,7 @@ const util = {
     section.className = 'prompt';
 
     const titulo = document.createElement('h4');
-    const palabras = document.createTextNode('Mover a:');
+    const palabras = document.createTextNode('MOVER A:');
     titulo.appendChild(palabras);
 
     const button1 = document.createElement('button');
@@ -212,28 +212,44 @@ const util = {
     main.appendChild(section);
   },
 
-  promptConfirmacion: ()=> {
-
+  promptConfirmacion: (nota)=> {
+    
     const main = document.querySelector('main')
 
     const div = document.createElement('div');
     div.className = 'promptConfirmacion'
 
+    const cabeceraPromptConfirm = document.createElement('h3');
+    let palabras = document.createTextNode('ELIMINA LA NOTA');
+    cabeceraPromptConfirm.appendChild(palabras);
+
     const titulo = document.createElement('h2');
-    let palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
+    palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
     titulo.appendChild(palabras);
 
     const btnAceptar = document.createElement('button');
     palabras = document.createTextNode('Aceptar');
     btnAceptar.appendChild(palabras);
+    btnAceptar.addEventListener('click', ()=>{
+      const padreNota = nota.parentNode;
+      padreNota.removeChild(nota);
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+
+    });
 
     const btnCancelar = document.createElement('button');
     palabras = document.createTextNode('Cancelar');
     btnCancelar.appendChild(palabras);
+    btnCancelar.addEventListener('click',()=>{
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
 
-    div.append(titulo, btnAceptar, btnCancelar);
+    div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
     main.appendChild(div)
-  }
+  },
+
 }
 
 
