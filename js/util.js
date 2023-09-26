@@ -210,8 +210,30 @@ const util = {
 
     section.append(titulo,button1,button2,button3,buttonX);
     main.appendChild(section);
-  }
+  },
 
+  promptConfirmacion: ()=> {
+
+    const main = document.querySelector('main')
+
+    const div = document.createElement('div');
+    div.className = 'promptConfirmacion'
+
+    const titulo = document.createElement('h2');
+    let palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
+    titulo.appendChild(palabras);
+
+    const btnAceptar = document.createElement('button');
+    palabras = document.createTextNode('Aceptar');
+    btnAceptar.appendChild(palabras);
+
+    const btnCancelar = document.createElement('button');
+    palabras = document.createTextNode('Cancelar');
+    btnCancelar.appendChild(palabras);
+
+    div.append(titulo, btnAceptar, btnCancelar);
+    main.appendChild(div)
+  }
 }
 
 

@@ -1,7 +1,7 @@
 .cuadro {
     width: 100vw;
     min-height: 88vh;
-    position: absolute;
+    position: relative;
 }
 
 .cabezaCuadro {

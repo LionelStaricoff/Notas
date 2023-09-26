@@ -9,3 +9,4 @@ buttons[4].addEventListener('click', util.exportarTablero);
 buttons[5].addEventListener('click', util.vaciarTablero);
 
 
+util.promptConfirmacion();
