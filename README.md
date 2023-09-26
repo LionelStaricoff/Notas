@@ -13,7 +13,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	- Cargar Tablero
 	- Guardar Tablero}
 
-[![Menú Desplegable](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable")
+[![Menú Desplegable](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable" width=50)
 
 ------------
 ####  El tablero tiene tres columnas que indican el estado de la tarea o idea:
