@@ -64,7 +64,7 @@ Contenido de la nota reducida:
 <div align="center">
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷 
-##### AUTORES: Lionel Staricoff & Gladys Romero
+##### Autores: Lionel Staricoff & Gladys Romero
 &copy; Copyright
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
