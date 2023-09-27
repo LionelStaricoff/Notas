@@ -12,17 +12,20 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	- Crear Nota
 	- Cargar Tablero
 	- Guardar Tablero}
-
-[![Menú Desplegable](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png "Menú Desplegable" width=50)
+ 
+<div align="center">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
+</div>
 
 ------------
 ####  El tablero tiene tres columnas que indican el estado de la tarea o idea:
 - IDEAS
 - EN PROCESO
 - COMPLETADAS
-
-[![Tablero](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/PantallaApp.png "Tablero")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/PantallaApp.png "Tablero"
-)
+  
+<div align="center">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/PantallaApp.png" alt="Tablero" width="50%">
+</div>
 
 ------------
 
@@ -35,7 +38,9 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	- Agrega a la columna
 	(Cuando la columna se agrega al tablero, se guarda en un tamaño reducido)
 
-[![Nota](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png "Nota")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png "Nota")
+<div align="center">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png" alt="Nota" width="25%">
+</div>
 
 ------------
 
@@ -49,17 +54,19 @@ Contenido de la nota reducida:
 	- Editar
 	- Cambia de columna
 
-[![Nota reducida](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/notaReducida.png "Nota reducida")](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/notaReducida.png "Nota reducida")
+<div align="center">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
 
-#####Botón para cambiar de columna:
-Se abrirá un cartel que le permitirá elegir a qué columna desea mover la nota.
+<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
 
-[![cartel para cambiar de columna](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png)](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png)
+</div>
+<br>
+<div align="center">
 
-
-🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
-#####Autores: Lionel Staricoff & Gladys Romero
+🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷 
+##### AUTORES: Lionel Staricoff & Gladys Romero
 &copy; Copyright
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
+</div>
 
