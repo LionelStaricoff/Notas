@@ -6,12 +6,9 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 
 
 #### Desde el menú desplegable podrá:
-- Título
-- Descripción
-- Tres botones:
-	- Crear Nota
-	- Cargar Tablero
-	- Guardar Tablero}
+- Crear Nota
+- Cargar Tablero
+- Guardar Tablero}
  
 <div align="center">
 	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
