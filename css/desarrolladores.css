@@ -1,4 +1,17 @@
-.modal-desarrolladores {
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+}
+.modal-contenido {
     width: 45em;
     height: 20em;
     top: 0;
@@ -17,7 +30,7 @@
     border-radius: 15px;
     font-size: 0.9em;
 }
-.modal-desarrolladores span {
+.modal-contenido span {
     position: absolute;
     right: 0;
     top: 5;
@@ -26,8 +39,8 @@
     font-size: 1em;
     font-weight: bold;
     border: 1px solid white;
-    padding: .15em;
-    height: 1.7em;
+    padding: .18em;
+    height: 1.8em;
 }
 
 .modal-header {
@@ -39,7 +52,7 @@
     grid-column: 1 / 3; /* Ocupa las dos columnas */
     grid-row: 2 / 3;
     text-align: center;
-    margin-top: 2em;
+
 }
 .modal-body img {
     margin: 0;
@@ -49,18 +62,90 @@
     margin-top: .2em;
     margin-left: 1.7em;
 }
+.frontend img {
+    width: 10em;
+    height: 3em;
+    margin-right: 2.5em;
+    margin-left: 2.5em;
+    margin-top: .25em;
+    position: absolute;
+}
 .backend {
     margin-right: 0em;
     margin-top: .2em;
-    height: 8.5em;
     width: 21em
 }
 
 .modal-footer {
     grid-column: 1 / span 2; /* Ocupa las dos columnas */
     text-align: left;
-    padding: .8em;
+    padding: 1em;
     border-top: .5px solid #ccc;
     font-size: 1em;
+}
+
+@media (max-width: 600px) {
+
+    .modal-contenido {
+        width: 18em;
+        height: 33em;
+        text-align: center;
+        display: block;
+    }
+    .modal-contenido span {
+        position: absolute;
+        right: 0;
+        top: 1.1em;
+        margin-top: .5em;
+        margin-right: .5em;
+        border: 1px solid rgb(84, 141, 247);
+        background-color: white;
+        color:black;
+        padding: .18em;
+        height: 1.8em;
+    }
+    .modal-header {
+        line-height: 1.2;
+        height: 2em;
+        margin-top: 1em;
+        margin-bottom: .2em;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        border-radius: 5px;
+
+        color: rgb(84, 141, 247);
+        padding: .2em
+
+    }
+    .modal-body img {
+        display: none
+    }
+    .frontend {
+        margin-top: 0em;
+        margin-left: 0em;
+        border-bottom: 1px solid #ccc;
+        padding: .5em
+    }
+    .frontend img {
+        width: 98%;
+        height: auto;
+        
+        display: none
+    }
+    .backend {
+        margin-top: 0em;
+        margin-left: 0em;
+        width: auto;
+        padding: .5em
+
+    }
+    
+    .modal-footer {
+        text-align: center;
+        padding: .8em;
+        border-top: .5px solid #ccc;
+        font-size: 1em;
+    }
+
 
 }

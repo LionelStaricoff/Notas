@@ -250,6 +250,26 @@ const util = {
     main.appendChild(div)
   },
 
+  mostrarDesarrolladores : ()=> {
+    const mostrarDesarrolladores= document.getElementById("mostrarDesarrolladores");
+    const modalDesarrolladores = document.querySelector(".modal");
+    const cerrarModal = document.getElementById("cerrarModal");
+
+    mostrarDesarrolladores.addEventListener("click", () => {
+      modalDesarrolladores.style.display = "block";
+    });
+
+    cerrarModal.addEventListener("click", ()=>{
+      modalDesarrolladores.style.display="none";
+    });
+
+    window.addEventListener("click", (evento) => {
+      if (evento.target === modalDesarrolladores) {
+          modalDesarrolladores.style.display = "none";
+      }
+    });
+  },
+
 }
 
 

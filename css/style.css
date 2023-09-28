@@ -25,7 +25,6 @@ header {
 .izquierda {
     padding-left: 0.7em;
     font-size: 1.2em;
-    color: #ccc
 }
 .titulo {
     display: flex;
@@ -75,7 +74,7 @@ header .menuDesplegable img {
     background-color: rgb(229, 229, 22);
     box-shadow:-6px 6px 6px rgba(38, 46, 39, 0.8);
     margin-top: 0.45em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.7em;
     padding: .1em
 }
 
@@ -207,7 +206,14 @@ main {
     header {
         height: 10vh;         
     }
-    
+    header .izquierda a {
+        padding-left: 0em;
+        font-size: .5em;
+        position: absolute;
+        text-align: left;
+        color: black;
+        top: .3em;
+    }
     header .titulo img {
         width: 4em;
         height: 2.6em;
@@ -240,7 +246,14 @@ main {
     header {
         height: 10vh;         
     }
-    
+    header .izquierda a {
+        padding-left: 0em;
+        font-size: .5em;
+        position: absolute;
+        text-align: left;
+        color: black;
+        top: .3em
+    }
     header .titulo img {
         width: 5em;
         height: 2.8em;
@@ -274,7 +287,14 @@ main {
     header {
         height: 9vh;         
     }
-    
+    header .izquierda a {
+        padding-left: 0em;
+        font-size: .5em;
+        position: absolute;
+        text-align: left;
+        color: black;
+        top: .3em
+    }
     header .titulo img {
         width: 5.3em;
         height: 3.2em;
@@ -307,7 +327,14 @@ main {
     header {
         height: 70px;         
     }
-    
+    header .izquierda a {
+        padding-left: 0em;
+        font-size: .45em;
+        position: absolute;
+        text-align: left;
+        color: black;
+        top: 3em
+    }
     header .titulo img {
         width: 6em;
         height: 2.8em;
@@ -340,6 +367,9 @@ main {
     header {
         height: 60px;         
     }
+    .izquierda {
+        font-size: .9em;
+    }
     header .titulo img {
         width: 5.5em;
         height: 2em;
@@ -361,6 +391,9 @@ main {
 @media screen and (min-width: 751px) and (max-width: 950px) {
     header {
         height: 80px;
+    }
+    .izquierda {
+        font-size: .9em;
     }
     header .titulo {
         margin-top: 0.5em;
@@ -384,6 +417,9 @@ main {
 @media screen and (min-width: 951px) and (max-width: 1050px) {
     header {
         height: 80px;
+    }
+    .izquierda {
+        font-size: .9em;
     }
     header .titulo {
         margin-top: 0.5em;
