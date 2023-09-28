@@ -1,9 +1,8 @@
 @import url("nota.css");
-@import url("notaReducida.css");
-@import url("cambioDeColumnas.css");
 @import url("cuadro.css");
 @import url("prompt.css");
 @import url("promptConfirm.css");
+@import url("desarrolladores.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
 * {
@@ -19,10 +18,15 @@ header {
     display: grid;
     justify-items: center;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     border-bottom: 2px solid black;
 }
-
+.izquierda {
+    padding-left: 0.7em;
+    font-size: 1.2em;
+    color: #ccc
+}
 .titulo {
     display: flex;
     align-items: center;

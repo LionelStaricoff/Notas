@@ -1,0 +1,66 @@
+.modal-desarrolladores {
+    width: 45em;
+    height: 20em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 20px; /* Espacio entre columnas y filas */
+    padding: 7px;
+    border: 2px solid #ccc;
+    background-color: rgb(84, 141, 247);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+.modal-desarrolladores span {
+    position: absolute;
+    right: 0;
+    top: 5;
+    margin-top: .5em;
+    margin-right: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: .15em;
+    height: 1.7em;
+}
+
+.modal-header {
+    grid-column: 1 / span 2; /* Ocupa las dos columnas */
+    text-align: center;
+    height: 1.3em;
+}
+.modal-body {
+    grid-column: 1 / 3; /* Ocupa las dos columnas */
+    grid-row: 2 / 3;
+    text-align: center;
+    margin-top: 2em;
+}
+.modal-body img {
+    margin: 0;
+    padding: 0;
+}
+.frontend {
+    margin-top: .2em;
+    margin-left: 1.7em;
+}
+.backend {
+    margin-right: 0em;
+    margin-top: .2em;
+    height: 8.5em;
+    width: 21em
+}
+
+.modal-footer {
+    grid-column: 1 / span 2; /* Ocupa las dos columnas */
+    text-align: left;
+    padding: .8em;
+    border-top: .5px solid #ccc;
+    font-size: 1em;
+
+}
