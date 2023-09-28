@@ -249,6 +249,20 @@ const util = {
     div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
     main.appendChild(div)
   },
+ permisoDescenso : function(event) {
+    event.preventDefault();
+},
+
+arrastrar :function(event) {
+    event.dataTransfer.setData("text", event.target.id);
+},
+
+soltar :function(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    var draggableElement = document.querySelector(".nota");
+    event.target.appendChild(draggableElement);
+}
 
 }
 

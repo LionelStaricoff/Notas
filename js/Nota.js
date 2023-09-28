@@ -145,6 +145,10 @@ class Nota {
 
         const titulo = nota.querySelector('input');
 
+        //comando para arrastrar elementos
+        nota.addEventListener("dragstart", util.arrastrar);
+        nota.draggable="true";
+
 
         textarea.style.display = 'none';
         nota.style.height = '5em';
@@ -182,6 +186,7 @@ class Nota {
         textarea.style.display = 'block';
         nota.style.height = '15em';
         nota.style.zIndex = '10';
+        nota.draggable="false";
 
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
