@@ -178,7 +178,6 @@ const util = {
 
     const button1 = document.createElement('button');
     button1.addEventListener('click', () => {
-      divs[estado].removeChild(nota.nota);
       divs[0].appendChild(nota.nota);
       nota.estado = util.estados[0];
       section.style.display = 'none';
@@ -186,7 +185,6 @@ const util = {
 
     const button2 = document.createElement('button');
     button2.addEventListener('click', () => {
-      divs[estado].removeChild(nota.nota);
       divs[1].appendChild(nota.nota);
       nota.estado = util.estados[1];
       section.style.display = 'none';
@@ -194,7 +192,6 @@ const util = {
 
     const button3 = document.createElement('button');
     button3.addEventListener('click', () => {
-      divs[estado].removeChild(nota.nota);
       divs[2].appendChild(nota.nota);
       nota.estado = util.estados[2];
       section.style.display = 'none';
