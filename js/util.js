@@ -262,7 +262,7 @@ soltar :function(event) {
     var data = event.dataTransfer.getData("text");
     var draggableElement = document.querySelector(".nota");
     event.target.appendChild(draggableElement);
-}
+},
 
   mostrarDesarrolladores : ()=> {
     const mostrarDesarrolladores= document.getElementById("mostrarDesarrolladores");
