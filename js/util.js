@@ -59,7 +59,7 @@ const util = {
       const columnas = document.querySelectorAll('.columnaCuadro');
 
       for (a of notasArray) {
-    
+
         let nota = new Nota(a.input, a.textarea,
           a.color, a.position, a.estado);
 
@@ -82,11 +82,11 @@ const util = {
       alert('No hay notas guardadas');
     }
 
-  
+
   },
 
 
-   borrarTodasLasNotas : ()=> {
+  borrarTodasLasNotas: () => {
     const div1 = document.querySelector('.idea');
     const div2 = document.querySelector('.enProceso');
     const div3 = document.querySelector('.completada');
@@ -162,13 +162,13 @@ const util = {
   },
 
   promptCambiarNota: (nota, estado) => {
-  
+
     const main = document.querySelector('.cuerpoCuadro');
     const div1 = main.querySelector('.idea');
     const div2 = main.querySelector('.enProceso');
     const div3 = main.querySelector('.completada');
-    const divs = [div1,div2,div3];
-  
+    const divs = [div1, div2, div3];
+
     const section = document.createElement('section');
     section.className = 'prompt';
 
@@ -177,7 +177,7 @@ const util = {
     titulo.appendChild(palabras);
 
     const button1 = document.createElement('button');
-    button1.addEventListener('click',()=>{
+    button1.addEventListener('click', () => {
       divs[estado].removeChild(nota.nota);
       divs[0].appendChild(nota.nota);
       nota.estado = util.estados[0];
@@ -185,7 +185,7 @@ const util = {
     });
 
     const button2 = document.createElement('button');
-    button2.addEventListener('click',()=>{
+    button2.addEventListener('click', () => {
       divs[estado].removeChild(nota.nota);
       divs[1].appendChild(nota.nota);
       nota.estado = util.estados[1];
@@ -193,7 +193,7 @@ const util = {
     });
 
     const button3 = document.createElement('button');
-    button3.addEventListener('click',()=>{
+    button3.addEventListener('click', () => {
       divs[estado].removeChild(nota.nota);
       divs[2].appendChild(nota.nota);
       nota.estado = util.estados[2];
@@ -202,18 +202,18 @@ const util = {
 
     const buttonX = document.createElement('button');
     buttonX.innerHTML = 'X';
-    buttonX.addEventListener('click',()=>{
+    buttonX.addEventListener('click', () => {
       const padre = section.parentNode;
       padre.removeChild(section);
 
     });
 
-    section.append(titulo,button1,button2,button3,buttonX);
+    section.append(titulo, button1, button2, button3, buttonX);
     main.appendChild(section);
   },
 
-  promptConfirmacion: (nota)=> {
-    
+  promptConfirmacion: (nota) => {
+
     const main = document.querySelector('main')
 
     const div = document.createElement('div');
@@ -230,7 +230,7 @@ const util = {
     const btnAceptar = document.createElement('button');
     palabras = document.createTextNode('Aceptar');
     btnAceptar.appendChild(palabras);
-    btnAceptar.addEventListener('click', ()=>{
+    btnAceptar.addEventListener('click', () => {
       const padreNota = nota.parentNode;
       padreNota.removeChild(nota);
       const padrePrompt = div.parentNode;
@@ -241,7 +241,7 @@ const util = {
     const btnCancelar = document.createElement('button');
     palabras = document.createTextNode('Cancelar');
     btnCancelar.appendChild(palabras);
-    btnCancelar.addEventListener('click',()=>{
+    btnCancelar.addEventListener('click', () => {
       const padrePrompt = div.parentNode;
       padrePrompt.removeChild(div);
     });
@@ -249,23 +249,27 @@ const util = {
     div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
     main.appendChild(div)
   },
- permisoDescenso : function(event) {
+  permisoDescenso: function (event) {
     event.preventDefault();
-},
+  },
 
-arrastrar :function(event) {
-    event.dataTransfer.setData("text", event.target.id);
-},
+  arrastrar: function (event) {
+     event.dataTransfer.setData("text", event.target.id);
 
-soltar :function(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    var draggableElement = document.querySelector(".nota");
-    event.target.appendChild(draggableElement);
-},
+  },
 
-  mostrarDesarrolladores : ()=> {
-    const mostrarDesarrolladores= document.getElementById("mostrarDesarrolladores");
+  soltar: function (event) {
+     event.preventDefault();
+     const data = event.dataTransfer.getData("text");
+     const draggableElement = document.getElementById(data);
+     event.target.appendChild(draggableElement);
+    
+   
+
+  },
+
+  mostrarDesarrolladores: () => {
+    const mostrarDesarrolladores = document.getElementById("mostrarDesarrolladores");
     const modalDesarrolladores = document.querySelector(".modal");
     const cerrarModal = document.getElementById("cerrarModal");
 
@@ -273,13 +277,13 @@ soltar :function(event) {
       modalDesarrolladores.style.display = "block";
     });
 
-    cerrarModal.addEventListener("click", ()=>{
-      modalDesarrolladores.style.display="none";
+    cerrarModal.addEventListener("click", () => {
+      modalDesarrolladores.style.display = "none";
     });
 
     window.addEventListener("click", (evento) => {
       if (evento.target === modalDesarrolladores) {
-          modalDesarrolladores.style.display = "none";
+        modalDesarrolladores.style.display = "none";
       }
     });
   },
