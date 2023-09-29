@@ -1,3 +1,5 @@
+let ids = 1;
+
 class Nota {
 
     constructor(titulo, descripcion, color, position, estado) {
@@ -8,6 +10,8 @@ class Nota {
         this.estado = estado ?? util.estados[0];
         this.position = position ?? 'absolute';
         this.nota;
+        this.id = ids++;
+
 
     }
 
@@ -15,6 +19,7 @@ class Nota {
 
         const nota = document.createElement('div');
         nota.className = 'nota';
+        nota.id = this.id;
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
         nota.style.zIndex = '10';
