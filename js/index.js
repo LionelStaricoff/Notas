@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('li');
 
 
+
 buttons[1].addEventListener('click', util.btnCrearNota);
 buttons[2].addEventListener('click', util.btnCargar);
 buttons[3].addEventListener('click', util.btnGuardar);
@@ -10,11 +11,20 @@ buttons[5].addEventListener('click', util.vaciarTablero);
 
 
 //div padre eventos de arrastre
-document.querySelector(".idea").addEventListener("drop", util.soltar);
-document.querySelector(".idea").addEventListener("dragover", util.permisoDescenso);
+const idea = document.querySelector(".idea");
+idea.addEventListener("drop", util.soltar);
+idea.addEventListener("dragover", util.permisoDescenso);
+idea.addEventListener('ontouchend', util.drop);
+idea.addEventListener('ondragover', util.permisoDescenso);
 
-document.querySelector(".enProceso").addEventListener("drop", util.soltar);
-document.querySelector(".enProceso").addEventListener("dragover", util.permisoDescenso);
+const enProceso = document.querySelector(".enProceso");
+enProceso.addEventListener("drop", util.soltar);
+enProceso.addEventListener("dragover", util.permisoDescenso);
+enProceso.addEventListener('ontouchend', util.drop);
+enProceso.addEventListener('ondragover', util.permisoDescenso );
 
-document.querySelector(".completada").addEventListener("drop", util.soltar);
-document.querySelector(".completada").addEventListener("dragover", util.permisoDescenso);
+completada = document.querySelector(".completada");
+completada.addEventListener("drop", util.soltar);
+completada.addEventListener("dragover", util.permisoDescenso);
+completada.addEventListener('ontouchend', util.drop);
+completada.addEventListener('ondragover', util.permisoDescenso );
