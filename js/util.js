@@ -1,3 +1,5 @@
+let currentElement = null;
+
 const util = {
 
 
@@ -8,6 +10,7 @@ const util = {
     nota.agregarAlFront();
 
   },
+  
   btnGuardar: function () {
     //limpiando datos anteriores
     localStorage.clear();
@@ -284,6 +287,34 @@ const util = {
       }
     });
   },
+
+  touchStart : (event)=>{
+
+    currentElement = event.target;
+},
+
+touchMove : (event)=>{
+
+  if(currentElement){
+    event.preventDefault();
+    const touch = event.touches[0];
+    const container = currentElement.parentNode;
+    const offsetX = touch.clientX - container.getBoundingClientRect().left;
+    const offsetY = touch.clientY - container.getBoundingClientRect().top;
+
+    currentElement.style.left = offsetX + "px";
+    currentElement.style.top = offsetY + "px";
+
+  }
+
+},
+
+drop : (event)=>{
+  if(currentElement){
+    event.target.appendChild(currentElement);
+    currentElement = null;
+  }
+}
 
 }
 

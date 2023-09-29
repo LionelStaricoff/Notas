@@ -154,6 +154,10 @@ class Nota {
         nota.addEventListener("dragstart", util.arrastrar);
         nota.draggable="true";
 
+        //comandos para arrastrar con los dedos
+        nota.addEventListener("ontouchstart", util.touchStart);
+        nota.addEventListener("ondragover", util.touchMove);
+
 
         textarea.style.display = 'none';
         nota.style.height = '5em';
