@@ -272,7 +272,6 @@ const util = {
     modalDesarrolladores.style.display = "block";
 
     const cerrarModal = document.getElementById("cerrarModal");
-    cerrarModal.innerHTML = 'X';
     cerrarModal.addEventListener("click", () => {
       modalDesarrolladores.style.display = "none";
     });
