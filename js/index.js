@@ -1,13 +1,13 @@
 const buttons = document.querySelectorAll('li');
 
 
-
 buttons[1].addEventListener('click', util.btnCrearNota);
 buttons[2].addEventListener('click', util.btnCargar);
 buttons[3].addEventListener('click', util.btnGuardar);
+buttons[6].addEventListener('click', util.mostrarDesarrolladores);
 //estos son los eventos para las funciones que faltan:
-buttons[4].addEventListener('click', util.exportarTablero);
-buttons[5].addEventListener('click', util.vaciarTablero);
+buttons[5].addEventListener('click', util.exportarTablero);
+buttons[4].addEventListener('click', util.vaciarTablero);
 
 
 //div padre eventos de arrastre

@@ -10,7 +10,7 @@ const util = {
     nota.agregarAlFront();
 
   },
-  
+
   btnGuardar: function () {
     //limpiando datos anteriores
     localStorage.clear();
@@ -235,7 +235,6 @@ const util = {
       padreNota.removeChild(nota);
       const padrePrompt = div.parentNode;
       padrePrompt.removeChild(div);
-
     });
 
     const btnCancelar = document.createElement('button');
@@ -254,29 +253,26 @@ const util = {
   },
 
   arrastrar: function (event) {
-     event.dataTransfer.setData("text", event.target.id);
+    event.dataTransfer.setData("text", event.target.id);
 
   },
 
   soltar: function (event) {
-     event.preventDefault();
-     const data = event.dataTransfer.getData("text");
-     const draggableElement = document.getElementById(data);
-     event.target.appendChild(draggableElement);
-    
-   
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text");
+    const draggableElement = document.getElementById(data);
+    event.target.appendChild(draggableElement);
+
+
 
   },
 
   mostrarDesarrolladores: () => {
-    const mostrarDesarrolladores = document.getElementById("mostrarDesarrolladores");
     const modalDesarrolladores = document.querySelector(".modal");
+    modalDesarrolladores.style.display = "block";
+
     const cerrarModal = document.getElementById("cerrarModal");
-
-    mostrarDesarrolladores.addEventListener("click", () => {
-      modalDesarrolladores.style.display = "block";
-    });
-
+    cerrarModal.innerHTML = 'X';
     cerrarModal.addEventListener("click", () => {
       modalDesarrolladores.style.display = "none";
     });
@@ -288,34 +284,36 @@ const util = {
     });
   },
 
-  touchStart : (event)=>{
+  touchStart: (event) => {
 
     currentElement = event.target;
-},
+  },
 
-touchMove : (event)=>{
+  touchMove: (event) => {
 
-  if(currentElement){
-    event.preventDefault();
-    const touch = event.touches[0];
-    const container = currentElement.parentNode;
-    const offsetX = touch.clientX - container.getBoundingClientRect().left;
-    const offsetY = touch.clientY - container.getBoundingClientRect().top;
+    if (currentElement) {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const container = currentElement.parentNode;
+      const offsetX = touch.clientX - container.getBoundingClientRect().left;
+      const offsetY = touch.clientY - container.getBoundingClientRect().top;
 
-    currentElement.style.left = offsetX + "px";
-    currentElement.style.top = offsetY + "px";
+      currentElement.style.left = offsetX + "px";
+      currentElement.style.top = offsetY + "px";
 
+    }
+
+  },
+
+  drop: (event) => {
+    if (currentElement) {
+      event.target.appendChild(currentElement);
+      currentElement = null;
+    }
   }
 
-},
-
-drop : (event)=>{
-  if(currentElement){
-    event.target.appendChild(currentElement);
-    currentElement = null;
-  }
 }
 
-}
+
 
 

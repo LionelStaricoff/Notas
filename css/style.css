@@ -18,13 +18,8 @@ header {
     display: grid;
     justify-items: center;
     align-items: center;
-    justify-content: space-between;
     position: relative;
     border-bottom: 2px solid black;
-}
-.izquierda {
-    padding-left: 0.7em;
-    font-size: 1.2em;
 }
 .titulo {
     display: flex;
@@ -64,7 +59,6 @@ header .titulo img {
 
 header .menuDesplegable #checkbox{
      display: none; 
-  
 }
 header .menuDesplegable img {
     width: 3em;
@@ -78,11 +72,9 @@ header .menuDesplegable img {
     padding: .1em
 }
 
-header .menuDesplegable img:hover {
-    background-color: rgb(9, 138, 88);
-}
 header .menuDesplegable img:active {
     transform: scale(90%);
+    background-color: rgb(9, 138, 88);
 }
 
 ul {
@@ -116,7 +108,6 @@ ul {
     text-align: center;
 }
 
-
 /*ocultar ultimos 2 botones*/
 
 #menu li ul li:nth-child(4) {
@@ -149,6 +140,10 @@ ul {
     color: #000;
     background-color: #49f8ec;
 }
+#menu li ul li:nth-child(6) {
+    color: #000;
+    background-color: #f7cb04;
+}
 #menu li ul li:first-child:hover {
     border: 2px solid #000;
 }
@@ -164,7 +159,9 @@ ul {
 #menu li ul li:nth-child(5):hover {
     border: 2px solid #000;
 }
-
+#menu li ul li:nth-child(6):hover {
+    border: 2px solid #000;
+}
 #menu li ul li:first-child:active {
     color: #f5abed;
     background-color: rgb(42, 40, 42);
@@ -190,6 +187,12 @@ ul {
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+#menu li ul li:nth-child(6):active {
+    color: #f7cb04;
+    background-color: rgb(42, 40, 42);
+    border: 2px solid #000;
+}
+
 /*MENU DESPLEGABLE  - Termina aquí */
 
 
@@ -206,14 +209,7 @@ main {
     header {
         height: 10vh;         
     }
-    header .izquierda a {
-        padding-left: 0em;
-        font-size: .5em;
-        position: absolute;
-        text-align: left;
-        color: black;
-        top: .3em;
-    }
+    
     header .titulo img {
         width: 4em;
         height: 2.6em;
@@ -234,9 +230,9 @@ main {
     }
 
     header .menuDesplegable img {
-        width: 2.1em;
-        height: 2.1em;
-        margin-top: 0.7em;
+        width: 1.8em;
+        height: 1.8em;
+        margin-top: 0.5em;
     }
     main {
         min-height: 90vh;
@@ -246,14 +242,7 @@ main {
     header {
         height: 10vh;         
     }
-    header .izquierda a {
-        padding-left: 0em;
-        font-size: .5em;
-        position: absolute;
-        text-align: left;
-        color: black;
-        top: .3em
-    }
+    
     header .titulo img {
         width: 5em;
         height: 2.8em;
@@ -277,7 +266,7 @@ main {
     header .menuDesplegable img {
         width: 2.3em;
         height: 2.3em;
-        margin-top: 0.7em;
+        margin-top: 0.6em;
     }
     main {
         min-height: 90vh;
@@ -287,14 +276,7 @@ main {
     header {
         height: 9vh;         
     }
-    header .izquierda a {
-        padding-left: 0em;
-        font-size: .5em;
-        position: absolute;
-        text-align: left;
-        color: black;
-        top: .3em
-    }
+    
     header .titulo img {
         width: 5.3em;
         height: 3.2em;
@@ -327,14 +309,7 @@ main {
     header {
         height: 70px;         
     }
-    header .izquierda a {
-        padding-left: 0em;
-        font-size: .45em;
-        position: absolute;
-        text-align: left;
-        color: black;
-        top: 3em
-    }
+    
     header .titulo img {
         width: 6em;
         height: 2.8em;
@@ -367,9 +342,6 @@ main {
     header {
         height: 60px;         
     }
-    .izquierda {
-        font-size: .9em;
-    }
     header .titulo img {
         width: 5.5em;
         height: 2em;
@@ -392,9 +364,7 @@ main {
     header {
         height: 80px;
     }
-    .izquierda {
-        font-size: .9em;
-    }
+    
     header .titulo {
         margin-top: 0.5em;
     }
@@ -418,9 +388,7 @@ main {
     header {
         height: 80px;
     }
-    .izquierda {
-        font-size: .9em;
-    }
+    
     header .titulo {
         margin-top: 0.5em;
     }
@@ -459,7 +427,7 @@ main {
         min-height: 90vh;
     }
 }
-@media screen and (min-width: 1251px) and (max-width: 1300px) {
+@media screen and (min-width: 1251px) and (max-width: 1370px) {
     header {
         height: 80px;
     }
