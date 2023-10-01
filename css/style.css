@@ -364,20 +364,24 @@ main {
     header {
         height: 80px;
     }
-    
     header .titulo {
         margin-top: 0.5em;
     }
     header .titulo img {
-        margin-right: 1.7em;
-        margin-left: 1.7em;
+        width: 7em;
+        height: 3em;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+    .titulo h1 {
+        font-size: 2.5em;;
     }
     .menuDesplegable {
         right: 4em;
     }
     header .menuDesplegable img {
-        width: 2.8em;
-        height: 2.8em;
+        width: 2.7em;
+        height: 2.7em;
         margin-top: 0.6em;
     }
     main {
@@ -388,13 +392,17 @@ main {
     header {
         height: 80px;
     }
-    
     header .titulo {
         margin-top: 0.5em;
     }
     header .titulo img {
-        margin-right: 1.7em;
-        margin-left: 1.7em;
+        width: 7.5em;
+        height: 3.5em;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+    .titulo h1 {
+        font-size: 2em;;
     }
     .menuDesplegable {
         right: 4em;
@@ -414,8 +422,13 @@ main {
         margin-top: 0.5em;
     }
     header .titulo img {
-        margin-right: 1.7em;
-        margin-left: 1.7em;
+        width: 7em;
+        height: 3em;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+    .titulo h1 {
+        font-size: 2.5em;;
     }
     .menuDesplegable {
         right: 4em;
@@ -433,10 +446,6 @@ main {
     }
     header .titulo {
         margin-top: 0.5em;
-    }
-    header .titulo img {
-        margin-right: 1.7em;
-        margin-left: 1.7em;
     }
     .menuDesplegable {
         right: 4em;

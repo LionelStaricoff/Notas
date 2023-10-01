@@ -41,6 +41,7 @@ class Nota {
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
+        textarea.style.lineHeight = '.9em';
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
 
@@ -144,9 +145,7 @@ class Nota {
 
         const btns = nota.querySelectorAll('button');
 
-
         const textarea = nota.querySelector('textarea');
-
 
         const titulo = nota.querySelector('input');
 
@@ -158,9 +157,12 @@ class Nota {
         nota.addEventListener("ontouchstart", util.touchStart);
         nota.addEventListener("ondragover", util.touchMove);
 
-
+        titulo.style.height = '2em';
+        titulo.style.fontSize = '.7em';
+        titulo.style.lineHeight = '.5em';
+        titulo.style.marginBottom = '3em';
         textarea.style.display = 'none';
-        nota.style.height = '5em';
+        nota.style.height = '6em';
         nota.style.zIndex = '5';
 
         const btnEditar = document.createElement('button');
@@ -192,6 +194,7 @@ class Nota {
         const i = nota.querySelector('i');
         const titulo = nota.querySelector('input');
 
+        titulo.style.marginBottom = '.5em';
         textarea.style.display = 'block';
         nota.style.height = '15em';
         nota.style.zIndex = '10';

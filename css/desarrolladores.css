@@ -12,8 +12,8 @@
     z-index: 20;
 }
 .modal-contenido {
-    width: 45em;
-    height: 20em;
+    width: 40em;
+    height: 16em;
     top: 0;
     right: 0;
     bottom: 0;
@@ -22,13 +22,15 @@
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 7px;
+    gap: .1em;
+    padding: 5.5px;
     border: 2px solid #ccc;
     background-color: rgb(84, 141, 247);
     color: white;
     border-radius: 15px;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.25em;
 }
 .modal-contenido span {
     position: absolute;
@@ -41,83 +43,88 @@
     padding: .18em;
     height: 1.8em;
 }
+.modal-contenido span:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+}
 
 .modal-header {
     grid-column: 1 / span 2;
     text-align: center;
     height: 1.3em;
 }
-.modal-body {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    text-align: center;
-
+.nombre {
+    margin-top: .3em;
+    font-size: 1.2em;
 }
-.modal-body img {
-    margin: 0;
-    padding: 0;
+p a img {
+    width: 1.45em;
+    height: 1.35em;
 }
 .frontend {
-    margin-top: .2em;
-    margin-left: 1.7em;
+    margin-top: 0.2em;
+    margin-left: .7em;
 }
-.frontend img {
+div .frontend:first-child {
+    margin-left: 0em;
+}
+.frontend .programmers {
     width: 10em;
     height: 3em;
     margin-right: 2.5em;
     margin-left: 2.5em;
-    margin-top: .25em;
+    margin-top: .4em;
     position: absolute;
 }
 .backend {
-    margin-right: 0em;
+    margin-right: 0.1em;
     margin-top: .2em;
-    width: 21em
+}
+div .backend:first-child {
+    margin-right: 0em;
 }
 
 .modal-footer {
     grid-column: 1 / span 2;
-    text-align: left;
-    padding: 1em;
+    text-align: center;
+    padding: .6em;
     border-top: .5px solid #ccc;
     font-size: 1em;
+}
+p a {
+    color: #a0e5f5;
+}
+p a:hover {
+    color: #0626f6;
 }
 
 @media (max-width: 600px) {
 
     .modal-contenido {
-        width: 18em;
+        width: 17em;
         height: 33em;
         text-align: center;
         display: block;
+        line-height: 1.45em;
+
     }
     .modal-contenido span {
-        position: absolute;
-        right: 0;
         top: 1.1em;
-        margin-top: .5em;
-        margin-right: .5em;
         border: 1px solid rgb(84, 141, 247);
         background-color: white;
         color:black;
-        padding: .18em;
-        height: 1.8em;
     }
     .modal-header {
-        line-height: 1.2;
+        line-height: 0.9em;
         height: 2em;
         margin-top: 1em;
         margin-bottom: .2em;
         border: 1px solid #ccc;
         background-color: #ccc;
         border-radius: 5px;
-
         color: rgb(84, 141, 247);
         padding: .2em
-
-    }
-    .modal-body img {
-        display: none
     }
     .frontend {
         margin-top: 0em;
@@ -125,10 +132,8 @@
         border-bottom: 1px solid #ccc;
         padding: .5em
     }
-    .frontend img {
-        width: 98%;
-        height: auto;
-        
+
+    .frontend .programmers {
         display: none
     }
     .backend {
@@ -136,15 +141,24 @@
         margin-left: 0em;
         width: auto;
         padding: .5em
-
+    }
+    .linkedin {
+        width: 1.7em;
+        height: 1.7em;
+        margin-top: .35em;
     }
     
     .modal-footer {
-        text-align: center;
         padding: .8em;
-        border-top: .5px solid #ccc;
-        font-size: 1em;
     }
 
-
+    @media screen and (min-width: 601px) and (max-width: 950px) {
+        .modal-header {
+            height: 1em;
+        }
+        .modal-footer {
+            padding: 1em;
+            padding-top: .5em;
+        }
+    }
 }

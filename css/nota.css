@@ -28,7 +28,8 @@
     height: auto;
     position: absolute;
     top: -13px; 
-    left: 45%; 
+    left: 50%; 
+    transform: translate(-50%);
     z-index: 11;
 }
 
@@ -49,7 +50,7 @@ h2 {
 }
 
 textarea {
-    height: 15em;
+    height: 12em;
     margin-bottom: 0.5em;
     font-size: 1em;
 }
@@ -115,4 +116,5 @@ img {
     .nota:hover .triangle {
         display: none;
     }
+
 }
