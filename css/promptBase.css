@@ -1,0 +1,45 @@
+.promptBase {
+    position: absolute;
+    top: 0;
+    bottom: 28em;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: min(100%,20em);
+    height: 7em; 
+    background-color: rgb(158, 245, 242);
+    border: 5px ridge rgb(7, 206, 209);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 25;
+
+}
+
+.promptBase h2 { 
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0.55em .3em .3em .3em;
+}
+.promptBase button {
+    color: white;
+    width: 40%;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(6, 93, 127);
+    border-radius: 10px;
+    margin: 0 auto;
+    transition: all .2s;
+}
+.promptBase button:hover {
+    transform: scale(.9);
+}
+.promptBase button:active {
+    background-color: rgb(3, 43, 71);
+    color: #fff;
+}
+@media (max-width: 350px) {
+    .promptBase h2 { 
+        line-height: 1.3em;
+    }
+}

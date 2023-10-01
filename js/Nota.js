@@ -248,7 +248,6 @@ class Nota {
         return e;
     }
 
-        
 
 }
 

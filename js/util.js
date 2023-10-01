@@ -21,8 +21,6 @@ const util = {
     //crando un arreglo para extraer los datos
     const datosNotas = [];
 
-
-
     // Recorrer los elementos y obtener los valores
     for (var i = 0; i < notas.length; i++) {
 
@@ -44,9 +42,11 @@ const util = {
 
     // Guarda el array de notas en el local storage
     localStorage.setItem('notas', JSON.stringify(datosNotas));
-
+    
     // Notifica al usuario que las notas fueron guardadas
-    alert('Notas guardadas exitosamente');
+  //  alert('Notas guardadas exitosamente');
+    promptBase ('Notas guardadas exitosamente')
+  
   },
 
 
@@ -248,6 +248,7 @@ const util = {
     div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
     main.appendChild(div)
   },
+  
   permisoDescenso: function (event) {
     event.preventDefault();
   },
@@ -309,9 +310,12 @@ const util = {
       event.target.appendChild(currentElement);
       currentElement = null;
     }
+  },
+
+  
   }
 
-}
+
 
 
 
