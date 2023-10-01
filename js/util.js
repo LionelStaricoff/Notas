@@ -248,7 +248,6 @@ const util = {
     div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
     main.appendChild(div)
   },
-  
   permisoDescenso: function (event) {
     event.preventDefault();
   },
