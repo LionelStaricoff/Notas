@@ -44,8 +44,8 @@ const util = {
     localStorage.setItem('notas', JSON.stringify(datosNotas));
     
     // Notifica al usuario que las notas fueron guardadas
-  //  alert('Notas guardadas exitosamente');
-    promptBase ('Notas guardadas exitosamente')
+    //alert('Notas guardadas exitosamente');
+    promptBase ('Notas guardadas exitosamente');
   
   },
 
@@ -77,12 +77,10 @@ const util = {
         }
       }
 
-
-      // Notifica al usuario que las notas fueron recuperadas
-      //alert('Notas recuperadas exitosamente');
     } else {
       // Si no hay notas guardadas, notifica al usuario
-      alert('No hay notas guardadas');
+      promptBase ('No hay notas guardadas');
+
     }
 
 
