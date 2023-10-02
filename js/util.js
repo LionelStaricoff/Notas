@@ -58,6 +58,7 @@ const util = {
     if (localStorage.getItem('notas')) {
       // Obtén las notas del local storage y conviértelas en un objeto JS
       const notasArray = JSON.parse(localStorage.getItem('notas'));
+      if (notasArray == '') promptBase ('No hay notas guardadas');
 
       const columnas = document.querySelectorAll('.columnaCuadro');
 
@@ -82,7 +83,6 @@ const util = {
       promptBase ('No hay notas guardadas');
 
     }
-
 
   },
 
