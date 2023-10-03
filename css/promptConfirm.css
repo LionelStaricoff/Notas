@@ -15,7 +15,7 @@
 
 }
 
-.promptConfirmacion h3 {
+.tituloCartel {
     font-size: 0.9em;
     color: #fff;
     background-color: rgb(115, 6, 127);
@@ -24,7 +24,7 @@
     display: grid;
     place-items: center;
 }
-.promptConfirmacion h2 { 
+.preguntaCartel { 
     font-size: 1.2em;
     margin: 0.55em .3em .3em .3em;
 }

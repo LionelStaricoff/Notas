@@ -41,7 +41,7 @@ class Nota {
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
-        textarea.style.lineHeight = '.9em';
+        textarea.style.lineHeight = '1em';
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
 
@@ -121,12 +121,10 @@ class Nota {
         });
 
 
-
-
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
-            util.promptConfirmacion(nota);
+            util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', nota);
         });
 
 

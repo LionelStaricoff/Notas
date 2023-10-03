@@ -12,53 +12,19 @@ const util = {
   },
 
   btnGuardar: function () {
-    //limpiando datos anteriores
-    localStorage.clear();
-
-    // cargando todas las notas
-    const notas = document.querySelectorAll('.nota');
-
-    //crando un arreglo para extraer los datos
-    const datosNotas = [];
-
-    // Recorrer los elementos y obtener los valores
-    for (var i = 0; i < notas.length; i++) {
-
-      const a = notas[i].style.position;
-      const padre = notas[i].parentNode.classList;
-
-      const nuevaNota = {
-        input: notas[i].querySelector('.titulo').value,
-        textarea: notas[i].querySelector('textarea').value,
-        color: notas[i].style.backgroundColor,
-        position: notas[i].style.position,
-        estado: padre[1]
-      }
-
-      datosNotas.push(nuevaNota);
-
-    }
+    util.confirmaGuardarTablero();
 
 
-    // Guarda el array de notas en el local storage
-    localStorage.setItem('notas', JSON.stringify(datosNotas));
-    
-    // Notifica al usuario que las notas fueron guardadas
-    //alert('Notas guardadas exitosamente');
-    promptBase ('Notas guardadas exitosamente');
-  
   },
 
 
   btnCargar: function () {
-
     util.borrarTodasLasNotas();
 
     // Verificar si hay notas guardadas en el local storage
     if (localStorage.getItem('notas')) {
       // Obtén las notas del local storage y conviértelas en un objeto JS
       const notasArray = JSON.parse(localStorage.getItem('notas'));
-      if (notasArray == '') promptBase ('No hay notas guardadas');
 
       const columnas = document.querySelectorAll('.columnaCuadro');
 
@@ -80,9 +46,10 @@ const util = {
 
     } else {
       // Si no hay notas guardadas, notifica al usuario
-      promptBase ('No hay notas guardadas');
+      util.promptBase('No hay notas guardadas');
 
     }
+
 
   },
 
@@ -210,42 +177,43 @@ const util = {
     main.appendChild(section);
   },
 
-  promptConfirmacion: (nota) => {
-
-    const main = document.querySelector('main')
-
-    const div = document.createElement('div');
-    div.className = 'promptConfirmacion'
-
-    const cabeceraPromptConfirm = document.createElement('h3');
-    let palabras = document.createTextNode('ELIMINA LA NOTA');
-    cabeceraPromptConfirm.appendChild(palabras);
-
-    const titulo = document.createElement('h2');
-    palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
-    titulo.appendChild(palabras);
-
-    const btnAceptar = document.createElement('button');
-    palabras = document.createTextNode('Aceptar');
-    btnAceptar.appendChild(palabras);
-    btnAceptar.addEventListener('click', () => {
-      const padreNota = nota.parentNode;
-      padreNota.removeChild(nota);
-      const padrePrompt = div.parentNode;
-      padrePrompt.removeChild(div);
-    });
-
-    const btnCancelar = document.createElement('button');
-    palabras = document.createTextNode('Cancelar');
-    btnCancelar.appendChild(palabras);
-    btnCancelar.addEventListener('click', () => {
-      const padrePrompt = div.parentNode;
-      padrePrompt.removeChild(div);
-    });
-
-    div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
-    main.appendChild(div)
-  },
+  /*  confirmacionBase: (nota) => {
+  
+      const main = document.querySelector('main')
+  
+      const div = document.createElement('div');
+      div.className = 'promptConfirmacion'
+  
+      const cabeceraPromptConfirm = document.createElement('h3');
+      let palabras = document.createTextNode('ELIMINA LA NOTA');
+      cabeceraPromptConfirm.appendChild(palabras);
+  
+      const titulo = document.createElement('h2');
+      palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
+      titulo.appendChild(palabras);
+  
+      const btnAceptar = document.createElement('button');
+      palabras = document.createTextNode('Aceptar');
+      btnAceptar.appendChild(palabras);
+      btnAceptar.addEventListener('click', () => {
+        const padreNota = nota.parentNode;
+        padreNota.removeChild(nota);
+        const padrePrompt = div.parentNode;
+        padrePrompt.removeChild(div);
+      });
+  
+      const btnCancelar = document.createElement('button');
+      palabras = document.createTextNode('Cancelar');
+      btnCancelar.appendChild(palabras);
+      btnCancelar.addEventListener('click', () => {
+        const padrePrompt = div.parentNode;
+        padrePrompt.removeChild(div);
+      });
+  
+      div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
+      main.appendChild(div)
+    },
+    */
   permisoDescenso: function (event) {
     event.preventDefault();
   },
@@ -309,8 +277,132 @@ const util = {
     }
   },
 
-  
-  }
+  promptBase: (frase) => {
+    const main = document.querySelector('main');
+
+    const div = document.createElement('div');
+    div.className = 'promptBase';
+
+    const textofrase = document.createElement('h2');
+    let palabras = document.createTextNode(frase);
+    textofrase.appendChild(palabras);
+
+    const btnAceptar = document.createElement('button');
+    const textBtn = document.createTextNode('Aceptar');
+    btnAceptar.appendChild(textBtn);
+    btnAceptar.addEventListener('click', () => {
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
+    div.append(textofrase, btnAceptar);
+    main.appendChild(div);
+  },
+
+  confirmacionBase: (titulo, pregunta, nota) => {
+
+    const main = document.querySelector('main')
+    const div = document.createElement('div');
+    div.className = 'promptConfirmacion'
+
+    const tituloCartel = document.createElement('h3');
+    tituloCartel.textContent = titulo;
+    tituloCartel.className = 'tituloCartel'
+
+    const preguntaCartel = document.createElement('h2');
+    preguntaCartel.textContent = pregunta;
+    preguntaCartel.className = 'preguntaCartel'
+
+    const btnAceptar = document.createElement('button');
+    btnAceptar.textContent = 'Aceptar';
+    btnAceptar.addEventListener('click', () => {
+      const padreNota = nota.parentNode;
+      padreNota.removeChild(nota);
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
+
+    const btnCancelar = document.createElement('button');
+    palabras = document.createTextNode('Cancelar');
+    btnCancelar.appendChild(palabras);
+    btnCancelar.addEventListener('click', () => {
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
+
+    div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
+    main.appendChild(div);
+  },
+
+  confirmaGuardarTablero: (titulo, pregunta, notas) => {
+
+    const main = document.querySelector('main')
+    const div = document.createElement('div');
+    div.className = 'promptConfirmacion'
+
+    const tituloCartel = document.createElement('h3');
+    palabras = document.createTextNode('GUARDA TABLERO');
+    tituloCartel.appendChild(palabras);
+    tituloCartel.className = 'tituloCartel'
+
+    const preguntaCartel = document.createElement('h2');
+    palabras = document.createTextNode('¿Querés guardar el tablero?');
+    preguntaCartel.appendChild(palabras);
+    preguntaCartel.className = 'preguntaCartel'
+
+    const btnAceptar = document.createElement('button');
+    palabras = document.createTextNode('SI');
+    btnAceptar.appendChild(palabras);
+    btnAceptar.addEventListener('click', () => {
+      //limpiando datos anteriores
+      localStorage.clear();
+      // cargando todas las notas
+      const notas = document.querySelectorAll('.nota');
+
+      //crando un arreglo para extraer los datos
+      const datosNotas = [];
+
+      // Recorrer los elementos y obtener los valores
+      for (var i = 0; i < notas.length; i++) {
+
+        const a = notas[i].style.position;
+        const padre = notas[i].parentNode.classList;
+
+        const nuevaNota = {
+          input: notas[i].querySelector('.titulo').value,
+          textarea: notas[i].querySelector('textarea').value,
+          color: notas[i].style.backgroundColor,
+          position: notas[i].style.position,
+          estado: padre[1]
+        }
+
+        datosNotas.push(nuevaNota);
+      }
+
+      // Guarda el array de notas en el local storage
+      localStorage.setItem('notas', JSON.stringify(datosNotas));
+
+      // Notifica al usuario que las notas fueron guardadas
+      //alert('Notas guardadas exitosamente');
+      util.promptBase('Notas guardadas exitosamente');
+
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+
+    });
+
+    const btnCancelar = document.createElement('button');
+    palabras = document.createTextNode('NO');
+    btnCancelar.appendChild(palabras);
+    btnCancelar.addEventListener('click', () => {
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
+
+    div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
+    main.appendChild(div);
+  },
+}
+
 
 
 
