@@ -1,4 +1,5 @@
 .promptConfirmacion {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -7,8 +8,8 @@
     margin: auto;
     width: min(100%,25em);
     height: 9em; 
-    background-color: rgb(214, 171, 206);
-    border: 5px ridge rgb(196, 15, 212);
+    background-color: rgb(134, 245, 237);
+    border: 5px ridge rgb(5, 121, 109);
     border-radius: 10px;
     text-align: center;
     z-index: 24;
@@ -16,17 +17,20 @@
 }
 
 .tituloCartel {
-    font-size: 0.9em;
+    height: 2em;
+    font-size: 1em;
     color: #fff;
-    background-color: rgb(115, 6, 127);
+    background-color: rgb(5, 121, 109);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     display: grid;
     place-items: center;
+    align-content: center;
 }
 .preguntaCartel { 
     font-size: 1.2em;
-    margin: 0.55em .3em .3em .3em;
+    margin: 0.8em .3em .8em .3em;
+
 }
 .promptConfirmacion button {
     color: white;
@@ -34,16 +38,17 @@
     height: 2em;
     font-size: 1em;
     font-weight: bold;
-    background-color: rgb(115, 6, 127);
+    background-color: rgb(8, 112, 101);
+    box-shadow: 4px 4px 4px rgb(64, 66, 65, .7);
     border-radius: 10px;
     margin: 0 .25em 0 0.25em;
     transition: all .2s;
 }
 .promptConfirmacion button:hover {
-    transform: scale(.9);
+    transform: scale(.95);
 }
 .promptConfirmacion button:active {
-    background-color: rgb(71, 12, 3);
+    background-color: rgb(1, 46, 28);
     color: #fff;
 }
 @media (max-width: 350px) {
