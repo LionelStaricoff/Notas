@@ -103,17 +103,19 @@ p a:hover {
 
     .modal-contenido {
         width: 17em;
-        height: 33em;
+        height: 32em;
         text-align: center;
         display: block;
         line-height: 1.45em;
 
     }
     .modal-contenido span {
-        top: 1.1em;
-        border: 1px solid rgb(84, 141, 247);
-        background-color: white;
-        color:black;
+        top: -1.9em;
+        right: -.5em;
+        color:white;
+        font-size: 1.4em;
+        border: none;
+
     }
     .modal-header {
         line-height: 0.9em;
