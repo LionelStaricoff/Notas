@@ -12,19 +12,18 @@ buttons[4].addEventListener('click', util.vaciarTablero);
 
 //div padre eventos de arrastre
 const idea = document.querySelector(".idea");
-idea.addEventListener("drop", util.soltar);
-idea.addEventListener("dragover", util.permisoDescenso);
-idea.addEventListener('ontouchend', util.drop);
-idea.addEventListener('ondragover', util.permisoDescenso);
-
 const enProceso = document.querySelector(".enProceso");
-enProceso.addEventListener("drop", util.soltar);
-enProceso.addEventListener("dragover", util.permisoDescenso);
-enProceso.addEventListener('ontouchend', util.drop);
-enProceso.addEventListener('ondragover', util.permisoDescenso );
+const completada = document.querySelector(".completada");
+const padres = [idea,enProceso,completada];
 
-completada = document.querySelector(".completada");
-completada.addEventListener("drop", util.soltar);
-completada.addEventListener("dragover", util.permisoDescenso);
-completada.addEventListener('ontouchend', util.drop);
-completada.addEventListener('ondragover', util.permisoDescenso );
+padres.forEach((b)=>{
+    b.addEventListener("drop", util.soltar);
+    b.addEventListener("dragover", util.permisoDescenso);
+    b.addEventListener('ontouchend', util.drop);
+    b.addEventListener('ondragover', util.permisoDescenso);
+});
+
+
+
+
+
