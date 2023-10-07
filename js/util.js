@@ -45,7 +45,7 @@ const util = {
     
     // Notifica al usuario que las notas fueron guardadas
     //alert('Notas guardadas exitosamente');
-    promptBase ('Notas guardadas exitosamente');
+    util.promptBase ('Notas guardadas exitosamente');
   
   },
 
@@ -58,7 +58,7 @@ const util = {
     if (localStorage.getItem('notas')) {
       // Obtén las notas del local storage y conviértelas en un objeto JS
       const notasArray = JSON.parse(localStorage.getItem('notas'));
-      if (notasArray == '') promptBase ('No hay notas guardadas');
+      if (notasArray == '') util.promptBase ('No hay notas guardadas');
 
       const columnas = document.querySelectorAll('.columnaCuadro');
 
@@ -80,7 +80,7 @@ const util = {
 
     } else {
       // Si no hay notas guardadas, notifica al usuario
-      promptBase ('No hay notas guardadas');
+      util.promptBase ('No hay notas guardadas');
 
     }
 
@@ -310,7 +310,26 @@ const util = {
       currentElement = null;
     }
   },
+   promptBase : (frase)=> {
+    const main = document.querySelector('main');
 
+    const div = document.createElement('div');
+    div.className = 'promptBase';
+
+    const textofrase = document.createElement('h2');
+    let palabras = document.createTextNode(frase);
+    textofrase.appendChild(palabras);
+
+    const btnAceptar = document.createElement('button');
+    const textBtn = document.createTextNode('Aceptar');
+    btnAceptar.appendChild(textBtn);
+    btnAceptar.addEventListener('click', () => {
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
+    div.append(textofrase,btnAceptar);
+    main.appendChild(div);
+}
   
   }
 
