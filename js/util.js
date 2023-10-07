@@ -259,9 +259,11 @@ const util = {
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
     const draggableElement = document.getElementById(data);
-    event.target.appendChild(draggableElement);
+    const padre = event.target.classList;
 
-
+      if(padre[1] == "idea" || padre[1] == "enProceso" || padre[1] == "completada"){
+        event.target.appendChild(draggableElement);
+      }
 
   },
 
