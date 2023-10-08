@@ -210,42 +210,6 @@ const util = {
     main.appendChild(section);
   },
 
-  promptConfirmacion: (nota) => {
-
-    const main = document.querySelector('main')
-
-    const div = document.createElement('div');
-    div.className = 'promptConfirmacion'
-
-    const cabeceraPromptConfirm = document.createElement('h3');
-    let palabras = document.createTextNode('ELIMINA LA NOTA');
-    cabeceraPromptConfirm.appendChild(palabras);
-
-    const titulo = document.createElement('h2');
-    palabras = document.createTextNode('¿Estás seguro que querés eliminarla?');
-    titulo.appendChild(palabras);
-
-    const btnAceptar = document.createElement('button');
-    palabras = document.createTextNode('Aceptar');
-    btnAceptar.appendChild(palabras);
-    btnAceptar.addEventListener('click', () => {
-      const padreNota = nota.parentNode;
-      padreNota.removeChild(nota);
-      const padrePrompt = div.parentNode;
-      padrePrompt.removeChild(div);
-    });
-
-    const btnCancelar = document.createElement('button');
-    palabras = document.createTextNode('Cancelar');
-    btnCancelar.appendChild(palabras);
-    btnCancelar.addEventListener('click', () => {
-      const padrePrompt = div.parentNode;
-      padrePrompt.removeChild(div);
-    });
-
-    div.append(cabeceraPromptConfirm, titulo, btnAceptar, btnCancelar);
-    main.appendChild(div)
-  },
   permisoDescenso: function (event) {
     event.preventDefault();
   },
@@ -329,6 +293,40 @@ const util = {
     });
     div.append(textofrase,btnAceptar);
     main.appendChild(div);
+},
+
+confirmacionBase: (titulo, pregunta, callbackAceptar) => {
+  const main = document.querySelector('main')
+  const div = document.createElement('div');
+  div.className = 'promptConfirmacion'
+
+  const tituloCartel = document.createElement('h3');
+  tituloCartel.textContent = titulo;
+  tituloCartel.className = 'tituloCartel';
+
+  const preguntaCartel = document.createElement('h2');
+  preguntaCartel.textContent = pregunta;
+  preguntaCartel.className = 'preguntaCartel';
+
+  const btnAceptar = document.createElement('button');
+  btnAceptar.textContent = 'Aceptar';
+  btnAceptar.addEventListener('click', () => {
+    if(typeof callbackAceptar === 'function'){
+      callbackAceptar();
+    }
+    const padrePrompt = div.parentNode;
+    padrePrompt.removeChild(div);
+  });
+
+  const btnCancelar = document.createElement('button');
+  btnCancelar.textContent = 'Cancelar';
+  btnCancelar.addEventListener('click', () => {
+    const padrePrompt = div.parentNode;
+    padrePrompt.removeChild(div);
+  });
+
+  div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
+  main.appendChild(div)
 }
   
   }

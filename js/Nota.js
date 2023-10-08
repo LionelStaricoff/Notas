@@ -128,9 +128,10 @@ class Nota {
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
-            util.promptConfirmacion(nota);
-        });
-
+            util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', ()=>{
+                const padreNota = nota.parentNode.removeChild(nota);
+            });
+         } );
 
     }
     modificarColor(btnColor, nota, i, input) {
