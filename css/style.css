@@ -1,4 +1,5 @@
 @import url("nota.css");
+@import url("exportar_importar.css");
 @import url("cuadro.css");
 @import url("prompt.css");
 @import url("promptConfirm.css");
@@ -109,14 +110,7 @@ ul {
     text-align: center;
 }
 
-/*ocultar ultimos 2 botones*/
 
-#menu li ul li:nth-child(4) {
-  display: none;
-}
-#menu li ul li:nth-child(5) {
-    display: none;
-}
 
 
 

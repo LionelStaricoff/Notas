@@ -145,29 +145,92 @@ const util = {
 
   },
 
-  btnCargarArchivo: () => {
-    const openFile = async () => {
-      return new Promise((resolve) => {
+  btnImportarArchivo: () => {
+    async function importar()  {
+      return new Promise(() => {
         const input = document.createElement('input');
         input.type = 'file';
         input.addEventListener('change', () => {
-          resolve(input.files[0]);
+          let file = input.files[0];
+          let reader = new FileReader();
+          reader.readAsText(file);
+          reader.onload = function() {
+
+            const notasArray = JSON.parse(reader.result);
+            if (notasArray == '') util.promptBase ('No hay notas guardadas');
+      
+            const columnas = document.querySelectorAll('.columnaCuadro');
+      
+            for (a of notasArray) {
+      
+              let nota = new Nota(a.input, a.textarea,
+                a.color, a.position, a.estado);
+      
+              nota.crearNota();
+      
+              nota.agregarAlFront();
+              nota1 = nota.getNota();
+      
+              if (nota.position != 'absolute') {
+                nota.agrandarNota(nota1);
+                nota.achicarNota(nota1);
+              }
+            }
+           
+          };
+          reader.onerror = function() {
+            console.log(reader.error);
+          };
         });
         input.click();
       });
-    };
+    }
+    importar();
+    
   },
 
-  btnGuardarArchivo: () => {
-    const saveFile = async (blob) => {
-      const a = document.createElement('a');
-      a.download = 'my-file.txt';
-      a.href = URL.createObjectURL(blob);
-      a.addEventListener('click', (e) => {
-        setTimeout(() => URL.revokeObjectURL(a.href), 30 * 1000);
-      });
-      a.click();
-    };
+  btnExportarArchivo: () => {
+    function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+    
+ // cargando todas las notas
+ const notas = document.querySelectorAll('.nota');
+
+ //crando un arreglo para extraer los datos
+ const datosNotas = [];
+
+ // Recorrer los elementos y obtener los valores
+ for (var i = 0; i < notas.length; i++) {
+
+   const a = notas[i].style.position;
+   const padre = notas[i].parentNode.classList;
+
+   const nuevaNota = {
+     input: notas[i].querySelector('.titulo').value,
+     textarea: notas[i].querySelector('textarea').value,
+     color: notas[i].style.backgroundColor,
+     position: notas[i].style.position,
+     estado: padre[1]
+   }
+  
+
+   datosNotas.push(nuevaNota);
+  }
+
+    var text = JSON.stringify(datosNotas);
+    var filename = 'notas.txt';
+    
+  
+      download(filename, text);
+  
+    
   },
 
   promptCambiarNota: (nota, estado) => {
