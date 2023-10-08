@@ -47,44 +47,35 @@ const util = {
 
 
   btnCargar: function () {
-    const columnas = document.querySelectorAll('.columnaCuadro');
+    util.borrarTodasLasNotas();
 
-    for (const columna of columnas) {
-      if (columna.children.length > 0) {
-        util.confirmacionBase('CARGA TABLERO', '¿Querés cargar el último tablero que guardaste?', ()=>{
-          util.borrarTodasLasNotas();
+    // Verificar si hay notas guardadas en el local storage
+    if (localStorage.getItem('notas')) {
+      // Obtén las notas del local storage y conviértelas en un objeto JS
+      const notasArray = JSON.parse(localStorage.getItem('notas'));
 
-          // Verificar si hay notas guardadas en el local storage
-          if (localStorage.getItem('notas')) {
-            // Obtén las notas del local storage y conviértelas en un objeto JS
-            const notasArray = JSON.parse(localStorage.getItem('notas'));
-      
-            const columnas = document.querySelectorAll('.columnaCuadro');
-      
-            for (a of notasArray) {
-      
-              let nota = new Nota(a.input, a.textarea,
-                a.color, a.position, a.estado);
-      
-              nota.crearNota();
-      
-              nota.agregarAlFront();
-              nota1 = nota.getNota();
-      
-              if (nota.position != 'absolute') {
-                nota.agrandarNota(nota1);
-                nota.achicarNota(nota1);
-              }
-            }
-      
-          } else {
-            // Si no hay notas guardadas, notifica al usuario
-            util.promptBase('No hay notas guardadas');
-          }
+      const columnas = document.querySelectorAll('.columnaCuadro');
 
-      });
+      for (a of notasArray) {
+
+        let nota = new Nota(a.input, a.textarea,
+          a.color, a.position, a.estado);
+
+        nota.crearNota();
+
+        nota.agregarAlFront();
+        nota1 = nota.getNota();
+
+        if (nota.position != 'absolute') {
+          nota.agrandarNota(nota1);
+          nota.achicarNota(nota1);
+        }
+      }
+
+    } else {
+      // Si no hay notas guardadas, notifica al usuario
+      util.promptBase('No hay notas guardadas');
     }
-  }
 
   },
 
