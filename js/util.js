@@ -155,8 +155,17 @@ const util = {
           let reader = new FileReader();
           reader.readAsText(file);
           reader.onload = function() {
+            util.borrarTodasLasNotas();
 
+            if(reader.result == ''){
+              util.promptBase ('No hay notas guardadas');
+            }else{
+
+              try {
             const notasArray = JSON.parse(reader.result);
+          } catch (error) {
+            util.promptBase('Error al analizar JSON: ' + error.message);
+          }
             if (notasArray == '') util.promptBase ('No hay notas guardadas');
       
             const columnas = document.querySelectorAll('.columnaCuadro');
