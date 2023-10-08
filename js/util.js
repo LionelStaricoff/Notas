@@ -12,6 +12,9 @@ const util = {
   },
 
   btnGuardar: function () {
+
+    util.confirmacionBase('GUARDANDO NOTAS', '¿QUIERE GUARDAR LAS NOTAS?', ()=>{
+
     //limpiando datos anteriores
     localStorage.clear();
 
@@ -46,11 +49,16 @@ const util = {
     // Notifica al usuario que las notas fueron guardadas
     //alert('Notas guardadas exitosamente');
     util.promptBase ('Notas guardadas exitosamente');
+  });
   
   },
 
 
   btnCargar: function () {
+
+    util.confirmacionBase('CARGANDO NOTAS', '¿QUIERE CARGAR LAS NOTAS?', ()=>{
+    
+ 
 
     util.borrarTodasLasNotas();
 
@@ -83,7 +91,7 @@ const util = {
       util.promptBase ('No hay notas guardadas');
 
     }
-
+  });
   },
 
 
