@@ -157,16 +157,11 @@ const util = {
           reader.onload = function() {
             util.borrarTodasLasNotas();
 
-            if(reader.result == ''){
-              util.promptBase ('No hay notas guardadas');
-            }else{
 
               try {
             const notasArray = JSON.parse(reader.result);
-          } catch (error) {
-            util.promptBase('Error al analizar JSON: ' + error.message);
-          }
-            if (notasArray == '') util.promptBase ('No hay notas guardadas');
+         
+           //if (notasArray == '') util.promptBase ('No hay notas guardadas');
       
             const columnas = document.querySelectorAll('.columnaCuadro');
       
@@ -186,10 +181,12 @@ const util = {
               }
             }
            
-          };
-          reader.onerror = function() {
-            console.log(reader.error);
-          };
+          } catch (error) {
+            util.promptBase('archivo no valido o vacio ' );
+          }
+        }
+         
+        
         });
         input.click();
       });
