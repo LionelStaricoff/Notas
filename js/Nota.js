@@ -103,6 +103,7 @@ class Nota {
 
             if (nota.style.position == 'relative') {
                 titulo.readOnly = false;
+                titulo.style.pointerEvents = 'auto';
                 textarea.readOnly = false;
                 nota.style.position = 'absolute';
                 this.agrandarNota(nota);
@@ -161,6 +162,7 @@ class Nota {
         titulo.style.fontSize = '.7em';
         titulo.style.lineHeight = '.5em';
         titulo.style.marginBottom = '3em';
+        titulo.style.pointerEvents = 'none';
         textarea.style.display = 'none';
         nota.style.height = '6em';
         nota.style.zIndex = '5';
