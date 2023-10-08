@@ -1,4 +1,5 @@
-# App Notas
+  
+    # App Notas
 
 Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que posee tres columnas que representan en que estado se encuentra la tarea o idea.
 
@@ -8,10 +9,10 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 #### Desde el menú desplegable podrá:
 - Crear Nota
 - Cargar Tablero
-- Guardar Tablero}
+- Guardar Tablero
  
 <div align="center">
-	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
+	<img src="/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
 </div>
 
 ------------
@@ -21,7 +22,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 - COMPLETADAS
   
 <div align="center">
-	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/PantallaApp.png" alt="Tablero" width="50%">
+	<img src="/imagesReadme/PantallaApp.png" alt="Tablero" width="50%">
 </div>
 
 ------------
@@ -36,7 +37,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	(Cuando la columna se agrega al tablero, se guarda en un tamaño reducido)
 
 <div align="center">
-	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png" alt="Nota" width="25%">
+	<img src="/imagesReadme/Nota.png" alt="Nota" width="25%">
 </div>
 
 ------------
@@ -52,9 +53,9 @@ Contenido de la nota reducida:
 	- Cambia de columna
 
 <div align="center">
-	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
+	<img src="/imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
 
-<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
+<img src="/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
 
 </div>
 <br>
@@ -66,4 +67,3 @@ Contenido de la nota reducida:
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
 </div>
-
