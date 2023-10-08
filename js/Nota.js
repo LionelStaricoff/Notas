@@ -28,6 +28,7 @@ class Nota {
         img1.src = 'img/chinche.png';
         img1.alt = 'imagen de chinche';
         img1.className = 'chinche';
+        img1.style.pointerEvents = 'none';
 
         const h2 = document.createElement('h2');
         const titulo = document.createElement('input');
