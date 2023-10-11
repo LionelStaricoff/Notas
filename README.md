@@ -8,8 +8,11 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 #### Desde el menú desplegable podrá:
 - Crear Nota
 - Cargar Tablero
-- Guardar Tablero}
- 
+- Guardar Tablero
+- Exportar Tablero
+- Importar el Tablero
+- Desarrolladores
+
 <div align="center">
 	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
 </div>
@@ -33,7 +36,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	- Eliminar
 	- Cambiar de color
 	- Agrega a la columna
-	(Cuando la columna se agrega al tablero, se guarda en un tamaño reducido)
+	(Cuando la nota se agrega al tablero, se guarda en un tamaño reducido)
 
 <div align="center">
 	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png" alt="Nota" width="25%">
@@ -61,7 +64,7 @@ Contenido de la nota reducida:
 <div align="center">
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷 
-##### Autores: Lionel Staricoff & Gladys Romero
+##### Autores: Lionel Staricoff & Gladys Isabel Romero
 &copy; Copyright
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷

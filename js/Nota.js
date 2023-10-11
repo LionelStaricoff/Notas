@@ -28,6 +28,7 @@ class Nota {
         img1.src = 'img/chinche.png';
         img1.alt = 'imagen de chinche';
         img1.className = 'chinche';
+        img1.style.pointerEvents = 'none';
 
         const h2 = document.createElement('h2');
         const titulo = document.createElement('input');
@@ -41,7 +42,7 @@ class Nota {
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
-        textarea.style.lineHeight = '1em';
+        textarea.style.lineHeight = '.9em';
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
 
@@ -103,6 +104,7 @@ class Nota {
 
             if (nota.style.position == 'relative') {
                 titulo.readOnly = false;
+                titulo.style.pointerEvents = 'auto';
                 textarea.readOnly = false;
                 nota.style.position = 'absolute';
                 this.agrandarNota(nota);
@@ -121,14 +123,15 @@ class Nota {
         });
 
 
+
+
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
             util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', ()=>{
                 const padreNota = nota.parentNode.removeChild(nota);
             });
-        });
-
+         } );
 
     }
     modificarColor(btnColor, nota, i, input) {
@@ -161,6 +164,7 @@ class Nota {
         titulo.style.fontSize = '.7em';
         titulo.style.lineHeight = '.5em';
         titulo.style.marginBottom = '3em';
+        titulo.style.pointerEvents = 'none';
         textarea.style.display = 'none';
         nota.style.height = '6em';
         nota.style.zIndex = '5';
@@ -250,5 +254,4 @@ class Nota {
 
 
 }
-
 
