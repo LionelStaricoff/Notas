@@ -404,7 +404,21 @@ confirmacionBase: (titulo, pregunta, callbackAceptar) => {
 
   div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
   main.appendChild(div)
+},
+
+modoOscuro : ()=>{
+let root = document.querySelector(":root");
+
+BtnColores.forEach(color => {
+color.addEventListener("click", () => {
+let dataColor = color.getAttribute("data-bg");
+root.style.setProperty("--mainColor", dataColor);
+// Guardar color en localStorage cuando se selecciona
+localStorage.setItem("color", dataColor);
+})
+});
 }
+
   
   }
 

@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all .5s;
 }
 
 header {
@@ -22,6 +23,7 @@ header {
     position: relative;
     border-bottom: 2px solid black;
 }
+
 .titulo {
     display: flex;
     align-items: center;
@@ -34,7 +36,7 @@ header .titulo img {
     margin-right: 4em;
     margin-left: 4em;
     filter: drop-shadow(8px 8px 4px black);
-   
+
 }
 
 .titulo h1 {
@@ -55,21 +57,22 @@ header .titulo img {
     right: 3em;
     min-width: 200px;
     display: grid;
-    justify-items:flex-end;
+    justify-items: flex-end;
     align-self: self-start;
     transition: all .5s;
 }
 
-header .menuDesplegable #checkbox{
-     display: none; 
+header .menuDesplegable #checkbox {
+    display: none;
 }
+
 header .menuDesplegable img {
     width: 3em;
     height: 3em;
     border: 2px solid #000;
     border-radius: 15%;
     background-color: rgb(229, 229, 22);
-    box-shadow:-6px 6px 6px rgba(38, 46, 39, 0.8);
+    box-shadow: -6px 6px 6px rgba(38, 46, 39, 0.8);
     margin-top: 0.45em;
     margin-bottom: 0.7em;
     padding: .1em
@@ -84,7 +87,7 @@ ul {
     list-style: none;
 }
 
-.menuDesplegable li ul li{
+.menuDesplegable li ul li {
     border-bottom: 1px solid black;
     padding: 0.8em;
 }
@@ -94,8 +97,8 @@ ul {
     text-align: right;
 }
 
-#checkbox:checked ~ li > .menu-list {
-    display:block;
+#checkbox:checked~li>.menu-list {
+    display: block;
 }
 
 #menu li ul li {
@@ -105,34 +108,41 @@ ul {
     border-left: 3px outset #434343;
     border-bottom: 3px solid #434343;
     box-shadow: -6px 6px 6px rgba(38, 46, 39, 0.8);
-    margin-bottom:0.3em;
+    margin-bottom: 0.3em;
     text-align: center;
 }
+
 /*efecto desplazable*/
 .menu-list li {
     transform: translateY(-100%);
     animation-name: slideInFromTop;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+   
 }
+
 @keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .menu-list li:nth-child(2) {
     animation-delay: .2s;
 }
+
 .menu-list li:nth-child(3) {
     animation-delay: .3s;
 }
+
 .menu-list li:nth-child(4) {
     animation-delay: .5s;
 }
+
 .menu-list li:nth-child(5) {
     animation-delay: .7s;
 }
@@ -141,100 +151,97 @@ ul {
     animation-delay: .9s;
 }
 
-
-
-
-/*efecto inverso*/
-
-#checkbox:checked ~ li > .menu-list li {
-    transform: translateY(-100%);
-    animation-name: slideInFromButton;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideInFromButton {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
+#checkbox:not(:checked)~li>.menu-list li {
+     display: none;
     }
-    100% {
-      transform: translateY(-250%);
-        opacity: 0;
-       pointer-events: none;
-       display: none;
-    }
-  }
-/*aca termina el efecto de desplazamiento*/
 
+
+/*termina el efecto desplazable*/
 
 #menu li ul li:first-child {
     color: #000;
     background-color: #f5abed;
 }
+
 #menu li ul li:nth-child(2) {
     color: #000;
     background-color: #ecf863;
 }
+
 #menu li ul li:nth-child(3) {
     color: #000;
     background-color: #63f883;
 }
+
 #menu li ul li:nth-child(4) {
     color: #000;
     background-color: #bb83fb;
 }
+
 #menu li ul li:nth-child(5) {
     color: #000;
     background-color: #49f8ec;
 }
+
 #menu li ul li:nth-child(6) {
     color: #000;
     background-color: #f7cb04;
 }
+
 #menu li ul li:first-child:hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(2):hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(3):hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(4):hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(5):hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(6):hover {
     border: 2px solid #000;
 }
+
 #menu li ul li:first-child:active {
     color: #f5abed;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(2):active {
     color: #ecf863;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(3):active {
     color: #63f883;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(4):active {
     color: #c49bf2;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(5):active {
     color: #49f8ec;
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
+
 #menu li ul li:nth-child(6):active {
     color: #f7cb04;
     background-color: rgb(42, 40, 42);
@@ -255,9 +262,9 @@ main {
 
 @media (max-width: 320px) {
     header {
-        height: 10vh;         
+        height: 10vh;
     }
-    
+
     header .titulo img {
         width: 4em;
         height: 2.6em;
@@ -282,15 +289,17 @@ main {
         height: 1.8em;
         margin-top: 0.5em;
     }
+
     main {
         min-height: 90vh;
     }
 }
+
 @media screen and (min-width: 321px) and (max-width: 375px) {
     header {
-        height: 10vh;         
+        height: 10vh;
     }
-    
+
     header .titulo img {
         width: 5em;
         height: 2.8em;
@@ -316,15 +325,17 @@ main {
         height: 2.3em;
         margin-top: 0.6em;
     }
+
     main {
         min-height: 90vh;
     }
 }
+
 @media screen and (min-width: 376px) and (max-width: 500px) {
     header {
-        height: 9vh;         
+        height: 9vh;
     }
-    
+
     header .titulo img {
         width: 5.3em;
         height: 3.2em;
@@ -349,15 +360,17 @@ main {
         height: 2.6em;
         margin-top: 0.8em;
     }
+
     main {
         min-height: 91vh;
     }
 }
+
 @media screen and (min-width: 501px) and (max-width: 650px) {
     header {
-        height: 70px;         
+        height: 70px;
     }
-    
+
     header .titulo img {
         width: 6em;
         height: 2.8em;
@@ -382,128 +395,164 @@ main {
         height: 2em;
         margin-top: 12px;
     }
+
     main {
         min-height: 90vh;
     }
 }
+
 @media screen and (min-width: 651px) and (max-width: 750px) {
     header {
-        height: 60px;         
+        height: 60px;
     }
+
     header .titulo img {
         width: 5.5em;
         height: 2em;
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
-        font-size: 1.8em;;
+        font-size: 1.8em;
+        ;
     }
+
     header .menuDesplegable img {
         width: 1.85em;
         height: 1.85em;
         margin-top: 11px;
     }
+
     main {
         min-height: 91vh;
     }
 }
+
 @media screen and (min-width: 751px) and (max-width: 950px) {
     header {
         height: 80px;
     }
+
     header .titulo {
         margin-top: 0.5em;
     }
+
     header .titulo img {
         width: 7em;
         height: 3em;
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
-        font-size: 2.5em;;
+        font-size: 2.5em;
+        ;
     }
+
     .menuDesplegable {
         right: 4em;
     }
+
     header .menuDesplegable img {
         width: 2.7em;
         height: 2.7em;
         margin-top: 0.6em;
     }
+
     main {
         min-height: 95vh;
     }
 }
+
 @media screen and (min-width: 951px) and (max-width: 1050px) {
     header {
         height: 80px;
     }
+
     header .titulo {
         margin-top: 0.5em;
     }
+
     header .titulo img {
         width: 7.5em;
         height: 3.5em;
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
-        font-size: 2em;;
+        font-size: 2em;
+        ;
     }
+
     .menuDesplegable {
         right: 4em;
     }
+
     header .menuDesplegable img {
         margin-top: 10px;
     }
+
     main {
         min-height: 90vh;
     }
 }
+
 @media screen and (min-width: 1051px) and (max-width: 1250px) {
     header {
         height: 80px;
     }
+
     header .titulo {
         margin-top: 0.5em;
     }
+
     header .titulo img {
         width: 7em;
         height: 3em;
         margin-right: 2em;
         margin-left: 2em;
     }
+
     .titulo h1 {
-        font-size: 2.5em;;
+        font-size: 2.5em;
+        ;
     }
+
     .menuDesplegable {
         right: 4em;
     }
+
     header .menuDesplegable img {
         margin-top: 12px;
     }
+
     main {
         min-height: 90vh;
     }
 }
+
 @media screen and (min-width: 1251px) and (max-width: 1370px) {
     header {
         height: 80px;
     }
+
     header .titulo {
         margin-top: 0.5em;
     }
+
     .menuDesplegable {
         right: 4em;
     }
+
     header .menuDesplegable img {
         margin-top: 12px;
     }
+
     main {
         min-height: 92vh;
     }
 
- 
+
 }
