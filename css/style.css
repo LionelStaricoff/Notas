@@ -6,6 +6,10 @@
 @import url("desarrolladores.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
+:root{
+    --letras: blue;
+    --bordes: rgb(240, 10, 10);
+}
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +25,36 @@ header {
     justify-items: center;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--bordes);
 }
+
+#sol{
+    display: none;
+}
+
+ #imgsol{
+   
+    width: 2.8em;
+    height: 2.8em;
+    background-image: url('/Notas/img/sun.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    margin-right: 4em;
+   
+}
+
+#imgsol_negro:hover, #imgsol:hover{
+    transform: scale(1.2);
+}
+
+
+
+#sol:checked + label  {
+    background-image: url('/Notas/img/sun_negro.png');
+    --bordes: rgb(255, 255, 255);
+}
+
 
 .titulo {
     display: flex;
@@ -118,7 +150,7 @@ ul {
     animation-name: slideInFromTop;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-   
+
 }
 
 @keyframes slideInFromTop {
@@ -152,8 +184,8 @@ ul {
 }
 
 #checkbox:not(:checked)~li>.menu-list li {
-     display: none;
-    }
+    display: none;
+}
 
 
 /*termina el efecto desplazable*/
