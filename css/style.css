@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
 :root{
-    --letras: blue;
-    --bordes: rgb(240, 10, 10);
+    --letras: black;
+    --fondo:  rgb(34, 205, 28);
 }
 * {
     margin: 0;
@@ -18,14 +18,14 @@
 }
 
 header {
-    background-color: rgb(34, 205, 28);
+    background-color: var(--fondo);
     width: 100vw;
     height: 12vh;
     display: grid;
     justify-items: center;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid var(--bordes);
+    border-bottom: 2px solid var(--letras);
 }
 
 #sol{
@@ -52,9 +52,15 @@ header {
 
 #sol:checked + label  {
     background-image: url('/Notas/img/sun_negro.png');
-    --bordes: rgb(255, 255, 255);
+   
 }
 
+#sol:checked ~ h1 {
+    --letras: white;
+}
+#sol:checked ~ img{
+filter: grayscale(100%);
+}
 
 .titulo {
     display: flex;
@@ -76,6 +82,7 @@ header .titulo img {
     font-weight: bold;
     font-size: 2.8em;
     text-shadow: -6px 6px 6px rgba(164, 245, 176, 0.8);
+    color: var(--letras)
 }
 
 
