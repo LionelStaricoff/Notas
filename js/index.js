@@ -1,8 +1,8 @@
 const buttons = document.querySelectorAll('li');
 
 
-buttons[1].addEventListener('click', util.btnCargar);
-buttons[2].addEventListener('click', util.btnCrearNota);
+buttons[2].addEventListener('click', util.btnCargar);
+buttons[1].addEventListener('click', util.btnCrearNota);
 buttons[3].addEventListener('click', util.btnGuardar);
 buttons[6].addEventListener('click', util.mostrarDesarrolladores);
 //estos son los eventos para las funciones que faltan:

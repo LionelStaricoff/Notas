@@ -16,16 +16,33 @@ header {
     background-color: rgb(34, 205, 28);
     width: 100vw;
     height: 12vh;
-    display: grid;
-    justify-items: center;
+    display: flex;
     align-items: center;
     position: relative;
     border-bottom: 2px solid black;
+    display: grid;
+    justify-content: space-evenly;
 }
+
+.claro-oscuro {
+    position: absolute;
+    display: grid;
+    margin-left: 2em;
+    z-index: 21;
+    background-color: rgb(255,215,0);
+    border: 2px outset rgb(149, 147, 140);
+    border-radius: 50%;
+}
+.claro-oscuro:hover {
+    background-color: rgb(149, 147, 140);
+}
+.claro-oscuro:active {
+    background-color: white;
+}
+
 .titulo {
     display: flex;
     align-items: center;
-    position: absolute;
 }
 
 header .titulo img {
@@ -34,7 +51,6 @@ header .titulo img {
     margin-right: 4em;
     margin-left: 4em;
     filter: drop-shadow(8px 8px 4px black);
-   
 }
 
 .titulo h1 {
@@ -52,7 +68,7 @@ header .titulo img {
     cursor: pointer;
     margin-top: 0.2em;
     position: absolute;
-    right: 3em;
+    right: 1em;
     min-width: 200px;
     display: grid;
     justify-items:flex-end;
@@ -68,11 +84,11 @@ header .menuDesplegable img {
     height: 3em;
     border: 2px solid #000;
     border-radius: 15%;
-    background-color: rgb(229, 229, 22);
+    background-color: rgb(255,215,0);
     box-shadow:-6px 6px 6px rgba(38, 46, 39, 0.8);
-    margin-top: 0.45em;
-    margin-bottom: 0.7em;
-    padding: .1em
+    margin-bottom: 0.75em;
+    /* margin-top: 0.45em;
+    padding: .1em */
 }
 
 header .menuDesplegable img:active {
@@ -190,7 +206,7 @@ ul {
 }
 #menu li ul li:nth-child(6) {
     color: #000;
-    background-color: #f7cb04;
+    background-color: rgb(255,215,0);
 }
 #menu li ul li:first-child:hover {
     border: 2px solid #000;
@@ -236,7 +252,7 @@ ul {
     border: 2px solid #000;
 }
 #menu li ul li:nth-child(6):active {
-    color: #f7cb04;
+    color: rgb(255,215,0);
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
