@@ -23,6 +23,20 @@ padres.forEach((b)=>{
     b.addEventListener('ondragover', util.permisoDescenso);
 });
 
+//Modo claro-oscuro
+const claroOscuro = document.querySelector('.claro-oscuro');
+
+const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+claroOscuro.addEventListener('click', () => {
+    let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    setTheme(themeApp);
+});
+
+setTheme(localStorage.getItem('theme') || 'light');
 
 
 

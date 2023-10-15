@@ -11,15 +11,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    filter: var(--filter);
+}
 header {
-    background-color: rgb(34, 205, 28);
+    color: var(--text);
+    background-color: var(--backgroundHeader);
     width: 100vw;
     height: 12vh;
     display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--invert);
     display: grid;
     justify-content: space-evenly;
 }
@@ -31,13 +34,15 @@ header {
     z-index: 21;
     background-color: rgb(255,215,0);
     border: 2px outset rgb(149, 147, 140);
+    box-shadow: 6px 6px 6px rgb(42, 40, 42);
     border-radius: 50%;
 }
 .claro-oscuro:hover {
     background-color: rgb(149, 147, 140);
 }
 .claro-oscuro:active {
-    background-color: white;
+    transform: scale(85%);
+    border: 2px ridge white 
 }
 
 .titulo {
@@ -57,7 +62,7 @@ header .titulo img {
     font-family: 'Kalam', cursive;
     font-weight: bold;
     font-size: 2.8em;
-    text-shadow: -6px 6px 6px rgba(164, 245, 176, 0.8);
+    text-shadow: 6px 6px 6px rgba(84, 86, 84, 0.8);
 }
 
 
@@ -85,7 +90,7 @@ header .menuDesplegable img {
     border: 2px solid #000;
     border-radius: 15%;
     background-color: rgb(255,215,0);
-    box-shadow:-6px 6px 6px rgba(38, 46, 39, 0.8);
+    box-shadow: 6px 6px 6px rgba(38, 46, 39, 0.8);
     margin-bottom: 0.75em;
     /* margin-top: 0.45em;
     padding: .1em */
@@ -261,11 +266,12 @@ ul {
 
 
 main {
-    background-color: rgb(192, 248, 177);
+    background-color: var(--background);
     width: 100vw;
     min-height: 88vh;
     position: relative;
     overflow: auto;
+    color: var(--text)
 }
 
 
@@ -522,4 +528,24 @@ main {
     }
 
  
+}
+
+[data-theme="light"] {
+    --filter: grayscale(0%);
+    --background: rgb(192, 248, 177);
+    --backgroundHeader: rgb(34, 205, 28);
+    --text: #000;
+    --invert: invert(0%);
+    --txtPrompt: #fff;
+
+}
+[data-theme="dark"] {
+    --filter: grayscale(100%);
+    --background: #55585c;
+    --backgroundHeader: #3b3737;
+    --text: #ccc;
+    --invert: invert(100%);
+    --txtblack: #000;
+
+
 }

@@ -1,4 +1,5 @@
 .promptBase {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     top: 0;
     bottom: 10em;
@@ -9,6 +10,7 @@
     height: 7em; 
     background-color: rgb(158, 245, 242);
     border: 5px ridge rgb(7, 206, 209);
+    color: var(--text);
     border-radius: 10px;
     text-align: center;
     z-index: 25;

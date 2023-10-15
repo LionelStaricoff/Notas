@@ -27,9 +27,10 @@
     place-items: center;
     align-content: center;
 }
-.preguntaCartel { 
+.promptConfirmacion h2 { 
     font-size: 1.2em;
     margin: 0.8em .3em .8em .3em;
+    color: var(--txtblack);
 
 }
 .promptConfirmacion button {
