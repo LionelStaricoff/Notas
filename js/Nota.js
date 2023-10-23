@@ -24,8 +24,7 @@ class Nota {
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
         nota.style.zIndex = '10';
-        nota.style.color = this.colorTexto; //COLOR TEXTO
-
+        
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
         img1.alt = 'imagen de chinche';
@@ -37,6 +36,7 @@ class Nota {
         titulo.type = "text";
         titulo.placeholder = "TITULO";
         titulo.value = this.titulo;
+        titulo.style.color = this.colorTexto;
         h2.appendChild(titulo);
 
         const textarea = document.createElement('textarea');
@@ -44,6 +44,7 @@ class Nota {
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
         textarea.style.lineHeight = '.9em';
+        textarea.style.color = this.colorTexto;
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
 
