@@ -35,6 +35,7 @@ const util = {
         textarea: notas[i].querySelector('textarea').value,
         color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
+        colorTexto: notas[i].style.color,   //COLOR TEXTO
         estado: padre[1]
       }
 
@@ -316,12 +317,12 @@ const util = {
     cerrarModal.addEventListener("click", () => {
       modalDesarrolladores.style.display = "none";
     });
-
+/*
     window.addEventListener("click", (evento) => {
       if (evento.target === modalDesarrolladores) {
         modalDesarrolladores.style.display = "none";
       }
-    });
+    }); */
   },
 
   touchStart: (event) => {
