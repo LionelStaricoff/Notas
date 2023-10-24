@@ -84,6 +84,8 @@ img {
 
 .nota button img {
     border: 1px solid rgb(88, 85, 85);
+    background: rgb(223, 213, 213);
+    padding: .1em
 }
 .nota button {
     align-self: center;
@@ -123,14 +125,15 @@ img {
 }
 
 .labelColorTxt {
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.7em;
+    height: 1.7em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1px solid black;
     color: var(--text);
     background-color: var(--backgroundClaroOscuro);
     border-radius: 4px;
-    margin-bottom: .25em;
+    display: grid;
+    align-items: center;
     text-align: center;
 }
 .labelColorTxt:hover {

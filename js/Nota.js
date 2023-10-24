@@ -43,7 +43,6 @@ class Nota {
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
-        textarea.style.lineHeight = '.9em';
         textarea.style.color = this.colorTexto;
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
@@ -60,15 +59,15 @@ class Nota {
         labelColorTxt.className = 'labelColorTxt';
         labelColorTxt.style.color = '#fff';
         labelColorTxt.style.background = '#000';
+
         const inputColorTxt = document.createElement('input');
         inputColorTxt.type = 'checkbox';
         inputColorTxt.style.display = 'none';
         inputColorTxt.value = this.color;
+
         const labelText = document.createTextNode('A');
         labelColorTxt.appendChild(inputColorTxt);
-        labelColorTxt.appendChild(labelText);
-
-        //COLOR TEXTO hasta ACÁ
+        labelColorTxt.appendChild(labelText);          //COLOR TEXTO hasta ACÁ
 
 
         const btnColor = document.createElement('button');

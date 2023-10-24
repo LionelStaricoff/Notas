@@ -36,14 +36,18 @@ header {
     display: grid;
     align-items: center;
     justify-items: center;
-    margin-left: 2.3em;
+    left: 1.8em;
     z-index: 21;
     background-color: var(--backgroundClaroOscuro);
     border: 3px ridge rgb(231, 184, 11);
-    box-shadow: 2px 2px 2px rgba(136, 135, 132, 0.2);
-    border-radius: 20%;
+    box-shadow: 6px 6px 6px rgba(38, 46, 39, 0.8);
+    border-radius: 15%;
 }
-
+.claro-oscuro img {
+    width: 90%;
+    height: 90%;
+    
+}
 .claro-oscuro:hover {
     background-color: rgb(149, 147, 140);
 }
@@ -318,7 +322,10 @@ main {
     header {
         height: 10vh;
     }
-
+    header .claro-oscuro {
+        width: 1.8em;
+        height: 1.8em;
+    }
     header .titulo img {
         width: 4em;
         height: 2.6em;
@@ -335,13 +342,13 @@ main {
     }
 
     .menuDesplegable {
-        right: 1em
+        right: 1.8em
     }
 
     header .menuDesplegable img {
         width: 1.8em;
         height: 1.8em;
-        margin-top: 0.5em;
+        margin-top: 1em;
     }
 
     main {
@@ -353,7 +360,10 @@ main {
     header {
         height: 10vh;
     }
-
+    header .claro-oscuro {
+        width: 2.3em;
+        height: 2.3em;
+    }
     header .titulo img {
         width: 5em;
         height: 2.8em;
@@ -377,7 +387,7 @@ main {
     header .menuDesplegable img {
         width: 2.3em;
         height: 2.3em;
-        margin-top: 0.6em;
+        margin-top: 0.9em;
     }
 
     main {
@@ -389,7 +399,10 @@ main {
     header {
         height: 9vh;
     }
-
+    header .claro-oscuro {
+        width: 2.6em;
+        height: 2.6em;
+    }
     header .titulo img {
         width: 5.3em;
         height: 3.2em;
@@ -424,7 +437,10 @@ main {
     header {
         height: 70px;
     }
-
+    header .claro-oscuro{
+        width: 2em;
+        height: 2em;
+    }
     header .titulo img {
         width: 6em;
         height: 2.8em;
@@ -459,7 +475,10 @@ main {
     header {
         height: 60px;
     }
-
+    header .claro-oscuro{
+        width: 1.85em;
+        height: 1.85em;
+    }
     header .titulo img {
         width: 5.5em;
         height: 2em;
@@ -487,7 +506,10 @@ main {
     header {
         height: 80px;
     }
-
+    header .claro-oscuro{
+        width: 2.7em;
+        height: 2.7em;
+    }
     header .titulo {
         margin-top: 0.5em;
     }
