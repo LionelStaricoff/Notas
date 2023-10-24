@@ -14,58 +14,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all .5s;
+}
+
+body {
+    filter: var(--filter);
 }
 
 header {
-    background-color: var(--fondo);
+    color: var(--text);
+    background-color: var(--backgroundHeader);
     width: 100vw;
     height: 12vh;
-    display: grid;
-    justify-items: center;
+    display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid var(--letras);
+    border-bottom: 2px solid var(--invert);
+    display: grid;
+    justify-content: space-evenly;
 }
 
-#sol{
-    display: none;
+.claro-oscuro {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    left: 1.8em;
+    z-index: 21;
+    background-color: var(--backgroundClaroOscuro);
+    border: 3px ridge rgb(231, 184, 11);
+    box-shadow: 6px 6px 6px rgba(38, 46, 39, 0.8);
+    border-radius: 15%;
+}
+.claro-oscuro img {
+    width: 90%;
+    height: 90%;
+    
+}
+.claro-oscuro:hover {
+    background-color: rgb(149, 147, 140);
 }
 
- #imgsol{
-   
-    width: 2.8em;
-    height: 2.8em;
-    background-image: url('/Notas/img/sun.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;	
-    margin-right: 4em;
-   
+.claro-oscuro:active {
+    transform: scale(85%);
+    border: 2px ridge white
 }
 
-#imgsol_negro:hover, #imgsol:hover{
-    transform: scale(1.2);
-}
+.claro-oscuro img {
+    filter: var(--claroOscuroImg);
 
-
-
-#sol:checked + label  {
-    background-image: url('/Notas/img/sun_negro.png');
-   
-}
-
-#sol:checked ~ h1 {
-    --letras: white;
-}
-#sol:checked ~ img{
-filter: grayscale(100%);
 }
 
 .titulo {
     display: flex;
     align-items: center;
-    position: absolute;
 }
 
 header .titulo img {
@@ -74,15 +77,13 @@ header .titulo img {
     margin-right: 4em;
     margin-left: 4em;
     filter: drop-shadow(8px 8px 4px black);
-
 }
 
 .titulo h1 {
     font-family: 'Kalam', cursive;
     font-weight: bold;
     font-size: 2.8em;
-    text-shadow: -6px 6px 6px rgba(164, 245, 176, 0.8);
-    color: var(--letras)
+    text-shadow: 6px 6px 6px rgba(84, 86, 84, 0.8);
 }
 
 
@@ -93,7 +94,7 @@ header .titulo img {
     cursor: pointer;
     margin-top: 0.2em;
     position: absolute;
-    right: 3em;
+    right: 1em;
     min-width: 200px;
     display: grid;
     justify-items: flex-end;
@@ -110,11 +111,11 @@ header .menuDesplegable img {
     height: 3em;
     border: 2px solid #000;
     border-radius: 15%;
-    background-color: rgb(229, 229, 22);
-    box-shadow: -6px 6px 6px rgba(38, 46, 39, 0.8);
-    margin-top: 0.45em;
-    margin-bottom: 0.7em;
-    padding: .1em
+    background-color: rgb(255, 215, 0);
+    box-shadow: 6px 6px 6px rgba(38, 46, 39, 0.8);
+    margin-bottom: 0.75em;
+    /* margin-top: 0.45em;
+    padding: .1em */
 }
 
 header .menuDesplegable img:active {
@@ -155,9 +156,8 @@ ul {
 .menu-list li {
     transform: translateY(-100%);
     animation-name: slideInFromTop;
-    animation-duration: 0.5s;
+    animation-duration: 0.1s;
     animation-fill-mode: forwards;
-
 }
 
 @keyframes slideInFromTop {
@@ -190,12 +190,34 @@ ul {
     animation-delay: .9s;
 }
 
-#checkbox:not(:checked)~li>.menu-list li {
-    display: none;
+
+
+
+/*efecto inverso*/
+
+#checkbox:checked~li>.menu-list li {
+    transform: translateY(-100%);
+    animation-name: slideInFromButton;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
+@keyframes slideInFromButton {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
-/*termina el efecto desplazable*/
+    100% {
+        transform: translateY(-250%);
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+    }
+}
+
+/*aca termina el efecto de desplazamiento*/
+
 
 #menu li ul li:first-child {
     color: #000;
@@ -224,7 +246,7 @@ ul {
 
 #menu li ul li:nth-child(6) {
     color: #000;
-    background-color: #f7cb04;
+    background-color: rgb(255, 215, 0);
 }
 
 #menu li ul li:first-child:hover {
@@ -282,7 +304,7 @@ ul {
 }
 
 #menu li ul li:nth-child(6):active {
-    color: #f7cb04;
+    color: rgb(255, 215, 0);
     background-color: rgb(42, 40, 42);
     border: 2px solid #000;
 }
@@ -291,11 +313,12 @@ ul {
 
 
 main {
-    background-color: rgb(192, 248, 177);
+    background-color: var(--background);
     width: 100vw;
     min-height: 88vh;
     position: relative;
     overflow: auto;
+    color: var(--text)
 }
 
 
@@ -303,7 +326,10 @@ main {
     header {
         height: 10vh;
     }
-
+    header .claro-oscuro {
+        width: 1.8em;
+        height: 1.8em;
+    }
     header .titulo img {
         width: 4em;
         height: 2.6em;
@@ -320,13 +346,13 @@ main {
     }
 
     .menuDesplegable {
-        right: 1em
+        right: 1.8em
     }
 
     header .menuDesplegable img {
         width: 1.8em;
         height: 1.8em;
-        margin-top: 0.5em;
+        margin-top: 1em;
     }
 
     main {
@@ -338,7 +364,10 @@ main {
     header {
         height: 10vh;
     }
-
+    header .claro-oscuro {
+        width: 2.3em;
+        height: 2.3em;
+    }
     header .titulo img {
         width: 5em;
         height: 2.8em;
@@ -362,7 +391,7 @@ main {
     header .menuDesplegable img {
         width: 2.3em;
         height: 2.3em;
-        margin-top: 0.6em;
+        margin-top: 0.9em;
     }
 
     main {
@@ -374,7 +403,10 @@ main {
     header {
         height: 9vh;
     }
-
+    header .claro-oscuro {
+        width: 2.6em;
+        height: 2.6em;
+    }
     header .titulo img {
         width: 5.3em;
         height: 3.2em;
@@ -409,7 +441,10 @@ main {
     header {
         height: 70px;
     }
-
+    header .claro-oscuro{
+        width: 2em;
+        height: 2em;
+    }
     header .titulo img {
         width: 6em;
         height: 2.8em;
@@ -444,7 +479,10 @@ main {
     header {
         height: 60px;
     }
-
+    header .claro-oscuro{
+        width: 1.85em;
+        height: 1.85em;
+    }
     header .titulo img {
         width: 5.5em;
         height: 2em;
@@ -472,7 +510,10 @@ main {
     header {
         height: 80px;
     }
-
+    header .claro-oscuro{
+        width: 2.7em;
+        height: 2.7em;
+    }
     header .titulo {
         margin-top: 0.5em;
     }
@@ -594,4 +635,26 @@ main {
     }
 
 
+}
+
+[data-theme="light"] {
+    --filter: grayscale(0%);
+    --background: rgb(192, 248, 177);
+    --backgroundHeader: rgb(34, 205, 28);
+    --text: #000;
+    --invert: invert(0%);
+    --txtPrompt: #fff;
+    --claroOscuroImg: invert(100%);
+    --backgroundClaroOscuro: rgb(36, 35, 33);
+}
+
+[data-theme="dark"] {
+    --filter: grayscale(100%);
+    --background: #55585c;
+    --backgroundHeader: #3b3737;
+    --text: #ccc;
+    --invert: invert(100%);
+    --txtblack: #000;
+    --claroOscuroImg: invert(0%);
+    --backgroundClaroOscuro: rgb(235, 233, 231);
 }

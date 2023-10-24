@@ -2,7 +2,7 @@ let ids = 1;
 
 class Nota {
 
-    constructor(titulo, descripcion, color, position, estado) {
+    constructor(titulo, descripcion, color, position, estado, colorTexto) {
 
         this.titulo = titulo ?? '';
         this.descripcion = descripcion ?? '';
@@ -11,6 +11,7 @@ class Nota {
         this.position = position ?? 'absolute';
         this.nota;
         this.id = ids++;
+        this.colorTexto = colorTexto ?? '#000'; //COLOR TEXTO
 
 
     }
@@ -23,7 +24,7 @@ class Nota {
         nota.style.backgroundColor = this.color;
         nota.style.position = this.position;
         nota.style.zIndex = '10';
-
+        
         const img1 = document.createElement('img');
         img1.src = 'img/chinche.png';
         img1.alt = 'imagen de chinche';
@@ -34,15 +35,15 @@ class Nota {
         const titulo = document.createElement('input');
         titulo.type = "text";
         titulo.placeholder = "TITULO";
-        titulo.className = "titulo";
         titulo.value = this.titulo;
+        titulo.style.color = this.colorTexto;
         h2.appendChild(titulo);
 
         const textarea = document.createElement('textarea');
         textarea.cols = '30';
         textarea.rows = '10';
         textarea.placeholder = 'Descripción';
-        textarea.style.lineHeight = '.9em';
+        textarea.style.color = this.colorTexto;
         const titleTextarea = document.createTextNode(this.descripcion);
         textarea.appendChild(titleTextarea);
 
@@ -53,6 +54,22 @@ class Nota {
         img.src = 'img/remove-symbol.png';
         img.alt = 'imagen de una x'
         btnX.appendChild(img);
+
+        const labelColorTxt = document.createElement('label'); //COLOR TEXTO desde ACÁ
+        labelColorTxt.className = 'labelColorTxt';
+        labelColorTxt.style.color = '#fff';
+        labelColorTxt.style.background = '#000';
+
+        const inputColorTxt = document.createElement('input');
+        inputColorTxt.type = 'checkbox';
+        inputColorTxt.style.display = 'none';
+        inputColorTxt.value = this.color;
+
+        const labelText = document.createTextNode('A');
+        labelColorTxt.appendChild(inputColorTxt);
+        labelColorTxt.appendChild(labelText);          //COLOR TEXTO hasta ACÁ
+
+
         const btnColor = document.createElement('button');
         const input = document.createElement('input');
         input.className = 'color';
@@ -66,6 +83,7 @@ class Nota {
         img2.alt = 'imagen de un tilde';
         btnTilde.appendChild(img2);
         section.appendChild(btnX);
+        section.appendChild(labelColorTxt);
         section.appendChild(btnColor);
         section.appendChild(btnTilde);
         const i = document.createElement('i');
@@ -81,6 +99,7 @@ class Nota {
         this.modificarColor(btnColor, nota, i, input);
         this.editarNota(btnTilde, titulo, textarea, nota);
         this.eliminar(nota, btnX);
+        this.modificarColorTexto(inputColorTxt, nota, labelColorTxt);
 
         this.nota = nota;
         return nota;
@@ -91,12 +110,12 @@ class Nota {
         const div2 = document.querySelector('.enProceso');
         const div3 = document.querySelector('.completada');
         const columnas = [div1, div2, div3];
-       
+
         const nota = this.crearNota();
         columnas[this.getEstado()].appendChild(nota);
 
     }
-    
+
 
     editarNota(btnTilde, titulo, textarea, nota) {
 
@@ -128,10 +147,10 @@ class Nota {
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
-            util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', ()=>{
+            util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', () => {
                 const padreNota = nota.parentNode.removeChild(nota);
             });
-         } );
+        });
 
     }
     modificarColor(btnColor, nota, i, input) {
@@ -144,6 +163,36 @@ class Nota {
         });
     }
 
+    modificarColorTexto(inputColorTxt, nota, labelColorTxt) {
+
+        inputColorTxt.addEventListener('change', function () {
+            const textarea = nota.querySelector('textarea');
+
+            const titulo = nota.querySelector('input');
+            
+            const chequeado = inputColorTxt.checked;
+            console.log(inputColorTxt);
+
+            if (chequeado) {
+                labelColorTxt.style.color = '#000';
+                labelColorTxt.style.background = '#fff';
+                this.colorTexto = '#fff';
+                titulo.style.color = this.colorTexto;
+                textarea.style.color = this.colorTexto;
+                nota.style.color = this.colorTexto;
+
+            } else {
+                labelColorTxt.style.color = '#fff';
+                labelColorTxt.style.background = '#000';
+                this.colorTexto = '#000';
+                titulo.style.color = this.colorTexto;
+                textarea.style.color = this.colorTexto;
+                nota.style.color = this.colorTexto;
+            }
+
+        });
+    }
+
     achicarNota(nota) {
 
         const btns = nota.querySelectorAll('button');
@@ -152,9 +201,11 @@ class Nota {
 
         const titulo = nota.querySelector('input');
 
+        const btnColorTxt = nota.querySelector('label'); //COLOR TEXTO
+
         //comando para arrastrar elementos
         nota.addEventListener("dragstart", util.arrastrar);
-        nota.draggable="true";
+        nota.draggable = "true";
 
         //comandos para arrastrar con los dedos
         nota.addEventListener("ontouchstart", util.touchStart);
@@ -166,6 +217,7 @@ class Nota {
         titulo.style.marginBottom = '3em';
         titulo.style.pointerEvents = 'none';
         textarea.style.display = 'none';
+        btnColorTxt.style.marginBottom = '.7em';
         nota.style.height = '6em';
         nota.style.zIndex = '5';
 
@@ -202,7 +254,7 @@ class Nota {
         textarea.style.display = 'block';
         nota.style.height = '15em';
         nota.style.zIndex = '10';
-        nota.draggable="false";
+        nota.draggable = "false";
 
         const btnTilde = document.createElement('button');
         const img2 = document.createElement('img');
@@ -254,5 +306,4 @@ class Nota {
 
 
 }
-
 

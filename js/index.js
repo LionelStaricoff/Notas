@@ -1,8 +1,8 @@
 const buttons = document.querySelectorAll('li');
 
 
-buttons[1].addEventListener('click', util.btnCargar);
-buttons[2].addEventListener('click', util.btnCrearNota);
+buttons[2].addEventListener('click', util.btnCargar);
+buttons[1].addEventListener('click', util.btnCrearNota);
 buttons[3].addEventListener('click', util.btnGuardar);
 buttons[6].addEventListener('click', util.mostrarDesarrolladores);
 //estos son los eventos para las funciones que faltan:
@@ -23,7 +23,20 @@ padres.forEach((b)=>{
     b.addEventListener('ondragover', util.permisoDescenso);
 });
 
+//Modo claro-oscuro
+const claroOscuro = document.querySelector('.claro-oscuro');
 
+const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+claroOscuro.addEventListener('click', () => {
+    let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    setTheme(themeApp);
+});
+
+setTheme(localStorage.getItem('theme') || 'light');
 
 
 

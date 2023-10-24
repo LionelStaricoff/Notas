@@ -1,5 +1,6 @@
 
 .prompt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: min(100%,25em);
     height: 9em; 
     position: absolute;
@@ -26,6 +27,8 @@
     font-size: 1.2em;
     font-weight: bold;
     border-top-left-radius: 5px;
+    display: grid;
+    align-items: center;
 }
 
 .prompt button{
