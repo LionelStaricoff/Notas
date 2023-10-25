@@ -14,9 +14,9 @@ buttons[4].addEventListener('click', util.btnExportarArchivo);
 const idea = document.querySelector(".idea");
 const enProceso = document.querySelector(".enProceso");
 const completada = document.querySelector(".completada");
-const padres = [idea,enProceso,completada];
+const padres = [idea, enProceso, completada];
 
-padres.forEach((b)=>{
+padres.forEach((b) => {
     b.addEventListener("drop", util.soltar);
     b.addEventListener("dragover", util.permisoDescenso);
     b.addEventListener('ontouchend', util.drop);
@@ -27,6 +27,4 @@ padres.forEach((b)=>{
 document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscuro);
 
 util.setTheme(localStorage.getItem('theme') || 'light');
-
-
 

@@ -6,6 +6,10 @@
 @import url("desarrolladores.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
+:root{
+    --letras: black;
+    --fondo:  rgb(34, 205, 28);
+}
 * {
     margin: 0;
     padding: 0;
@@ -148,7 +152,6 @@ ul {
     text-align: center;
 }
 
-
 /*efecto desplazable*/
 .menu-list li {
     transform: translateY(-100%);
@@ -186,6 +189,8 @@ ul {
 .menu-list li:nth-child(6) {
     animation-delay: .9s;
 }
+
+
 
 
 /*efecto inverso*/
@@ -629,6 +634,7 @@ main {
     main {
         min-height: 92vh;
     }
+
 
 }
 

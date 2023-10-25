@@ -2,7 +2,7 @@ let ids = 1;
 
 class Nota {
 
-    constructor(titulo, descripcion, color, position, estado, colorTexto) {
+    constructor(titulo, descripcion, color, position, estado, colorTexto,checkeado) {
 
         this.titulo = titulo ?? '';
         this.descripcion = descripcion ?? '';
@@ -12,6 +12,7 @@ class Nota {
         this.nota;
         this.id = ids++;
         this.colorTexto = colorTexto ?? '#000'; //COLOR TEXTO
+        this.checkeado = checkeado ?? 'false';
 
 
     }
@@ -63,6 +64,8 @@ class Nota {
         const inputColorTxt = document.createElement('input');
         inputColorTxt.type = 'checkbox';
         inputColorTxt.style.display = 'none';
+        inputColorTxt.id = 'checkLetra';
+        inputColorTxt.checked = this.checkeado;
         inputColorTxt.value = this.color;
 
         const labelText = document.createTextNode('A');
@@ -100,6 +103,7 @@ class Nota {
         this.editarNota(btnTilde, titulo, textarea, nota);
         this.eliminar(nota, btnX);
         this.modificarColorTexto(inputColorTxt, nota, labelColorTxt);
+        this.estaChecked(inputColorTxt,nota, labelColorTxt);
 
         this.nota = nota;
         return nota;
@@ -147,7 +151,6 @@ class Nota {
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
-
             util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', () => {
                 const padreNota = nota.parentNode.removeChild(nota);
             });
@@ -167,13 +170,13 @@ class Nota {
     modificarColorTexto(inputColorTxt, nota, labelColorTxt) {
 
         inputColorTxt.addEventListener('change', function () {
+            
             const textarea = nota.querySelector('textarea');
 
             const titulo = nota.querySelector('input');
-            
             const chequeado = inputColorTxt.checked;
-            console.log(inputColorTxt);
-
+               
+    
             if (chequeado) {
                 labelColorTxt.style.color = '#000';
                 labelColorTxt.style.background = '#fff';
@@ -181,7 +184,7 @@ class Nota {
                 titulo.style.color = this.colorTexto;
                 textarea.style.color = this.colorTexto;
                 nota.style.color = this.colorTexto;
-
+    
             } else {
                 labelColorTxt.style.color = '#fff';
                 labelColorTxt.style.background = '#000';
@@ -192,6 +195,32 @@ class Nota {
             }
 
         });
+    }
+
+    estaChecked(inputColorTxt,nota, labelColorTxt){
+        const textarea = nota.querySelector('textarea');
+
+        const titulo = nota.querySelector('input');
+        const chequeado = inputColorTxt.checked;
+           
+
+        if (chequeado) {
+            labelColorTxt.style.color = '#000';
+            labelColorTxt.style.background = '#fff';
+            this.colorTexto = '#fff';
+            titulo.style.color = this.colorTexto;
+            textarea.style.color = this.colorTexto;
+            nota.style.color = this.colorTexto;
+
+        } else {
+            labelColorTxt.style.color = '#fff';
+            labelColorTxt.style.background = '#000';
+            this.colorTexto = '#000';
+            titulo.style.color = this.colorTexto;
+            textarea.style.color = this.colorTexto;
+            nota.style.color = this.colorTexto;
+        }
+
     }
 
     achicarNota(nota) {
