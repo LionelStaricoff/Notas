@@ -14,9 +14,9 @@ buttons[4].addEventListener('click', util.btnExportarArchivo);
 const idea = document.querySelector(".idea");
 const enProceso = document.querySelector(".enProceso");
 const completada = document.querySelector(".completada");
-const padres = [idea,enProceso,completada];
+const padres = [idea, enProceso, completada];
 
-padres.forEach((b)=>{
+padres.forEach((b) => {
     b.addEventListener("drop", util.soltar);
     b.addEventListener("dragover", util.permisoDescenso);
     b.addEventListener('ontouchend', util.drop);
@@ -24,19 +24,13 @@ padres.forEach((b)=>{
 });
 
 //Modo claro-oscuro
-const claroOscuro = document.querySelector('.claro-oscuro');
+//document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscuro);
 
-const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
+util.setTheme(localStorage.getItem('theme') || 'light');
 
-claroOscuro.addEventListener('click', () => {
-    let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-    setTheme(themeApp);
+
+document.querySelector('.claro-oscuro').addEventListener('click',()=>{
+const notas = document.querySelector('.nota');
+
+console.log( notas.querySelector('#checkLetra').checked);
 });
-
-setTheme(localStorage.getItem('theme') || 'light');
-
-
-

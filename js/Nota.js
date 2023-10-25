@@ -63,6 +63,7 @@ class Nota {
         const inputColorTxt = document.createElement('input');
         inputColorTxt.type = 'checkbox';
         inputColorTxt.style.display = 'none';
+        inputColorTxt.id = 'checkLetra';
         inputColorTxt.value = this.color;
 
         const labelText = document.createTextNode('A');

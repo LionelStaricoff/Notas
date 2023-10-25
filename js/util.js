@@ -28,6 +28,7 @@ const util = {
 
       const a = notas[i].style.position;
       const padre = notas[i].parentNode.classList;
+      //const checkbox = 
 
       const nuevaNota = {
         input: notas[i].querySelector('input').value,
@@ -35,6 +36,7 @@ const util = {
         color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
         colorTexto: notas[i].style.color,   //COLOR TEXTO 
+        checkeado: notas.querySelector('#checkLetra').checked,
         estado: padre[1]
       }
 
@@ -402,6 +404,15 @@ confirmacionBase: (titulo, pregunta, callbackAceptar) => {
 
   div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
   main.appendChild(div)
+},
+ setTheme : (theme) => {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+},
+
+modoOscuro:() => {
+  let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+  util.setTheme(themeApp);
 }
   
   }
