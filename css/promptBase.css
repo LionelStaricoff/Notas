@@ -17,6 +17,7 @@
 }
 
 .promptBase h2 { 
+    color: black;
     font-weight: 400;
     font-size: 1.2em;
     margin: 0.55em .3em .3em .3em;

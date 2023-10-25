@@ -161,14 +161,14 @@ const util = {
               try {
             const notasArray = JSON.parse(reader.result);
          
-           //if (notasArray == '') util.promptBase ('No hay notas guardadas');
+        
       
             const columnas = document.querySelectorAll('.columnaCuadro');
       
             for (a of notasArray) {
       
               let nota = new Nota(a.input, a.textarea,
-                a.color, a.position, a.estado);
+                a.color, a.position, a.estado, a.colorTexto, a.checkeado);
       
               nota.crearNota();
       
@@ -219,10 +219,12 @@ const util = {
    const padre = notas[i].parentNode.classList;
 
    const nuevaNota = {
-     input: notas[i].querySelector('.titulo').value,
+     input: notas[i].querySelector('input').value,
      textarea: notas[i].querySelector('textarea').value,
      color: notas[i].style.backgroundColor,
      position: notas[i].style.position,
+     colorTexto: notas[i].style.color,   //COLOR TEXTO 
+     checkeado: notas[i].querySelector('#checkLetra').checked,
      estado: padre[1]
    }
   
@@ -231,7 +233,7 @@ const util = {
   }
 
     var text = JSON.stringify(datosNotas);
-    var filename = 'notas.txt';
+    var filename = 'notas.json';
     
   
       download(filename, text);
