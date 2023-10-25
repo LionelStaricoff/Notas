@@ -147,6 +147,7 @@ class Nota {
     }
     eliminar(nota, btnX) {
         btnX.addEventListener('click', () => {
+
             util.confirmacionBase('ELIMINA LA NOTA', '¿Estás seguro que deseas eliminarla?', () => {
                 const padreNota = nota.parentNode.removeChild(nota);
             });

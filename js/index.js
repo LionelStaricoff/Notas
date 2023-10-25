@@ -24,19 +24,9 @@ padres.forEach((b)=>{
 });
 
 //Modo claro-oscuro
-const claroOscuro = document.querySelector('.claro-oscuro');
+document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscuro);
 
-const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-
-claroOscuro.addEventListener('click', () => {
-    let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-    setTheme(themeApp);
-});
-
-setTheme(localStorage.getItem('theme') || 'light');
+util.setTheme(localStorage.getItem('theme') || 'light');
 
 
 

@@ -148,6 +148,7 @@ ul {
     text-align: center;
 }
 
+
 /*efecto desplazable*/
 .menu-list li {
     transform: translateY(-100%);
@@ -187,8 +188,6 @@ ul {
 }
 
 
-
-
 /*efecto inverso*/
 
 #checkbox:checked~li>.menu-list li {
@@ -197,6 +196,7 @@ ul {
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
+
 
 @keyframes slideInFromButton {
     0% {
@@ -629,7 +629,6 @@ main {
     main {
         min-height: 92vh;
     }
-
 
 }
 
