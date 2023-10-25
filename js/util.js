@@ -36,7 +36,7 @@ const util = {
         color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
         colorTexto: notas[i].style.color,   //COLOR TEXTO 
-        checkeado: notas.querySelector('#checkLetra').checked,
+        checkeado: notas[i].querySelector('#checkLetra').checked,
         estado: padre[1]
       }
 
@@ -73,7 +73,7 @@ const util = {
       for (a of notasArray) {
 
         let nota = new Nota(a.input, a.textarea,
-          a.color, a.position, a.estado, a.colorTexto);
+          a.color, a.position, a.estado, a.colorTexto, a.checkeado);
          
         nota.crearNota();
 

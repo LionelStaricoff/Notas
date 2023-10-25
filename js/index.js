@@ -24,13 +24,7 @@ padres.forEach((b) => {
 });
 
 //Modo claro-oscuro
-//document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscuro);
+document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscuro);
 
 util.setTheme(localStorage.getItem('theme') || 'light');
 
-
-document.querySelector('.claro-oscuro').addEventListener('click',()=>{
-const notas = document.querySelector('.nota');
-
-console.log( notas.querySelector('#checkLetra').checked);
-});
