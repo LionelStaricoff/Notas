@@ -20,7 +20,6 @@ const util = {
 
     // cargando todas las notas
     const notas = document.querySelectorAll('.nota');
-
     //crando un arreglo para extraer los datos
     const datosNotas = [];
 
@@ -31,15 +30,15 @@ const util = {
       const padre = notas[i].parentNode.classList;
 
       const nuevaNota = {
-        input: notas[i].querySelector('.titulo').value,
+        input: notas[i].querySelector('input').value,
         textarea: notas[i].querySelector('textarea').value,
         color: notas[i].style.backgroundColor,
         position: notas[i].style.position,
+        colorTexto: notas[i].style.color,   //COLOR TEXTO 
         estado: padre[1]
       }
 
       datosNotas.push(nuevaNota);
-
     }
 
 
@@ -69,12 +68,11 @@ const util = {
       if (notasArray == '') util.promptBase ('No hay notas guardadas');
 
       const columnas = document.querySelectorAll('.columnaCuadro');
-
       for (a of notasArray) {
 
         let nota = new Nota(a.input, a.textarea,
-          a.color, a.position, a.estado);
-
+          a.color, a.position, a.estado, a.colorTexto);
+         
         nota.crearNota();
 
         nota.agregarAlFront();
@@ -316,12 +314,12 @@ const util = {
     cerrarModal.addEventListener("click", () => {
       modalDesarrolladores.style.display = "none";
     });
-
+/*
     window.addEventListener("click", (evento) => {
       if (evento.target === modalDesarrolladores) {
         modalDesarrolladores.style.display = "none";
       }
-    });
+    }); */
   },
 
   touchStart: (event) => {
@@ -407,7 +405,6 @@ confirmacionBase: (titulo, pregunta, callbackAceptar) => {
 }
   
   }
-
 
 
 

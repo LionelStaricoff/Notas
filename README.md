@@ -1,5 +1,5 @@
   
-    # App Notas
+# App Notas
 
 Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que posee tres columnas que representan en que estado se encuentra la tarea o idea.
 
@@ -7,15 +7,15 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 
 
 #### Desde el menú desplegable podrá:
+- Crear Nota
 - Cargar Tablero
-- Crear Nueva Nota
 - Guardar Tablero
 - Exportar Tablero
 - Importar el Tablero
 - Desarrolladores
- 
+
 <div align="center">
-	<img src="/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
 </div>
 
 ------------
@@ -25,7 +25,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 - COMPLETADAS
   
 <div align="center">
-	<img src="/imagesReadme/PantallaApp.png" alt="Tablero" width="50%">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/PantallaApp.png" alt="Tablero" width="50%">
 </div>
 
 ------------
@@ -37,10 +37,10 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	- Eliminar
 	- Cambiar de color
 	- Agrega a la columna
-	(Cuando la columna se agrega al tablero, se guarda en un tamaño reducido)
+	(Cuando la nota se agrega al tablero, se guarda en un tamaño reducido)
 
 <div align="center">
-	<img src="/imagesReadme/Nota.png" alt="Nota" width="25%">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png" alt="Nota" width="25%">
 </div>
 
 ------------
@@ -56,17 +56,18 @@ Contenido de la nota reducida:
 	- Cambia de columna
 
 <div align="center">
-	<img src="/imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
+	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
 
-<img src="/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
+<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
 
 </div>
 <br>
 <div align="center">
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷 
-##### Autores: Lionel Staricoff & Gladys Romero
+##### Autores: Lionel Staricoff & Gladys Isabel Romero
 &copy; Copyright
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
 </div>
+

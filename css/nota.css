@@ -70,6 +70,7 @@ input {
     justify-content: space-evenly;
     margin-right: .1em;
     margin-left: .1em
+    
 }
 
 .nota button,
@@ -82,13 +83,14 @@ img {
 }
 
 .nota button img {
-    border: 1px solid black;
+    border: 1px solid rgb(88, 85, 85);
+    background: rgb(223, 213, 213);
+    padding: .1em
 }
 .nota button {
     align-self: center;
 }
 .nota button:hover {
-
     transform: scale(110%);
 }
 .nota button:active {
@@ -120,5 +122,24 @@ img {
     .nota:hover .triangle {
         display: none;
     }
-
 }
+
+.labelColorTxt {
+    width: 1.7em;
+    height: 1.7em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+    color: var(--text);
+    background-color: var(--backgroundClaroOscuro);
+    border-radius: 4px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+.labelColorTxt:hover {
+    color: #777;
+}
+.labelColorTxt:active {
+    transform: scale(115%);
+}
+
