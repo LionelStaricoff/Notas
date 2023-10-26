@@ -13,85 +13,85 @@ const util = {
 
   btnGuardar: function () {
 
-    util.confirmacionBase('GUARDANDO NOTAS', '¿QUIERE GUARDAR LAS NOTAS?', ()=>{
+    util.confirmacionBase('GUARDANDO NOTAS', '¿QUIERE GUARDAR LAS NOTAS?', () => {
 
-    //limpiando datos anteriores
-    localStorage.clear();
+      //limpiando datos anteriores
+      localStorage.clear();
 
-    // cargando todas las notas
-    const notas = document.querySelectorAll('.nota');
-    //crando un arreglo para extraer los datos
-    const datosNotas = [];
+      // cargando todas las notas
+      const notas = document.querySelectorAll('.nota');
+      //crando un arreglo para extraer los datos
+      const datosNotas = [];
 
-    // Recorrer los elementos y obtener los valores
-    for (var i = 0; i < notas.length; i++) {
+      // Recorrer los elementos y obtener los valores
+      for (var i = 0; i < notas.length; i++) {
 
-      const a = notas[i].style.position;
-      const padre = notas[i].parentNode.classList;
-      //const checkbox = 
+        const a = notas[i].style.position;
+        const padre = notas[i].parentNode.classList;
+        //const checkbox = 
 
-      const nuevaNota = {
-        input: notas[i].querySelector('input').value,
-        textarea: notas[i].querySelector('textarea').value,
-        color: notas[i].style.backgroundColor,
-        position: notas[i].style.position,
-        colorTexto: notas[i].style.color,   //COLOR TEXTO 
-        checkeado: notas[i].querySelector('#checkLetra').checked,
-        estado: padre[1]
+        const nuevaNota = {
+          input: notas[i].querySelector('input').value,
+          textarea: notas[i].querySelector('textarea').value,
+          color: notas[i].style.backgroundColor,
+          position: notas[i].style.position,
+          colorTexto: notas[i].style.color,   //COLOR TEXTO 
+          checkeado: notas[i].querySelector('#checkLetra').checked,
+          estado: padre[1]
+        }
+
+        datosNotas.push(nuevaNota);
       }
 
-      datosNotas.push(nuevaNota);
-    }
 
+      // Guarda el array de notas en el local storage
+      localStorage.setItem('notas', JSON.stringify(datosNotas));
 
-    // Guarda el array de notas en el local storage
-    localStorage.setItem('notas', JSON.stringify(datosNotas));
-    
-    // Notifica al usuario que las notas fueron guardadas
-    //alert('Notas guardadas exitosamente');
-    util.promptBase ('Notas guardadas exitosamente');
-  });
-  
+      // Notifica al usuario que las notas fueron guardadas
+      //alert('Notas guardadas exitosamente');
+      util.promptBase('Notas guardadas exitosamente');
+    });
+
   },
 
 
   btnCargar: function () {
 
-    util.confirmacionBase('CARGANDO NOTAS', '¿QUIERE CARGAR LAS NOTAS?', ()=>{
-    
- 
+    util.confirmacionBase('CARGANDO NOTAS', '¿QUIERE CARGAR LAS NOTAS?', () => {
 
-    util.borrarTodasLasNotas();
 
-    // Verificar si hay notas guardadas en el local storage
-    if (localStorage.getItem('notas')) {
-      // Obtén las notas del local storage y conviértelas en un objeto JS
-      const notasArray = JSON.parse(localStorage.getItem('notas'));
-      if (notasArray == '') util.promptBase ('No hay notas guardadas');
 
-      const columnas = document.querySelectorAll('.columnaCuadro');
-      for (a of notasArray) {
+      util.borrarTodasLasNotas();
 
-        let nota = new Nota(a.input, a.textarea,
-          a.color, a.position, a.estado, a.colorTexto, a.checkeado);
-         
-        nota.crearNota();
+      // Verificar si hay notas guardadas en el local storage
+      if (localStorage.getItem('notas')) {
+        // Obtén las notas del local storage y conviértelas en un objeto JS
+        const notasArray = JSON.parse(localStorage.getItem('notas'));
+        if (notasArray == '') util.promptBase('No hay notas guardadas');
 
-        nota.agregarAlFront();
-        nota1 = nota.getNota();
+        const columnas = document.querySelectorAll('.columnaCuadro');
+        for (a of notasArray) {
 
-        if (nota.position != 'absolute') {
-          nota.agrandarNota(nota1);
-          nota.achicarNota(nota1);
+          let nota = new Nota(a.input, a.textarea,
+            a.color, a.position, a.estado, a.colorTexto, a.checkeado);
+
+          nota.crearNota();
+
+          nota.agregarAlFront();
+          nota1 = nota.getNota();
+
+          if (nota.position != 'absolute') {
+            nota.agrandarNota(nota1);
+            nota.achicarNota(nota1);
+          }
         }
+
+      } else {
+        // Si no hay notas guardadas, notifica al usuario
+        util.promptBase('No hay notas guardadas');
+
       }
-
-    } else {
-      // Si no hay notas guardadas, notifica al usuario
-      util.promptBase ('No hay notas guardadas');
-
-    }
-  });
+    });
   },
 
 
@@ -146,7 +146,7 @@ const util = {
   },
 
   btnImportarArchivo: () => {
-    async function importar()  {
+    async function importar() {
       return new Promise(() => {
         const input = document.createElement('input');
         input.type = 'file';
@@ -154,45 +154,45 @@ const util = {
           let file = input.files[0];
           let reader = new FileReader();
           reader.readAsText(file);
-          reader.onload = function() {
+          reader.onload = function () {
             util.borrarTodasLasNotas();
 
 
-              try {
-            const notasArray = JSON.parse(reader.result);
-         
-        
-      
-            const columnas = document.querySelectorAll('.columnaCuadro');
-      
-            for (a of notasArray) {
-      
-              let nota = new Nota(a.input, a.textarea,
-                a.color, a.position, a.estado, a.colorTexto, a.checkeado);
-      
-              nota.crearNota();
-      
-              nota.agregarAlFront();
-              nota1 = nota.getNota();
-      
-              if (nota.position != 'absolute') {
-                nota.agrandarNota(nota1);
-                nota.achicarNota(nota1);
+            try {
+              const notasArray = JSON.parse(reader.result);
+
+
+
+              const columnas = document.querySelectorAll('.columnaCuadro');
+
+              for (a of notasArray) {
+
+                let nota = new Nota(a.input, a.textarea,
+                  a.color, a.position, a.estado, a.colorTexto, a.checkeado);
+
+                nota.crearNota();
+
+                nota.agregarAlFront();
+                nota1 = nota.getNota();
+
+                if (nota.position != 'absolute') {
+                  nota.agrandarNota(nota1);
+                  nota.achicarNota(nota1);
+                }
               }
+
+            } catch (error) {
+              util.promptBase('archivo no valido o vacio ');
             }
-           
-          } catch (error) {
-            util.promptBase('archivo no valido o vacio ' );
           }
-        }
-         
-        
+
+
         });
         input.click();
       });
     }
     importar();
-    
+
   },
 
   btnExportarArchivo: () => {
@@ -205,40 +205,40 @@ const util = {
       element.click();
       document.body.removeChild(element);
     }
-    
- // cargando todas las notas
- const notas = document.querySelectorAll('.nota');
 
- //crando un arreglo para extraer los datos
- const datosNotas = [];
+    // cargando todas las notas
+    const notas = document.querySelectorAll('.nota');
 
- // Recorrer los elementos y obtener los valores
- for (var i = 0; i < notas.length; i++) {
+    //crando un arreglo para extraer los datos
+    const datosNotas = [];
 
-   const a = notas[i].style.position;
-   const padre = notas[i].parentNode.classList;
+    // Recorrer los elementos y obtener los valores
+    for (var i = 0; i < notas.length; i++) {
 
-   const nuevaNota = {
-     input: notas[i].querySelector('input').value,
-     textarea: notas[i].querySelector('textarea').value,
-     color: notas[i].style.backgroundColor,
-     position: notas[i].style.position,
-     colorTexto: notas[i].style.color,   //COLOR TEXTO 
-     checkeado: notas[i].querySelector('#checkLetra').checked,
-     estado: padre[1]
-   }
-  
+      const a = notas[i].style.position;
+      const padre = notas[i].parentNode.classList;
 
-   datosNotas.push(nuevaNota);
-  }
+      const nuevaNota = {
+        input: notas[i].querySelector('input').value,
+        textarea: notas[i].querySelector('textarea').value,
+        color: notas[i].style.backgroundColor,
+        position: notas[i].style.position,
+        colorTexto: notas[i].style.color,   //COLOR TEXTO 
+        checkeado: notas[i].querySelector('#checkLetra').checked,
+        estado: padre[1]
+      }
+
+
+      datosNotas.push(nuevaNota);
+    }
 
     var text = JSON.stringify(datosNotas);
     var filename = 'notas.json';
-    
-  
-      download(filename, text);
-  
-    
+
+
+    download(filename, text);
+
+
   },
 
   promptCambiarNota: (nota, estado) => {
@@ -304,9 +304,9 @@ const util = {
     const draggableElement = document.getElementById(data);
     const padre = event.target.classList;
 
-      if(padre[1] == "idea" || padre[1] == "enProceso" || padre[1] == "completada"){
-        event.target.appendChild(draggableElement);
-      }
+    if (padre[1] == "idea" || padre[1] == "enProceso" || padre[1] == "completada") {
+      event.target.appendChild(draggableElement);
+    }
 
   },
 
@@ -314,16 +314,22 @@ const util = {
     const modalDesarrolladores = document.querySelector(".modal");
     modalDesarrolladores.style.display = "block";
 
-    const cerrarModal = document.getElementById("cerrarModal");
-    cerrarModal.addEventListener("click", () => {
+    
+  },
+
+  cerrarModal: () => {
+    const modalDesarrolladores = document.querySelector(".modal");
+
+    modalDesarrolladores.className += " modal_contenido_cerrado";
+
+    const myTimeout = setTimeout(myGreeting, 1000);
+
+    function myGreeting() {
+      modalDesarrolladores.classList.remove("modal_contenido_cerrado");
       modalDesarrolladores.style.display = "none";
-    });
-/*
-    window.addEventListener("click", (evento) => {
-      if (evento.target === modalDesarrolladores) {
-        modalDesarrolladores.style.display = "none";
-      }
-    }); */
+
+    }
+
   },
 
   touchStart: (event) => {
@@ -353,7 +359,7 @@ const util = {
       currentElement = null;
     }
   },
-   promptBase : (frase)=> {
+  promptBase: (frase) => {
     const main = document.querySelector('main');
 
     const div = document.createElement('div');
@@ -370,54 +376,54 @@ const util = {
       const padrePrompt = div.parentNode;
       padrePrompt.removeChild(div);
     });
-    div.append(textofrase,btnAceptar);
+    div.append(textofrase, btnAceptar);
     main.appendChild(div);
-},
+  },
 
-confirmacionBase: (titulo, pregunta, callbackAceptar) => {
-  const main = document.querySelector('main')
-  const div = document.createElement('div');
-  div.className = 'promptConfirmacion'
+  confirmacionBase: (titulo, pregunta, callbackAceptar) => {
+    const main = document.querySelector('main')
+    const div = document.createElement('div');
+    div.className = 'promptConfirmacion'
 
-  const tituloCartel = document.createElement('h3');
-  tituloCartel.textContent = titulo;
-  tituloCartel.className = 'tituloCartel';
+    const tituloCartel = document.createElement('h3');
+    tituloCartel.textContent = titulo;
+    tituloCartel.className = 'tituloCartel';
 
-  const preguntaCartel = document.createElement('h2');
-  preguntaCartel.textContent = pregunta;
-  preguntaCartel.className = 'preguntaCartel';
+    const preguntaCartel = document.createElement('h2');
+    preguntaCartel.textContent = pregunta;
+    preguntaCartel.className = 'preguntaCartel';
 
-  const btnAceptar = document.createElement('button');
-  btnAceptar.textContent = 'Aceptar';
-  btnAceptar.addEventListener('click', () => {
-    if(typeof callbackAceptar === 'function'){
-      callbackAceptar();
-    }
-    const padrePrompt = div.parentNode;
-    padrePrompt.removeChild(div);
-  });
+    const btnAceptar = document.createElement('button');
+    btnAceptar.textContent = 'Aceptar';
+    btnAceptar.addEventListener('click', () => {
+      if (typeof callbackAceptar === 'function') {
+        callbackAceptar();
+      }
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
 
-  const btnCancelar = document.createElement('button');
-  btnCancelar.textContent = 'Cancelar';
-  btnCancelar.addEventListener('click', () => {
-    const padrePrompt = div.parentNode;
-    padrePrompt.removeChild(div);
-  });
+    const btnCancelar = document.createElement('button');
+    btnCancelar.textContent = 'Cancelar';
+    btnCancelar.addEventListener('click', () => {
+      const padrePrompt = div.parentNode;
+      padrePrompt.removeChild(div);
+    });
 
-  div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
-  main.appendChild(div)
-},
- setTheme : (theme) => {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-},
+    div.append(tituloCartel, preguntaCartel, btnAceptar, btnCancelar);
+    main.appendChild(div)
+  },
+  setTheme: (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  },
 
-modoOscuro:() => {
-  let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-  util.setTheme(themeApp);
-}
-  
+  modoOscuro: () => {
+    let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    util.setTheme(themeApp);
   }
+
+}
 
 
 

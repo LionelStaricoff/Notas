@@ -28,3 +28,5 @@ document.querySelector('.claro-oscuro').addEventListener('click', util.modoOscur
 
 util.setTheme(localStorage.getItem('theme') || 'light');
 
+// panel desarrolladores
+ document.getElementById("cerrarModal").addEventListener("click",util.cerrarModal);
