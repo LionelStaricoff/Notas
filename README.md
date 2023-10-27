@@ -20,6 +20,15 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 </div>
 
 ------------
+
+#### Modo Oscuro:
+
+<div align="center">
+	<img src="imagesReadme/modoOscuro.png" alt="Menú Desplegable" width="60%">
+</div>
+
+------------
+
 ####  El tablero tiene tres columnas que indican el estado de la tarea o idea:
 - IDEAS
 - EN PROCESO
@@ -34,14 +43,15 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 #### Cada nota tiene:
 - Título
 - Descripción
-- Tres botones:
-	- Eliminar
-	- Cambiar de color
-	- Agrega a la columna
-	(Cuando la nota se agrega al tablero, se guarda en un tamaño reducido)
-
+- Cuatro botones:
+	- Elimina la nota
+	- Cambia de color la letra (Blanco o Negro)
+	- Cambia de color la nota
+	- Agrega la nota en la columna del cuadro
+	(Cuando la columna se agrega al cuadro, se guarda en un tamaño reducido)
+</div>
 <div align="center">
-	<img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Nota.png" alt="Nota" width="25%">
+	<img src="imagesReadme/Nota.png" alt="Nota" width="25%">
 </div>
 
 ------------
@@ -50,10 +60,12 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 La descripción estará oculta y podrá verse cuando se presione el botón editar.
 
 Contenido de la nota reducida:
+<div align="left">
 - Descripción
 - Botones:
-	- Eliminar
-	- Editar
+	- Elimina
+	- Cambia de color la letra
+	- Edita el título, la descripción, el color de la nota
 	- Cambia de columna
 
 <div align="center">
@@ -62,6 +74,10 @@ Contenido de la nota reducida:
 <img src="https://github.com/Gladys077/Notas/blob/dev/imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
 
 </div>
+
+##### También puede cambiar de columna arrastrando la nota:
+
+
 <br>
 <div align="center">
 
