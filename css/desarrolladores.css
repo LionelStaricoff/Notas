@@ -49,24 +49,28 @@
 
 .modal_contenido_cerrado {
 
-    animation: 1s normal anim1 ease-out;
+    animation: 1s normal animCerrar ease-out;
 }
 
-@keyframes anim1 {
+/* @keyframes anim1 {
     0% {
-      
-       
         transform: rotateY(-100deg);
     }
 
     100% {
         transform: rotateY(0deg);
       
-       
     }
+} */
 
-      
+@keyframes animCerrar {
+    0% {
+        transform: scale(1);
+    }
     
+    100% {
+        transform: scale(0);
+    }
 }
 
 .modal-contenido span {
