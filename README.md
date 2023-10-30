@@ -79,7 +79,9 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-    <img src="https://www.youtube.com/watch?v=h-EpkVvcP94" alt="Arrastrando la nota a otra columna" width="55%">
+	<video width="400" controls>
+	  <source src="https://www.youtube.com/watch?v=h-EpkVvcP94" type="video/mp4" alt="Arrastrando la nota a otra columna">
+	</video>
 </div>
 
 <br>
