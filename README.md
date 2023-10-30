@@ -79,7 +79,7 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	[Comprehensive Markdown Crash Course](https://www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC "cambiar de columna arrastrando la nota")
 </div>
 
 <br>
