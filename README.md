@@ -13,7 +13,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 - Desarrolladores
 
 <div align="center">
-	<img src="imagesReadme/Menu.png" alt="Menú Desplegable" width="60%">
+	<img src="imagesReadme/menu.png" alt="Menú Desplegable" width="60%">
 </div>
 ------------
 
