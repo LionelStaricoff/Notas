@@ -79,9 +79,9 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-	[Comprehensive Markdown Crash Course](https://www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC "cambiar de columna arrastrando la nota")
+	[![Comprehensive Markdown Crash Course]](www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC "cambiar de columna arrastrando la nota")
 </div>
-
+[![Comprehensive Markdown Crash Course]](www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC "cambiar de columna arrastrando la nota")
 <br>
 <div align="center">
 
