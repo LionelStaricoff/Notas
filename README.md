@@ -1,4 +1,4 @@
-# App Notas
+ # App Notas
 
 Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que posee tres columnas que representan en que estado se encuentra la tarea o idea.
 
@@ -79,9 +79,7 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-	<video width="400" controls>
-	  <source src="https://www.youtube.com/watch?v=h-EpkVvcP94" type="video/mp4" alt="Arrastrando la nota a otra columna">
-	</video>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <br>
@@ -93,4 +91,5 @@ Contenido de la nota reducida:
 
 🔷 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔸 🔷
 </div>
+
 
