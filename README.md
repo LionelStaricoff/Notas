@@ -20,7 +20,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 #### Modo Oscuro:
 
 <div align="center">
-	<img src="imagesReadme/modoOscuro.png" alt="Menú Desplegable" width="60%">
+	<img src="imagesReadme/modoOscuro.png" alt="Modo oscuro" width="60%">
 </div>
 
 ------------
@@ -79,7 +79,7 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-	<img src="imagesReadme/MoverNotas.gif" alt="Nota moviéndose" width="55%" align="center">
+	<img src="imagesReadme/MoverNotas.gif" alt="Arrastrando la nota a otra columna" width="55%">
 </div>
 
 <br>
