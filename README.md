@@ -79,7 +79,7 @@ Contenido de la nota reducida:
 ##### También puede cambiar de columna arrastrando la nota:
 
 <div align="center">
-	<img src="imagesReadme/MoverNotas.gif" alt="Arrastrando la nota a otra columna" width="55%">
+    <img src="imagesReadme/MoverNotas.mp4" alt="Arrastrando la nota a otra columna" width="55%">
 </div>
 
 <br>
