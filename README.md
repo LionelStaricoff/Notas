@@ -27,6 +27,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 
 #### El tablero tiene tres columnas que indican el estado de la tarea o idea:
 <div align="left">
+
 - IDEAS
 - EN PROCESO
 - COMPLETADAS
@@ -39,6 +40,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 
 #### Cada nota tiene:
 <div align="left">
+
 - Título
 - Descripción
 - Cuatro botones:
@@ -59,6 +61,7 @@ La descripción estará oculta y podrá verse cuando se presione el botón edita
 
 Contenido de la nota reducida:
 <div align="left">
+
 - Descripción
 - Botones:
 	- Elimina
