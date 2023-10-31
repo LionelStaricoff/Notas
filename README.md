@@ -13,14 +13,14 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 - Desarrolladores
 
 <div align="center">
-	<img src="imagesReadme/menu.png" alt="Menú Desplegable" width="60%">
+	<img src="imagesReadme/menu.png" alt="Menú Desplegable" width="70%">
 </div>
 ------------
 
 #### Modo Oscuro:
 
 <div align="center">
-	<img src="imagesReadme/modoOscuro.png" alt="Modo oscuro" width="60%">
+	<img src="imagesReadme/modoOscuro.png" alt="Modo oscuro" width="70%">
 </div>
 
 ------------
@@ -51,7 +51,7 @@ Esta app te permite crear **notitas**, editarlas y guardarlas en un tablero que 
 	(Cuando la columna se agrega al cuadro, se guarda en un tamaño reducido)
 </div>
 <div align="center">
-	<img src="imagesReadme/Nota.png" alt="Nota" width="25%">
+	<img src="imagesReadme/Nota.png" alt="Nota" width="60%">
 </div>
 
 ------------
@@ -70,16 +70,15 @@ Contenido de la nota reducida:
 	- Cambia de columna
 </div>
 <div align="center">
-	<img src="imagesReadme/notaReducida.png" alt="Nota Reducita" width="55%" align="center">
+	<img src="imagesReadme/notaReducida.png" alt="Nota Reducita" width="70%" align="center">
 
-<img src="imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="30%" align="center">
+<img src="imagesReadme/Prompt-Mover.png" alt="Cartel para cambiar de columna" width="50%" align="center">
 
 </div>
 
 ##### También puede cambiar de columna arrastrando la nota:
-![](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/MoverNotas2.gif)
-
 <div align="center">
+![](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/MoverNotas2.gif)
 </div>
 	
 <br>
