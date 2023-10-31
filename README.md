@@ -77,10 +77,12 @@ Contenido de la nota reducida:
 </div>
 
 ##### También puede cambiar de columna arrastrando la nota:
+![](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/ArrastrandoNotas.gif)
 
+<a href="https://www.youtube.com/watch?v=h-EpkVvcP94" target="_blank">Video que muestra como arrastrar las notas</a>
 <div align="center">
 </div>
-
+	
 <br>
 <div align="center">
 
