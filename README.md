@@ -81,7 +81,8 @@ Contenido de la nota reducida:
 <div align="center">
 	 ! ["cambiar de columna arrastrando la nota"](www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC) 
 </div>
-[![cambiar de columna arrastrando la nota]({https://definicion.de/wp-content/uploads/2009/04/youtube.png})]({www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC} "Link Title")
+>[!VIDEO](www.youtube.com/embed/h-EpkVvcP94?si=LHLCPBBh1MmrQ7vC)
+
 <br>
 <div align="center">
 
