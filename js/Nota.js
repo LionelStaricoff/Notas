@@ -178,17 +178,17 @@ class Nota {
                
     
             if (chequeado) {
-                labelColorTxt.style.color = '#000';
-                labelColorTxt.style.background = '#fff';
-                this.colorTexto = '#fff';
+                labelColorTxt.style.color = '#fff';
+                labelColorTxt.style.background = '#000';
+                this.colorTexto = '#000';
                 titulo.style.color = this.colorTexto;
                 textarea.style.color = this.colorTexto;
                 nota.style.color = this.colorTexto;
     
             } else {
-                labelColorTxt.style.color = '#fff';
-                labelColorTxt.style.background = '#000';
-                this.colorTexto = '#000';
+                labelColorTxt.style.color = '#000';
+                labelColorTxt.style.background = '#fff';
+                this.colorTexto = '#fff';
                 titulo.style.color = this.colorTexto;
                 textarea.style.color = this.colorTexto;
                 nota.style.color = this.colorTexto;
@@ -205,17 +205,17 @@ class Nota {
            
 
         if (chequeado) {
-            labelColorTxt.style.color = '#000';
-            labelColorTxt.style.background = '#fff';
-            this.colorTexto = '#fff';
+            labelColorTxt.style.color = '#fff';
+            labelColorTxt.style.background = '#000';
+            this.colorTexto = '#000';
             titulo.style.color = this.colorTexto;
             textarea.style.color = this.colorTexto;
             nota.style.color = this.colorTexto;
 
         } else {
-            labelColorTxt.style.color = '#fff';
-            labelColorTxt.style.background = '#000';
-            this.colorTexto = '#000';
+            labelColorTxt.style.color = '#000';
+            labelColorTxt.style.background = '#fff';
+            this.colorTexto = '#fff';
             titulo.style.color = this.colorTexto;
             textarea.style.color = this.colorTexto;
             nota.style.color = this.colorTexto;
