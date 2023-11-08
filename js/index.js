@@ -30,3 +30,4 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 
 // panel desarrolladores
  document.getElementById("cerrarModal").addEventListener("click",util.cerrarModal);
+

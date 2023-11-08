@@ -137,7 +137,7 @@ ul {
     text-align: right;
 }
 
-#checkbox:checked~li>.menu-list {
+#checkbox:not(:checked)~li>.menu-list {
     display: block;
 }
 
@@ -213,6 +213,7 @@ ul {
         transform: translateY(-250%);
         opacity: 0;
         pointer-events: none;
+        visibility: hidden;
         display: none;
     }
 }

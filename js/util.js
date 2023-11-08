@@ -421,7 +421,9 @@ const util = {
   modoOscuro: () => {
     let themeApp = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
     util.setTheme(themeApp);
-  }
+  },
+
+  
 
 }
 
