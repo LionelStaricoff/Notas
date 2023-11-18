@@ -137,7 +137,7 @@ ul {
     text-align: right;
 }
 
-#checkbox:not(:checked)~li>.menu-list {
+#checkbox:checked~li>.menu-list {
     display: block;
 }
 

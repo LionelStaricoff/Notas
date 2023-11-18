@@ -77,7 +77,7 @@ Contenido de la nota reducida:
 </div>
 
 ##### También puede cambiar de columna arrastrando la nota:
-![](https://github.com/Gladys077/Notas/blob/dev/imagesReadme/MoverNotas2.gif)
+![](imagesReadme/MoverNotas2.gif)
 	
 <br>
 <div align="center">

@@ -31,3 +31,6 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 // panel desarrolladores
  document.getElementById("cerrarModal").addEventListener("click",util.cerrarModal);
 
+//para sacar el error del menu
+document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
+

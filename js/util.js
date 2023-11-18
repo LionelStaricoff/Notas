@@ -424,7 +424,26 @@ const util = {
   },
 
   
+  cerrarMenu: () => {
+    const menu = document.querySelector(".menu-list");
+    if( menu.style.display == "none"){
+      const myTimeout = setTimeout(myGreeting, 10);
+    }else{
+      const myTimeout = setTimeout(myGreeting, 1000);
+    }
 
+   
+
+    function myGreeting() {
+      if( menu.style.display == "none"){
+        menu.style.display = "block";
+      }else{
+        menu.style.display = "none";
+      }
+     
+
+    }
+  },
 }
 
 
