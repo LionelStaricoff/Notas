@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the Notitas y más notitas 2.1
+---------------------------------------------------
+
+app_name - 						Notitas y más notitas
+app_alias - 					lionel
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Atlantico
+app_author_country - 			Colombia
+app_password - 					yoGuifk3USZW
+app_versionName - 				versionName "2.1"
+app_versionCode - 				201
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Monday 27th of November 2023 10:11:26 PM
+
+https://www.webintoapp.com
+---------------------------------------------------
+
