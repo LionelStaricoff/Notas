@@ -6,6 +6,7 @@
 @import url("desarrolladores.css");
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
+
 :root{
     --letras: black;
     --fondo:  rgb(34, 205, 28);
@@ -250,6 +251,14 @@ ul {
     color: #000;
     background-color: rgb(255, 215, 0);
 }
+#menu li ul li:nth-child(7) {
+    color: #000;
+    background-color: rgb(240, 84, 157);
+    &:hover {
+        border: 2px solid #000;
+    }
+}
+
 
 #menu li ul li:first-child:hover {
     border: 2px solid #000;

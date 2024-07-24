@@ -1,3 +1,5 @@
+
+
 let currentElement = null;
 
 const util = {
@@ -447,6 +449,11 @@ const util = {
 
     }
   },
+
+  login: ()=>{
+
+   new cartelLogin('main')
+  }
 }
 
 

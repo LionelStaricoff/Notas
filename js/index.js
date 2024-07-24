@@ -8,6 +8,7 @@ buttons[6].addEventListener('click', util.mostrarDesarrolladores);
 //estos son los eventos para las funciones que faltan:
 buttons[5].addEventListener('click', util.btnImportarArchivo);
 buttons[4].addEventListener('click', util.btnExportarArchivo);
+buttons[7].addEventListener('click',  util.login);
 
 
 //div padre eventos de arrastre
@@ -34,3 +35,4 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 //para sacar el error del menu
 document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
+new cartelLogin('main')
