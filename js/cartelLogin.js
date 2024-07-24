@@ -1,6 +1,6 @@
- class cartelLogin {
-    constructor(padre) {
-
+class cartelLogin {
+    constructor(padre, funcion) {
+        this._funcion = funcion;
         this._padre = padre ?? 'body';
         this.isAgregarAlFront();
     }
@@ -21,12 +21,12 @@
         usuario.placeholder = 'Usuario'
         const password = document.createElement('input');
         password.type = 'password';
-        password.placeholder = 'constraseña' 
+        password.placeholder = 'constraseña'
         const button = document.createElement('input');
         button.type = 'button';
         button.value = 'Loguear';
-    
-        
+        button.addEventListener('click', () => this.isFunction());
+
         div.append(span, usuario, password, button);
         return div;
     }
@@ -89,5 +89,13 @@
         const cartel = document.querySelector('#login') ?? null;
 
         if (cartel == null) this.agregarAlFront();
+    }
+
+    isFunction() {
+        if ( typeof this._funcion == 'function') {
+            this._funcion()
+        } else {
+            alert('el parametro debe ser una funcion')
+        }
     }
 }

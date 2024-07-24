@@ -35,4 +35,4 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 //para sacar el error del menu
 document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
-new cartelLogin('main')
+new cartelLogin('main',()=> alert('anda'))
