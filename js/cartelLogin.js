@@ -1,8 +1,9 @@
-class cartelLogin {
+ class cartelLogin {
     constructor(padre, funcion) {
         this._funcion = funcion;
         this._padre = padre ?? 'body';
         this.isAgregarAlFront();
+        this._div;
     }
 
     agregarAlFront() {
@@ -12,10 +13,11 @@ class cartelLogin {
     }
 
     armarCartel() {
-        const div = document.createElement('div');
-        div.id = "login";
+        this._div = document.createElement('div');
+        this._div.id = "login";
         const span = document.createElement('span');
         span.innerText = 'X';
+        span.addEventListener('click', () => this.cerrarCartel())
         const usuario = document.createElement('input');
         usuario.type = 'text';
         usuario.placeholder = 'Usuario'
@@ -27,15 +29,15 @@ class cartelLogin {
         button.value = 'Loguear';
         button.addEventListener('click', () => this.isFunction());
 
-        div.append(span, usuario, password, button);
-        return div;
+        this._div.append(span, usuario, password, button);
+        return this._div;
     }
 
     caragarStyle() {
         const head = document.querySelector('head');
         const style = document.createElement('style');
         style.innerText = `#login {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -92,10 +94,15 @@ class cartelLogin {
     }
 
     isFunction() {
-        if ( typeof this._funcion == 'function') {
+        if (typeof this._funcion == 'function') {
             this._funcion()
         } else {
             alert('el parametro debe ser una funcion')
         }
+    }
+
+    cerrarCartel() {
+        const padre = this._div.parentNode;
+        padre.removeChild(this._div);
     }
 }

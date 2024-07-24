@@ -452,7 +452,7 @@ const util = {
 
   login: ()=>{
 
-   new cartelLogin('main')
+   new cartelLogin('main',()=> alert('logica'))
   }
 }
 
