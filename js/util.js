@@ -265,7 +265,7 @@ const util = {
       nota.estado = util.estados[0];
       section.style.display = 'none';
     });
-     
+
     const button2 = document.createElement('button');
     button2.style.backgroundImage = 'url("/img/enProceso.png")';
     button2.addEventListener('click', () => {
@@ -273,7 +273,7 @@ const util = {
       nota.estado = util.estados[1];
       section.style.display = 'none';
     });
-   
+
     const button3 = document.createElement('button');
     button3.style.backgroundImage = 'url("/img/hecho.png")';
     button3.addEventListener('click', () => {
@@ -319,7 +319,7 @@ const util = {
     const modalDesarrolladores = document.querySelector(".modal");
     modalDesarrolladores.style.display = "block";
 
-    
+
   },
 
   cerrarModal: () => {
@@ -428,32 +428,42 @@ const util = {
     util.setTheme(themeApp);
   },
 
-  
+
   cerrarMenu: () => {
     const menu = document.querySelector(".menu-list");
-    if( menu.style.display == "none"){
+    if (menu.style.display == "none") {
       const myTimeout = setTimeout(myGreeting, 10);
-    }else{
+    } else {
       const myTimeout = setTimeout(myGreeting, 1000);
     }
 
-   
+
 
     function myGreeting() {
-      if( menu.style.display == "none"){
+      if (menu.style.display == "none") {
         menu.style.display = "block";
-      }else{
+      } else {
         menu.style.display = "none";
       }
-     
+
 
     }
   },
 
-  login: ()=>{
+  login: async () => {
 
-   new cartelLogin('main',()=> alert('logica'))
+
+    new cartelLogin('main', async () => {
+      const name = document.querySelector('input[type="text"]');
+      const password = document.querySelector('input[type="password"]');
+      const bbdd = new BbddLocal('./json/user.json');
+
+     bbdd.login(name.value, password.value) ;
+
+
+    })
   }
+
 }
 
 

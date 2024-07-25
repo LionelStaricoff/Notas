@@ -1,5 +1,5 @@
 
-export default class BbddLocal {
+ class BbddLocal {
     constructor(archivo) {
         this._archivo = archivo;
        
@@ -10,18 +10,27 @@ export default class BbddLocal {
 
     }
 
-   async leerDatos(archivo = this._archivo) {
-      
-      await  fetch(archivo)
-            .then(response => response.text())
+    async login(_name, _password ) {
+
+       await fetch(this._archivo)
+            .then(response => response.json())
             .then(data => {
-                console.log(data); 
+           
+                for(let d of data.users){
+                  
+                    if(d.name == _name && d.password == _password){
+                        alert('acceso correcto')
+                        cartelLogin.cerrarCarterLogin();
+                        return;
+                    }
+                }
+                alert('datos incorrectos')
+                return false;
             })
             .catch(error => {
                 console.error('Error al cargar el archivo:', error);
             });
 
- 
 
     }
 }

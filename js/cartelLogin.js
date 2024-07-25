@@ -105,4 +105,22 @@
         const padre = this._div.parentNode;
         padre.removeChild(this._div);
     }
+
+    
+   static cerrarCarterLogin() {
+
+    const cartel = document.querySelector('#login')
+    const padre = cartel.parentNode;
+    padre.removeChild(cartel)
+
+  }
 }
+
+
+
+
+
+
+
+
+
