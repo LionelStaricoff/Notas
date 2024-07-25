@@ -1,3 +1,6 @@
+import BbddLocal from './BbddLocal.js';
+
+
 const buttons = document.querySelectorAll('li');
 
 
@@ -36,3 +39,6 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
 
+
+const bbdd = new BbddLocal('./json/user.json');
+bbdd.leerDatos()
