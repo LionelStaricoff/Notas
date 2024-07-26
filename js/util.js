@@ -458,15 +458,75 @@ const util = {
       const password = document.querySelector('input[type="password"]');
       const bbdd = new BbddLocal('./json/user.json');
 
-     bbdd.login(name.value, password.value) ;
+      bbdd.login(name.value, password.value);
 
 
     })
-  }
+  },
 
+
+  cargarNotalAlFront: (_notas) => {
+    try {
+      const notasArray = _notas;
+
+
+
+      const columnas = document.querySelectorAll('.columnaCuadro');
+
+      for (a of notasArray) {
+
+        let nota = new Nota(a.input, a.textarea,
+          a.color, a.position, a.estado, a.colorTexto, a.checkeado);
+
+        nota.crearNota();
+
+        nota.agregarAlFront();
+        nota1 = nota.getNota();
+
+        if (nota.position != 'absolute') {
+          nota.agrandarNota(nota1);
+          nota.achicarNota(nota1);
+        }
+      }
+
+    } catch (error) {
+      util.promptBase('archivo no valido o vacio ');
+    }
+  },
+
+
+  traerTodasLasNotasDelFront:()=>{
+
+      // cargando todas las notas
+      const notas = document.querySelectorAll('.nota');
+
+      //crando un arreglo para extraer los datos
+      const datosNotas = [];
+  
+      // Recorrer los elementos y obtener los valores
+      for (var i = 0; i < notas.length; i++) {
+  
+        const a = notas[i].style.position;
+        const padre = notas[i].parentNode.classList;
+  
+        const nuevaNota = {
+          input: notas[i].querySelector('input').value,
+          textarea: notas[i].querySelector('textarea').value,
+          color: notas[i].style.backgroundColor,
+          position: notas[i].style.position,
+          colorTexto: notas[i].style.color,   //COLOR TEXTO 
+          checkeado: notas[i].querySelector('#checkLetra').checked,
+          estado: padre[1]
+        }
+  
+  
+        datosNotas.push(nuevaNota);
+        return datosNotas;
+
+  }
 }
 
 
-
+}
 
 
