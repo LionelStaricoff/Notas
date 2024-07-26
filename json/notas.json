@@ -1,4 +1,11 @@
-{
-    "name": "lionel",
-    "password": 1234
+[
+  {
+    "input": "nota1",
+    "textarea": "descripción",
+    "color": "rgb(0, 0, 255)",
+    "position": "relative",
+    "colorTexto": "rgb(0, 0, 0)",
+    "checkeado": true,
+    "estado": "idea"
   }
+]
