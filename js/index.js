@@ -41,16 +41,32 @@ document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
 
 // Inicializar el Service Worker
-const sw = navigator.serviceWorker.register('service-worker.js');
+//const sw = navigator.serviceWorker.register('./serviceworker.js');
 
 // Verificar si el Service Worker se registró correctamente
-sw.then(registration => {
-  alert('Service Worker registrado con éxito');
+//sw.then(registration => {
+ // alert('Service Worker registrado con éxito');
+
   // Guardar la referencia del Service Worker en una variable
-  const sw = registration.active;
+  //const sw = registration.active;
+
   // Utilizar los métodos del Service Worker
 
  // sw.postMessage({ action: 'read' });
  // sw.postMessage({ action: 'update' });
  
-});
+//})
+
+let sw;
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js')
+      .then(registration => {
+        console.log('Service Worker registrado con éxito:', registration);
+        sw = registration.active;
+      })
+      .catch(error => {
+        console.error('Error al registrar el Service Worker:', error);
+      });
+  }
+

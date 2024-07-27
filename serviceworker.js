@@ -1,4 +1,4 @@
- const jsondb = './json/db.json'
+ const jsondb = './db.json'
   
  //importScripts('./json/db.json');
 /*
