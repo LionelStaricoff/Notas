@@ -1,5 +1,5 @@
 
-
+try {
 
 
 const buttons = document.querySelectorAll('li');
@@ -40,23 +40,10 @@ util.setTheme(localStorage.getItem('theme') || 'light');
 document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
 
-// Inicializar el Service Worker
-//const sw = navigator.serviceWorker.register('./serviceworker.js');
 
-// Verificar si el Service Worker se registró correctamente
-//sw.then(registration => {
- // alert('Service Worker registrado con éxito');
 
-  // Guardar la referencia del Service Worker en una variable
-  //const sw = registration.active;
-
-  // Utilizar los métodos del Service Worker
-
- // sw.postMessage({ action: 'read' });
- // sw.postMessage({ action: 'update' });
- 
-//})
-
+  
+//serviceworker
 let sw;
 
   if ('serviceWorker' in navigator) {
@@ -70,3 +57,14 @@ let sw;
       });
   }
 
+const cargarNotasServiceWorker = ()=>sw.postMessage({ action: 'read' });
+const guardarNotasServiceWorker = ()=>sw.postMessage({ action: 'update' });
+
+
+
+new cartelBbdd('main')
+
+
+} catch (error) {
+  console.error( new Error('error al cargar la pagina 404'))
+}
