@@ -259,7 +259,7 @@ const util = {
     titulo.appendChild(palabras);
 
     const button1 = document.createElement('button');
-    button1.style.backgroundImage = 'url("/img/idea.png")';
+    button1.style.backgroundImage = 'url("./img/idea.png")';
     button1.addEventListener('click', () => {
       divs[0].appendChild(nota.nota);
       nota.estado = util.estados[0];
@@ -267,7 +267,7 @@ const util = {
     });
 
     const button2 = document.createElement('button');
-    button2.style.backgroundImage = 'url("/img/enProceso.png")';
+    button2.style.backgroundImage = 'url("./img/enProceso.png")';
     button2.addEventListener('click', () => {
       divs[1].appendChild(nota.nota);
       nota.estado = util.estados[1];
@@ -275,7 +275,7 @@ const util = {
     });
 
     const button3 = document.createElement('button');
-    button3.style.backgroundImage = 'url("/img/hecho.png")';
+    button3.style.backgroundImage = 'url("./img/hecho.png")';
     button3.addEventListener('click', () => {
       divs[2].appendChild(nota.nota);
       nota.estado = util.estados[2];

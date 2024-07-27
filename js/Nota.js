@@ -254,7 +254,7 @@ class Nota {
         const btnEditar = document.createElement('button');
         btnEditar.className = 'boton-editar';
         const imgEditar = document.createElement('img');
-        imgEditar.src = 'img/edit.png'
+        imgEditar.src = './img/edit.png'
         btnEditar.appendChild(imgEditar);
         btnEditar.addEventListener('click',
             this.editarNota(btnEditar, titulo, textarea, nota));
@@ -262,7 +262,7 @@ class Nota {
         const btnMover = document.createElement('button');
         btnMover.className = 'boton-mover';
         const imgMover = document.createElement('img');
-        imgMover.src = 'img/flecha.png'
+        imgMover.src = './img/flecha.png'
         btnMover.appendChild(imgMover);
         btnMover.addEventListener('click', () => {
             util.promptCambiarNota(this, this.getEstado());
