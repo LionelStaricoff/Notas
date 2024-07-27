@@ -61,14 +61,22 @@ const cargarNotasServiceWorker = ()=>sw.postMessage({ action: 'read' });
 const guardarNotasServiceWorker = ()=>sw.postMessage({ action: 'update' });
 
 
+// constructor:
+new cartelBbdd('main')
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', ()=>alert('.functionBtn'))
+const btn1 = document.querySelector('#btn1')
+btn1.addEventListener('click', ()=>alert('.functionBtn1'))
 
+//constructor builder
+/*
  cartelBbdd.builder().padre('main')
  .nameBtn('Guardar_bbdd')
  .nameBtn1('cargar_bbdd')
  .functionBtn(()=>alert('.functionBtn'))
  .functionBtn1(()=>alert('.functionBtn1'))
  .build();
-
+*/
 
 } catch (error) {
   console.error( new Error('error al cargar la pagina 404'))

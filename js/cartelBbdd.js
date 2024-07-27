@@ -27,11 +27,13 @@ class cartelBbdd {
         const button = document.createElement('input');
         button.type = 'button';
         button.value = this._nameBtn;
+        button.id = 'btn';
         button.addEventListener('click', () => this.isFunction(this._funcion));
 
         const button1 = document.createElement('input');
         button1.type = 'button';
         button1.value = this._nameBtn1;
+        button1.id = 'btn1';
         button1.addEventListener('click', () => this.isFunction(this._function1));
 
         this._div.append(span, button, button1);
