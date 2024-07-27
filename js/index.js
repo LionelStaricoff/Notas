@@ -63,6 +63,10 @@ const guardarNotasServiceWorker = ()=>sw.postMessage({ action: 'update' });
 
 
  cartelBbdd.builder().padre('main')
+ .nameBtn('Guardar_bbdd')
+ .nameBtn1('cargar_bbdd')
+ .functionBtn(()=>alert('.functionBtn'))
+ .functionBtn1(()=>alert('.functionBtn1'))
  .build();
 
 

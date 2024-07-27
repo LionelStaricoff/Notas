@@ -27,12 +27,12 @@ class cartelBbdd {
         const button = document.createElement('input');
         button.type = 'button';
         button.value = this._nameBtn;
-        button.addEventListener('click', () => this.isFunction());
+        button.addEventListener('click', () => this.isFunction(this._funcion));
 
         const button1 = document.createElement('input');
         button1.type = 'button';
         button1.value = this._nameBtn1;
-        button1.addEventListener('click', () => this.isFunction());
+        button1.addEventListener('click', () => this.isFunction(this._function1));
 
         this._div.append(span, button, button1);
         return this._div;
@@ -98,9 +98,9 @@ class cartelBbdd {
         if (cartel == null) this.agregarAlFront();
     }
 
-    isFunction() {
-        if (typeof this._funcion == 'function') {
-            this._funcion()
+    isFunction(funcion) {
+        if (typeof funcion == 'function') {
+            funcion()
         } else {
             alert('el parametro debe ser una funcion')
         }
@@ -140,8 +140,12 @@ class cartelBbdd {
         return this;
     }
 
-    
-    static function(dtoFunction){
+    static functionBtn(dtoFunction){
+        this.builderCartel._funcion = dtoFunction;
+        return this;
+    }
+
+    static functionBtn1(dtoFunction){
         this.builderCartel._function1 = dtoFunction;
         return this;
     }
