@@ -62,7 +62,8 @@ const guardarNotasServiceWorker = ()=>sw.postMessage({ action: 'update' });
 
 
 
-new cartelBbdd('main')
+ cartelBbdd.builder().padre('main')
+ .build();
 
 
 } catch (error) {

@@ -1,13 +1,14 @@
- class cartelBbdd {
-    constructor(padre,nameBtn,nameBtn1, funcion,function1) {
+class cartelBbdd {
+    constructor(padre, nameBtn, nameBtn1, funcion, function1) {
         this._padre = padre ?? 'body';
         this._nameBtn = nameBtn ?? 'Guardar';
         this._nameBtn1 = nameBtn1 ?? 'Cargar';
         this._funcion = funcion;
         this._function1 = function1;
-        
+
         this.isAgregarAlFront();
         this._div;
+        this.builderCartel;
     }
 
     agregarAlFront() {
@@ -22,7 +23,7 @@
         const span = document.createElement('span');
         span.innerText = 'X';
         span.addEventListener('click', () => this.cerrarCartel())
-        
+
         const button = document.createElement('input');
         button.type = 'button';
         button.value = this._nameBtn;
@@ -33,7 +34,7 @@
         button1.value = this._nameBtn1;
         button1.addEventListener('click', () => this.isFunction());
 
-        this._div.append(span, button , button1);
+        this._div.append(span, button, button1);
         return this._div;
     }
 
@@ -110,14 +111,43 @@
         padre.removeChild(this._div);
     }
 
+
+    static cerrarCarterLogin() {
+
+        const cartel = document.querySelector('#login')
+        const padre = cartel.parentNode;
+        padre.removeChild(cartel)
+
+    }
+
+  static  builder() {
+        this.builderCartel = new cartelBbdd();
+        return this;
+    }
+
+    static padre(dtoPadre){
+        this.builderCartel._padre = dtoPadre;
+        return this;
+    }
+
+    static nameBtn(dtoNameBtn){
+        this.builderCartel._nameBtn = dtoNameBtn;
+        return this;
+    }
     
-   static cerrarCarterLogin() {
+    static nameBtn1(dtoNameBtn1){
+        this.builderCartel._nameBtn1 = dtoNameBtn1;
+        return this;
+    }
 
-    const cartel = document.querySelector('#login')
-    const padre = cartel.parentNode;
-    padre.removeChild(cartel)
-
-  }
+    
+    static function(dtoFunction){
+        this.builderCartel._function1 = dtoFunction;
+        return this;
+    }
+    static build(){
+        return this.builderCartel;
+    }
 }
 
 
