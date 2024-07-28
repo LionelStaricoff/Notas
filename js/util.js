@@ -495,36 +495,36 @@ const util = {
   },
 
 
-  traerTodasLasNotasDelFront:()=>{
+  traerTodasLasNotasDelFront: () => {
 
-      // cargando todas las notas
-      const notas = document.querySelectorAll('.nota');
+    // cargando todas las notas
+    const notas = document.querySelectorAll('.nota');
 
-      //crando un arreglo para extraer los datos
-      const datosNotas = [];
-  
-      // Recorrer los elementos y obtener los valores
-      for (var i = 0; i < notas.length; i++) {
-  
-        const a = notas[i].style.position;
-        const padre = notas[i].parentNode.classList;
-  
-        const nuevaNota = {
-          input: notas[i].querySelector('input').value,
-          textarea: notas[i].querySelector('textarea').value,
-          color: notas[i].style.backgroundColor,
-          position: notas[i].style.position,
-          colorTexto: notas[i].style.color,   //COLOR TEXTO 
-          checkeado: notas[i].querySelector('#checkLetra').checked,
-          estado: padre[1]
-        }
-  
-  
-        datosNotas.push(nuevaNota);
-        return datosNotas;
+    //crando un arreglo para extraer los datos
+    const datosNotas = [];
 
+    // Recorrer los elementos y obtener los valores
+    for (var i = 0; i < notas.length; i++) {
+
+      const a = notas[i].style.position;
+      const padre = notas[i].parentNode.classList;
+
+      const nuevaNota = {
+        input: notas[i].querySelector('input').value,
+        textarea: notas[i].querySelector('textarea').value,
+        color: notas[i].style.backgroundColor,
+        position: notas[i].style.position,
+        colorTexto: notas[i].style.color,   //COLOR TEXTO 
+        checkeado: notas[i].querySelector('#checkLetra').checked,
+        estado: padre[1]
+      }
+
+
+      datosNotas.push(nuevaNota);
+      return datosNotas;
+
+    }
   }
-}
 
 
 }

@@ -15,18 +15,25 @@ class BbddLocal {
         await fetch(this._archivo)
             .then(response => response.json())
             .then(data => {
-               
+
                 const usuarioEncontrado = data.users.find(d => d.name == _name && d.password == _password);
 
 
                 if (usuarioEncontrado) {
-                    alert('acceso correcto')
+
+                    cartelBbdd.builder().padre('main')
+                        .nameBtn('Guardar notas')
+                        .nameBtn1('Cargar notas')
+                        .functionBtn(async () => alert('Guardar notas'))
+                        .functionBtn1(async () => alert('Cargar notas'))
+                        .build();
+                        
                     cartelLogin.cerrarCarterLogin();
                     return;
                 }
 
                 alert('datos incorrectos')
-               
+
             })
             .catch(error => {
                 console.error('Error al cargar el archivo:', error);
