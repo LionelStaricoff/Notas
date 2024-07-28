@@ -21,9 +21,11 @@
   });
   
   self.addEventListener('message', (event) => {
+    debugger;
     switch (event.data.action) {
-     
+    
       case 'read':
+        console.log('read')
         fetch(jsondb)
         .then(data => data.json())
         .then(n => util.cargarNotalAlFront(n))

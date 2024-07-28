@@ -41,33 +41,11 @@ document.getElementById("checkbox").addEventListener("click",util.cerrarMenu);
 
 
 
-
-  
-//serviceworker
-let sw;
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js')
-      .then(registration => {
-        console.log('Service Worker registrado con éxito:', registration);
-        sw = registration.active;
-      })
-      .catch(error => {
-        console.error('Error al registrar el Service Worker:', error);
-      });
-  }
-
-const cargarNotasServiceWorker = ()=>sw.postMessage({ action: 'read' });
-const guardarNotasServiceWorker = ()=>sw.postMessage({ action: 'update' });
-
-
-
-
  cartelBbdd.builder().padre('main')
- .nameBtn('Guardar_bbdd')
- .nameBtn1('cargar_bbdd')
- .functionBtn(()=>alert('.functionBtn'))
- .functionBtn1(()=>alert('.functionBtn1'))
+ .nameBtn('Guardar notas')
+ .nameBtn1('Cargar notas') 
+ .functionBtn(async()=> alert('Guardar notas'))
+ .functionBtn1(async()=> alert('Cargar notas'))
  .build();
 
 
